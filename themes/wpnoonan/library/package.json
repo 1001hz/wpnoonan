@@ -1,0 +1,29 @@
+{
+  "name": "wpnoonan",
+  "version": "1.0.0",
+  "description": "wordpress site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1001hz/wpnoonan.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1001hz/wpnoonan/issues"
+  },
+  "homepage": "https://github.com/1001hz/wpnoonan#readme",
+  "devDependencies": {
+    "bourbon-neat": "^1.8.0",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-scss": "^1.4.0",
+    "sass": "^0.5.0"
+  },
+  "dependencies": {
+    "bourbon": "^4.3.2"
+  }
+}

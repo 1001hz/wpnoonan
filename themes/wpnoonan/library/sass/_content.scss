@@ -1,0 +1,19 @@
+#main{
+  @include outer-container($max-width);
+}
+
+@include media($mobile) {
+
+}
+
+@include media($tablet) {
+
+}
+
+@include media($desktop) {
+
+}
+
+@include media($largedesktop) {
+
+}
