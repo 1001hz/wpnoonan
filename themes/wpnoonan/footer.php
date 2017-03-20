@@ -9,7 +9,10 @@
  */
 ?>
 
+    </div>
+    <div id="footer">
+    <?php wp_footer(); ?>
+    </div>
 </div>
-<?php wp_footer(); ?>
 </body>
 </html>

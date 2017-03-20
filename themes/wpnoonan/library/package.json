@@ -19,6 +19,7 @@
   "devDependencies": {
     "bourbon-neat": "^1.8.0",
     "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
     "gulp-sass": "^3.1.0",
     "gulp-scss": "^1.4.0",
     "sass": "^0.5.0"

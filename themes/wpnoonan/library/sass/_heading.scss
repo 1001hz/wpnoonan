@@ -1,0 +1,31 @@
+.heading {
+  height: 60px;
+  background-color: #ffffff;
+
+  &__logo-wrapper {
+    display: inline-block;
+  }
+
+  &__menu-wrapper {
+    float: right;
+    display: inline-block;
+  }
+}
+
+@include media($mobile) {
+
+}
+
+@include media($tablet) {
+
+}
+
+@include media($desktop) {
+  .heading {
+    height: 100px;
+  }
+}
+
+@include media($largedesktop) {
+
+}

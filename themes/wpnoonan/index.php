@@ -8,7 +8,44 @@
  */
 
 get_header(); ?>
-<h1>
-Hello
-</h1>
+<div class="carousel">
+
+</div>
+
+<div class="about">
+
+</div>
+
+<div class="services">
+
+</div>
+
+<div class="team">
+<?php
+$query = new WP_Query(array(
+    'post_type' => 'wpn_staff',
+    'post_status' => 'publish'
+));
+
+
+while ($query->have_posts()) {
+    $query->the_post();
+    $post_id = get_the_ID();
+    echo $post_id;
+    echo "<br>";
+    $met = rwmb_meta( 'wpn_staff_description', $args = array(), $post_id = null );
+
+        var_dump($met);
+}
+
+wp_reset_query();
+
+
+?>
+</div>
+
+<div class="contact">
+
+</div>
+
 <?php get_footer(); ?>
