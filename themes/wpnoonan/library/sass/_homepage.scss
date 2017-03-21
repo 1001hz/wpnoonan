@@ -1,0 +1,65 @@
+.hp {
+
+  &__section {
+    width: 100%;
+    display: table;
+    margin: 0;
+    max-width: none;
+    background-color: #373B44;
+    height: 100vh;
+    position: relative;
+
+    &:nth-of-type(2n) {
+      background-color: $grey-light;
+    }
+    &:nth-of-type(3n) {
+      background-color: darken($grey-light, 5%);
+    }
+    &:nth-of-type(4n) {
+      background-color: darken($grey-light, 10%);
+    }
+    &:nth-of-type(5n) {
+      background-color: darken($grey-light, 15%);
+    }
+
+    &--carousel {
+      height: calc(100vh - 60px);
+    }
+
+    h2 {
+      text-align: center;
+      color: $brandBlue;
+      text-transform: uppercase;
+    }
+
+    .scroll-arrow {
+      &:after {
+        content: '\2193';
+        position: absolute;
+        bottom: 0;
+        left:0;
+        right:0;
+        color: $brandBlue;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+
+  &__inner-section {
+
+
+  }
+}
+
+
+@include media($desktop) {
+  .hp {
+
+    &__section {
+      &--carousel {
+        height: calc(100vh - 120px);
+      }
+    }
+  }
+}

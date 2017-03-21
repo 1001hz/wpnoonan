@@ -9,18 +9,13 @@ html, body {
   position:relative;
 }
 
-#main{
+.content{
   @include outer-container($max-width);
   height: 100%;
-  padding-bottom: 60px;
 }
 
 #footer {
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:60px;   /* Height of the footer */
-  background:#6cf;
+  background: $brandBlue;
 }
 @include media($mobile) {
 

@@ -8,19 +8,30 @@
  */
 
 get_header(); ?>
-<div class="carousel">
+<section class="hp__section hp__section--carousel">
+    <div class="hp__inner-section">
+        <h1>Intro</h1>
+    </div>
+    <div class="scroll-arrow scroll-arrow--about"></div>
+</section>
 
-</div>
+<section class="hp__section about">
+    <div class="hp__inner-section content">
+        <h2>About</h2>
+    </div>
+    <div class="scroll-arrow scroll-arrow--services"></div>
+</section>
 
-<div class="about">
+<section class="hp__section">
+    <div class="hp__inner-section content services">
+        <h2>Services</h2>
+    </div>
+    <div class="scroll-arrow scroll-arrow--team"></div>
+</section>
 
-</div>
-
-<div class="services">
-
-</div>
-
-<div class="team">
+<section class="hp__section">
+    <div class="hp__inner-section content team">
+        <h2>Team</h2>
 <?php
 $query = new WP_Query(array(
     'post_type' => 'wpn_staff',
@@ -42,10 +53,14 @@ wp_reset_query();
 
 
 ?>
-</div>
+    </div>
+    <div class="scroll-arrow scroll-arrow--contact"></div>
+</section>
 
-<div class="contact">
-
-</div>
+<section class="hp__section">
+    <div class="hp__inner-section content contact">
+        <h2>Contact</h2>
+    </div>
+</section>
 
 <?php get_footer(); ?>

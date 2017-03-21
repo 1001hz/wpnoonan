@@ -9,7 +9,7 @@
 
         $('.hamburger').bind('click', function() {
             $(this).toggleClass('open');
-            $('.menu-main-nav-container').toggleClass('open');
+            $('.nav').toggleClass('open');
         });
 
     });

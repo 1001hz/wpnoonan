@@ -25,7 +25,7 @@
 	<div class="heading">
 
 		<div class="heading__logo-wrapper">
-			<img src="" alt="logo" />
+			<img src="http://www.fillmurray.com/200/60" alt="logo" />
 		</div>
 
 		<div class="heading__menu-wrapper">
@@ -36,8 +36,14 @@
               <span></span>
             </div>
 
+			<nav class="nav">
 			<?php wp_nav_menu( array( "menu" => "main-nav" ) ); ?>
+			</nav>
+		</div>
 
+		<div class="heading__cta-wrapper">
+			<a href="#">Book an appointment</a>
+			<a href="tel:+3536977700">Call us: (069) 77700</a>
 		</div>
 
 	</div>

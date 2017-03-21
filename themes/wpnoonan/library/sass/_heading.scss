@@ -10,6 +10,11 @@
     float: right;
     display: inline-block;
   }
+
+  &__cta-wrapper {
+    display: none;
+  }
+
 }
 
 @include media($mobile) {
@@ -22,7 +27,58 @@
 
 @include media($desktop) {
   .heading {
-    height: 100px;
+    height: 120px;
+    padding-top: 20px;
+
+    &__logo-wrapper {
+      display: block;
+      height: 60px;
+      width: 200px;
+      margin: 0 auto;
+    }
+
+    &__menu-wrapper {
+      float: none;
+      display: block;
+      height: 40px;
+    }
+
+    &__cta-wrapper {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 0;
+      width: 240px;
+
+      a {
+        display: block;
+        border-radius: 20px;
+        width: 100%;
+        color: $white;
+        text-transform: uppercase;
+        font-size: $base-font-size;
+        padding: 5px 0;
+        text-align: center;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:nth-child(1) {
+          background-color: $grey;
+          margin-bottom: 5px;
+          &:hover {
+            background-color: darken($grey, 10%);
+            transition: background-color $base-duration $base-easing;
+          }
+        }
+        &:nth-child(2) {
+          background-color: $brandBlue;
+          &:hover {
+            background-color: darken($brandBlue, 10%);
+            transition: background-color $base-duration $base-easing;
+          }
+        }
+      }
+    }
   }
 }
 
