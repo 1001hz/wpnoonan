@@ -2,9 +2,7 @@
 
   &__section {
     width: 100%;
-    display: table;
     margin: 0;
-    max-width: none;
     background-color: #373B44;
     height: 100vh;
     position: relative;
@@ -49,6 +47,18 @@
   &__inner-section {
 
 
+  }
+
+  .hero-carousel {
+
+    &__item{
+      height: calc(100vh - 60px);
+      width: 100%;
+      //background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
 

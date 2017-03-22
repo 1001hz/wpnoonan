@@ -11,9 +11,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hp__section {
   width: 100%;
-  display: table;
   margin: 0;
-  max-width: none;
   background-color: #373B44;
   height: 100vh;
   position: relative; }
@@ -40,6 +38,13 @@ h1, h2, h3, h4, h5, h6 {
     color: #10B0E6;
     display: block;
     text-align: center; }
+
+.hp .hero-carousel__item {
+  height: calc(100vh - 60px);
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
 
 @media screen and (min-width: 960px) {
   .hp__section--carousel {

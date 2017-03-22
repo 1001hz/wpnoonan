@@ -6,7 +6,7 @@
      * Dom Ready
      */
     $(document).ready(function(){
-        
+
         $('.scroll-arrow--about').bind('click', function(){
             $(window).scrollTo('.about', 300);
         });
