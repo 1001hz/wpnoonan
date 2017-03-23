@@ -188,6 +188,9 @@
             color: $brandBlue;
             transition: color $base-duration $base-easing;
           }
+          &:active {
+            color: $brandBlue;
+          }
         }
       }
     }

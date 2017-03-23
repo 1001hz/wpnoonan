@@ -7,6 +7,8 @@
      */
     $(document).ready(function(){
 
+        new WOW({offset: 100}).init();
+
         $('.scroll-arrow--about').bind('click', function(){
             $(window).scrollTo('.about', 300);
         });
