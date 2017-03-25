@@ -18,7 +18,17 @@ get_header(); ?>
                   <div class="hero-carousel__item" style="background-image: url(http://s1.picswalls.com/wallpapers/2015/12/12/beautiful-wallpapers_124418469_294.jpg);"></div>
                   <div class="hero-carousel__item" style="background-image: url(http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-13.jpg);"></div>
                 </div>
+                <div class="hero-carousel__content">
+                    <h1>We're committed to providing you with the best care possible</h1>
+                    <div class="hero-carousel__cta-wrapper">
+                        <a href="#" class="hero-carousel__cta">Book an appointment</a>
+                    </div>
+                    <div class="hero-carousel__cta-wrapper">
+                        <a href="#" class="hero-carousel__cta hero-carousel__cta--transparent">See our services</a>
+                    </div>
+                </div>
             </div>
+
         </div>
         <div class="scroll-arrow scroll-arrow--about wow bounceInUp"></div>
     </section>
@@ -28,22 +38,21 @@ get_header(); ?>
     <section class="hp__section about">
         <div class="hp__inner-section content">
             <h2>About</h2>
-            <div class="hp__content hp__content--half  wow fadeInUp">
+            <div class="hp__content hp__content--half hp__content--pad  wow fadeInUp">
                 <h3>Lorem Ipsum Dolar</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p><a class="hp__cta" href="#">Meet our team</a></p>
             </div>
             <div class="hp__content hp__content--half  wow fadeInUp">
                 <img src="http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-13.jpg" />
             </div>
         </div>
-        <div class="scroll-arrow scroll-arrow--services wow bounceInUp"></div>
     </section>
 
     <section class="hp__section">
         <div class="hp__inner-section content services">
             <h2>Services</h2>
         </div>
-        <div class="scroll-arrow scroll-arrow--team wow bounceInUp"></div>
     </section>
 
     <section class="hp__section">
@@ -71,7 +80,6 @@ get_header(); ?>
 
     ?>
         </div>
-        <div class="scroll-arrow scroll-arrow--contact wow bounceInUp"></div>
     </section>
 
     <section class="hp__section">

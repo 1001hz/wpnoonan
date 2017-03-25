@@ -7,60 +7,95 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Roboto", sans-serif;
-  letter-spacing: 1.5px; }
+  letter-spacing: -0.5px; }
 
 p {
   line-height: 26px;
   font-size: 16px;
   color: #343434; }
 
-.hp__section {
+img {
+  width: 100%; }
+
+.hp__content h3 {
+  margin-top: 0;
+  color: #10B0E6; }
+
+.hp__content--pad {
+  padding: 0 30px; }
+
+.hp__cta {
+  background-color: transparent;
+  color: #10B0E6;
+  border: solid 1px #10B0E6;
+  border-radius: 40px;
+  height: 40px;
+  display: inline-block;
+  padding: 0 20px;
+  line-height: 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer; }
+  .hp__cta:hover {
+    background-color: #0d8cb6;
+    color: #fff; }
+  .hp__cta:hover {
+    transition: all 0.2s ease-in; }
+
+.hp__section:nth-of-type(2n) {
+  background-color: #FEFEFE; }
+
+.hp__section:nth-of-type(3n) {
+  background-color: #f1f1f1; }
+
+.hp__section:nth-of-type(4n) {
+  background-color: #e5e5e5; }
+
+.hp__section:nth-of-type(5n) {
+  background-color: #d8d8d8; }
+
+.hp__section--carousel {
   width: 100%;
   margin: 0;
   background-color: #373B44;
-  height: 100vh;
-  position: relative; }
-  .hp__section:nth-of-type(2n) {
-    background-color: #FEFEFE; }
-  .hp__section:nth-of-type(3n) {
-    background-color: #f1f1f1; }
-  .hp__section:nth-of-type(4n) {
-    background-color: #e5e5e5; }
-  .hp__section:nth-of-type(5n) {
-    background-color: #d8d8d8; }
-  .hp__section--carousel {
-    height: calc(100vh - 60px); }
-  .hp__section h2 {
-    text-align: center;
+  position: relative;
+  height: calc(100vh - 60px);
+  overflow: hidden; }
+
+.hp__section h2 {
+  text-align: center;
+  color: #10B0E6;
+  text-transform: uppercase; }
+
+.hp__section .scroll-arrow {
+  display: none; }
+  .hp__section .scroll-arrow:after {
+    z-index: 14;
+    content: '\2193';
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
     color: #10B0E6;
-    text-transform: uppercase; }
-  .hp__section .scroll-arrow {
-    display: none; }
-    .hp__section .scroll-arrow:after {
-      content: '\2193';
-      position: absolute;
-      bottom: 20px;
-      left: 0;
-      right: 0;
-      color: #10B0E6;
-      display: block;
-      text-align: center;
-      border-radius: 50px;
-      width: 50px;
-      height: 50px;
-      margin: 0 auto;
-      font-size: 30px;
-      line-height: 42px;
-      background-color: #fff;
-      font-weight: bold;
-      transition: background-color 0.2s ease-in, color 0.2s ease-in;
-      cursor: pointer;
-      box-shadow: -1px 2px 6px #999;
-      opacity: 0.7; }
-    .hp__section .scroll-arrow:hover:after {
-      background-color: #10B0E6;
-      color: #fff;
-      transition: background-color 0.2s ease-in, color 0.2s ease-in; }
+    display: block;
+    text-align: center;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    font-size: 30px;
+    line-height: 42px;
+    background-color: #fff;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in;
+    cursor: pointer;
+    box-shadow: -1px 2px 6px #555;
+    opacity: 0.7; }
+  .hp__section .scroll-arrow:hover:after {
+    background-color: #10B0E6;
+    color: #fff;
+    transition: background-color 0.2s ease-in, color 0.2s ease-in; }
 
 .hp__inner-section {
   padding: 20px 0; }
@@ -69,16 +104,74 @@ p {
   .hp__inner-section--hero {
     padding: 0; }
 
-.hp .hero-carousel__item {
-  height: calc(100vh - 60px);
-  width: 100%;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover; }
-
-.hp .hero-carousel .bx-wrapper {
-  border: 0; }
+.hero-carousel {
+  position: relative;
+  overflow: hidden; }
+  .hero-carousel__content {
+    z-index: 11;
+    padding: 20px 40px;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 60px);
+    transform: translateY(-50%); }
+    .hero-carousel__content h1 {
+      color: #fff;
+      font-weight: 300;
+      text-transform: uppercase; }
+  .hero-carousel__cta {
+    background-color: #10B0E6;
+    color: #fff;
+    border: solid 1px #10B0E6;
+    border-radius: 40px;
+    height: 40px;
+    display: inline-block;
+    padding: 0 20px;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    margin-top: 20px; }
+    .hero-carousel__cta:hover {
+      background-color: #0d8cb6; }
+    .hero-carousel__cta:hover {
+      transition: all 0.2s ease-in; }
+    .hero-carousel__cta--transparent {
+      background-color: transparent;
+      color: #10B0E6;
+      border: solid 1px #10B0E6;
+      border-radius: 40px;
+      height: 40px;
+      display: inline-block;
+      padding: 0 20px;
+      line-height: 40px;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      cursor: pointer; }
+      .hero-carousel__cta--transparent:hover {
+        background-color: #0d8cb6;
+        color: #fff; }
+      .hero-carousel__cta--transparent:hover {
+        transition: all 0.2s ease-in; }
+  .hero-carousel__item {
+    height: calc(100vh - 60px);
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .hero-carousel .bx-wrapper {
+    border: 0; }
+  .hero-carousel:before {
+    content: '';
+    background-color: #000;
+    opacity: 0.6;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 10; }
 
 @media screen and (min-width: 960px) {
   .hp__section--carousel {
@@ -93,7 +186,14 @@ p {
     margin-top: 0;
     color: #10B0E6; }
   .hp__content img {
-    width: 100%; } }
+    width: 100%; }
+  .hero-carousel__content {
+    width: 400px; }
+  .hero-carousel__item {
+    background-attachment: fixed; }
+  .hero-carousel:before {
+    background: linear-gradient(to right, #000, transparent, transparent);
+    opacity: 0.8; } }
 
 html, body {
   padding: 0;
@@ -121,7 +221,10 @@ html, body {
   height: 60px;
   background-color: #ffffff; }
   .heading__logo-wrapper {
-    display: inline-block; }
+    display: inline-block;
+    width: 200px; }
+    .heading__logo-wrapper img {
+      width: 100%; }
   .heading__menu-wrapper {
     float: right;
     display: inline-block; }
@@ -200,7 +303,7 @@ html, body {
         letter-spacing: -2.5px; }
   .nav.open {
     opacity: 1;
-    z-index: 10;
+    z-index: 12;
     background-color: #10B0E6;
     background: linear-gradient(to bottom left, #68d1f4, #096787);
     transition: all 0.2s ease-in; }
@@ -219,7 +322,7 @@ html, body {
 
 .hamburger {
   margin: 20px;
-  z-index: 11;
+  z-index: 13;
   width: 22px;
   height: 16px;
   position: relative;

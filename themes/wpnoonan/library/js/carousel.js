@@ -10,6 +10,7 @@
 
         $('.bxslider').bxSlider({
             mode: 'fade',
+            controls: false,
             captions: true,
             pager: false,
             autoStart: true,

@@ -25,7 +25,7 @@
 	<div class="heading">
 
 		<div class="heading__logo-wrapper">
-			<img src="http://www.fillmurray.com/200/60" alt="logo" />
+			<img src="http://www.geoworldtravel.com/resources/wordpress-logo-hoz-cmyk-1038x360.png" alt="logo" />
 		</div>
 
 		<div class="heading__menu-wrapper">

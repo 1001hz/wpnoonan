@@ -10,6 +10,7 @@
 
         $('.bxslider').bxSlider({
             mode: 'fade',
+            controls: false,
             captions: true,
             pager: false,
             autoStart: true,
@@ -47,7 +48,7 @@
      */
     $(document).ready(function(){
 
-        new WOW({offset: 100}).init();
+        new WOW().init();
 
         $('.scroll-arrow--about').bind('click', function(){
             $(window).scrollTo('.about', 300);

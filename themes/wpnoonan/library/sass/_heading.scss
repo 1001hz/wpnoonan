@@ -4,6 +4,10 @@
 
   &__logo-wrapper {
     display: inline-block;
+    width: 200px;
+    img {
+      width: 100%;
+    }
   }
 
   &__menu-wrapper {

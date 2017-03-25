@@ -1,11 +1,20 @@
 .hp {
 
+  &__content {
+    h3 {
+      margin-top: 0;
+      color: $brandBlue;
+    }
+    &--pad {
+      padding: 0 30px;
+    }
+  }
+
+  &__cta {
+    @include link-btn($brandBlue, 40px, 'true');
+  }
+
   &__section {
-    width: 100%;
-    margin: 0;
-    background-color: #373B44;
-    height: 100vh;
-    position: relative;
 
     &:nth-of-type(2n) {
       background-color: $grey-light;
@@ -21,7 +30,12 @@
     }
 
     &--carousel {
+      width: 100%;
+      margin: 0;
+      background-color: #373B44;
+      position: relative;
       height: calc(100vh - 60px);
+      overflow: hidden;
     }
 
     h2 {
@@ -33,6 +47,7 @@
     .scroll-arrow {
       display: none;
       &:after {
+        z-index: 14;
         content: '\2193';
         position: absolute;
         bottom: 20px;
@@ -51,7 +66,7 @@
         font-weight: bold;
         transition: background-color $base-duration $base-easing, color $base-duration $base-easing;
         cursor: pointer;
-        box-shadow: -1px 2px 6px #999;
+        box-shadow: -1px 2px 6px #555;
         opacity: 0.7;
       }
 
@@ -76,23 +91,63 @@
     }
   }
 
-  .hero-carousel {
-
-    &__item{
-      height: calc(100vh - 60px);
-      width: 100%;
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-
-    .bx-wrapper{
-      border: 0;
-    }
-  }
 }
 
+.hero-carousel {
+
+  position: relative;
+  overflow: hidden;
+
+  &__content {
+    z-index: 11;
+    padding: 20px 40px;
+    position: absolute;
+    left: 0;
+    top: calc(50% - 60px);
+    transform: translateY(-50%);
+
+    h1 {
+      color: $white;
+      font-weight: $light-font-weight;
+      text-transform: uppercase;
+    }
+  }
+
+  &__cta {
+    @include link-btn($brandBlue, 40px, 'false');
+
+    &--transparent {
+      @include link-btn($brandBlue, 40px, 'true');
+    }
+
+    margin-top: 20px;
+  }
+
+  &__item{
+    height: calc(100vh - 60px);
+    width: 100%;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .bx-wrapper{
+    border: 0;
+  }
+
+  &:before {
+    content: '';
+    background-color: $black;
+    opacity: 0.6;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: 10;
+  }
+}
 
 @include media($desktop) {
   .hp {
@@ -112,6 +167,7 @@
         display: inline-block;
         vertical-align: top;
       }
+
       h3 {
         margin-top: 0;
         color: $brandBlue;
@@ -119,6 +175,19 @@
       img {
         width: 100%;
       }
+    }
+  }
+
+  .hero-carousel {
+    &__content {
+      width: 400px;
+    }
+    &__item {
+      background-attachment: fixed;
+    }
+    &:before {
+      background: linear-gradient(to right, $black , transparent, transparent);
+      opacity: 0.8;
     }
   }
 }
