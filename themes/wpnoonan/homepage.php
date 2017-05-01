@@ -1,10 +1,7 @@
 <?php
 /**
- * The main template file
+ * Template Name: Homepage
  *
- * @package wpnoonan
- * @subpackage Wpnoonan
- * @since Wpnoonan 1.0
  */
 
 get_header(); ?>
@@ -13,13 +10,49 @@ get_header(); ?>
     <section class="hp__section hp__section--carousel">
         <div class="hp__inner-section hp__inner-section--hero">
             <div class="hero-carousel">
-                <div class="bxslider">
-                  <div class="hero-carousel__item" style="background-image: url(http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-14.jpg);"></div>
-                  <div class="hero-carousel__item" style="background-image: url(http://s1.picswalls.com/wallpapers/2015/12/12/beautiful-wallpapers_124418469_294.jpg);"></div>
-                  <div class="hero-carousel__item" style="background-image: url(http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-13.jpg);"></div>
-                </div>
+
+                <?php
+
+                    $query = new WP_Query(array(
+                        'post_type' => 'wpn_carousel',
+                        'post_status' => 'publish'
+                    ));
+
+                    while ($query->have_posts()) {
+                        $query->the_post();
+                        $post_id = get_the_ID();
+                        $carouselTitle = get_post_meta( $post_id, 'wpn_carousel_title', false );
+                        $carouselImages = get_post_meta( $post_id, 'wpn_carousel_image', true );
+
+                    ?>
+
+                    <div class="bxslider">
+
+                        <?php
+                        foreach($carouselImages as $imgId) {
+                            $img = wp_get_attachment_url($imgId[0]);
+                            ?>
+
+                            <div class="hero-carousel__item" style="background-image: url(<?php echo $img; ?>);"></div>
+
+                            <?php
+                        }
+                        ?>
+
+                    </div>
+
+                    <?php
+
+                        }
+
+
+                    wp_reset_query();
+
+                ?>
+
+
                 <div class="hero-carousel__content">
-                    <h1>We're committed to providing you with the best care possible</h1>
+                    <h1><?php echo $carouselTitle[0]; ?></h1>
                     <div class="hero-carousel__cta-wrapper">
                         <a href="#" class="hero-carousel__cta">Book an appointment</a>
                     </div>

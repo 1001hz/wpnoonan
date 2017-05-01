@@ -32,3 +32,11 @@ html, body {
 @include media($largedesktop) {
 
 }
+
+.bump-top {
+  margin-top: 20px;
+}
+
+.bump-bottom {
+  margin-bottom: 20px;
+}

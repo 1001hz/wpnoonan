@@ -23,10 +23,10 @@
       background-color: darken($grey-light, 5%);
     }
     &:nth-of-type(4n) {
-      background-color: darken($grey-light, 10%);
+
     }
     &:nth-of-type(5n) {
-      background-color: darken($grey-light, 15%);
+      background-color: darken($grey-light, 5%);
     }
 
     &--carousel {
@@ -81,7 +81,7 @@
   }
 
   &__inner-section {
-    padding: 20px 0;
+    padding: 30px 0;
     h2 {
       margin-top: 0;
     }
@@ -115,6 +115,7 @@
 
   &__cta {
     @include link-btn($brandBlue, 40px, 'false');
+    font-size: 13px;
 
     &--transparent {
       @include link-btn($brandBlue, 40px, 'true');
@@ -184,6 +185,9 @@
     }
     &__item {
       background-attachment: fixed;
+    }
+    &__cta {
+      font-size: 16px;
     }
     &:before {
       background: linear-gradient(to right, $black , transparent, transparent);

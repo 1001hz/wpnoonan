@@ -1,16 +1,16 @@
 <?php
 
-add_action( 'init', 'wpn_staff' );
-function wpn_staff() {
+add_action( 'init', 'wpn_carousel' );
+function wpn_carousel() {
     $labels = array(
-        'name' => _x('Staff', 'post type general name'),
-        'singular_name' => _x('Staff', 'post type singular name'),
-        'add_new' => _x('Add a Staff', 'page'),
-        'add_new_item' => __('Add a Staff'),
+        'name' => _x('Carousel', 'post type general name'),
+        'singular_name' => _x('Carousel', 'post type singular name'),
+        'add_new' => _x('Add a carousel', 'page'),
+        'add_new_item' => __('Add a carousel'),
         'edit_item' => __('Edit'),
-        'new_item' => __('New Staff'),
-        'view_item' => __('View Staff'),
-        'search_items' => __('Search Staff'),
+        'new_item' => __('New carousel'),
+        'view_item' => __('View carousel'),
+        'search_items' => __('Search carousel'),
         'not_found' =>  __('Nothing found'),
         'not_found_in_trash' => __('Nothing found in Trash'),
         'parent_item_colon' => ''
@@ -31,7 +31,7 @@ function wpn_staff() {
         'supports' => array('title')
     );
 
-    register_post_type('wpn_staff', $args);
+    register_post_type('wpn_carousel', $args);
 }
 
 ?>

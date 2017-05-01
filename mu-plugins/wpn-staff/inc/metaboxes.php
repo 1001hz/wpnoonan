@@ -13,8 +13,14 @@ function wpn_staff_mb($meta_boxes) {
 		'priority'   => 'low',
 		'fields' => array(
 			array(
-				'name' => 'Name',
-				'id'    => 'wpn_staff_name',
+				'name' => 'First Name',
+				'id'    => 'wpn_staff_fname',
+				'type'  => 'text',
+				'size' => 80
+			),
+			array(
+				'name' => 'Last Name',
+				'id'    => 'wpn_staff_lname',
 				'type'  => 'text',
 				'size' => 80
 			),
