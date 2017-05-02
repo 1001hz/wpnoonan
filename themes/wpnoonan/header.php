@@ -25,7 +25,8 @@
 	<div class="heading">
 
 		<div class="heading__logo-wrapper">
-			<img src="http://www.geoworldtravel.com/resources/wordpress-logo-hoz-cmyk-1038x360.png" alt="logo" />
+
+			<img src="wp-content/themes/wpnoonan/images/WLPLogo.png" alt="logo" />
 		</div>
 
 		<div class="heading__menu-wrapper">

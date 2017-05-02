@@ -17,9 +17,21 @@ html, body {
 
   &__header {
     background-color: $light-grey;
-    margin: 20px 0;
     padding-top: 40px;
     padding-bottom: 40px;
+
+    &:first-child {
+      margin-top: 20px;
+    }
+
+    //&:nth-child(2n) {
+    //  background-color: $medium-grey;
+    //}
+
+    &--list {
+      background-color: $white;
+      border-bottom: solid 1px $medium-grey;
+    }
   }
 
   &__copy {

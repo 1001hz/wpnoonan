@@ -18,7 +18,7 @@
 			<div class="staff__image staff__image--round staff__image--small staff__image--border">
 				<?php echo get_avatar($authorId); ?>
 			</div>
-			<p class="staff__author"><i>by</i> <?php echo $author ?></p>
+			<p class="staff__author"><i>by</i> <b><?php echo $author ?></b></p>
 		</div>
 
 		</div>

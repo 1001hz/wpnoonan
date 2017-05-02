@@ -224,9 +224,13 @@ html, body {
     display: block; }
   .content__header {
     background-color: #f1f1f2;
-    margin: 20px 0;
     padding-top: 40px;
     padding-bottom: 40px; }
+    .content__header:first-child {
+      margin-top: 20px; }
+    .content__header--list {
+      background-color: #fff;
+      border-bottom: solid 1px #e6e7e8; }
   .content__copy {
     padding-top: 40px;
     padding-bottom: 40px; }
@@ -486,9 +490,17 @@ html, body {
 
 .staff__author {
   text-align: center;
-  color: #20c3f3;
+  color: #4d4d4f;
+  padding: 0;
+  font-size: 16px;
+  margin-bottom: 0; }
+
+.staff__post-date {
+  text-align: center;
+  color: #e6e7e8;
   padding: 0 0 12px 0;
-  font-size: 16px; }
+  font-size: 14px;
+  margin: 0; }
 
 .staff__image {
   width: 160px;
@@ -634,6 +646,10 @@ input[type=submit] {
   background-color: #f1f1f2;
   padding-top: 20px;
   padding-bottom: 20px; }
+  .comments__area .comment-author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px; }
 
 .post-nav__direction {
   color: #4d4d4f; }

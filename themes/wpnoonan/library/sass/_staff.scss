@@ -38,9 +38,18 @@
 
   &__author {
     text-align: center;
-    color: $brandBlue;
-    padding: 0 0 12px 0;
+    color: $dark-grey;
+    padding: 0;
     font-size: 16px;
+    margin-bottom: 0;
+  }
+
+  &__post-date {
+    text-align: center;
+    color: $medium-grey;
+    padding: 0 0 12px 0;
+    font-size: 14px;
+    margin: 0;
   }
 
   &__image {
