@@ -36,6 +36,13 @@
     font-size: 20px;
   }
 
+  &__author {
+    text-align: center;
+    color: $brandBlue;
+    padding: 0 0 12px 0;
+    font-size: 16px;
+  }
+
   &__image {
 
     width: 160px;
@@ -49,10 +56,26 @@
     }
 
     &--medium {
+      width: 100px;
       img {
         width: 100px;
         height: 100px;
       }
+    }
+
+    &--small {
+      width: 60px;
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &--border {
+      img {
+        border: 3px solid #fff;
+      }
+
     }
   }
 }

@@ -67,10 +67,10 @@
         font-weight: bold;
 
         &:nth-child(1) {
-          background-color: $grey;
+          background-color: $light-grey;
           margin-bottom: 5px;
           &:hover {
-            background-color: darken($grey, 10%);
+            background-color: darken($light-grey, 10%);
             transition: background-color $base-duration $base-easing;
           }
         }

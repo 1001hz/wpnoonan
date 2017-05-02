@@ -23,23 +23,36 @@ get_header(); ?>
 				comments_template();
 			}
 
-			if ( is_singular( 'attachment' ) ) {
-				// Parent post navigation.
-				the_post_navigation( array(
-					'prev_text' => _x( '<span class="meta-nav">Published in</span><span class="post-title">%title</span>', 'Parent post link', 'twentysixteen' ),
-				) );
-			} elseif ( is_singular( 'post' ) ) {
-				// Previous/next post navigation.
-				the_post_navigation( array(
-					'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next', 'twentysixteen' ) . '</span> ' .
-						'<span class="screen-reader-text">' . __( 'Next post:', 'twentysixteen' ) . '</span> ' .
-						'<span class="post-title">%title</span>',
-					'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous', 'twentysixteen' ) . '</span> ' .
-						'<span class="screen-reader-text">' . __( 'Previous post:', 'twentysixteen' ) . '</span> ' .
-						'<span class="post-title">%title</span>',
-				) );
-			}
+			// Post nav
+$prevPost = get_previous_post();
+$nextPost = get_next_post();
+			?>
+			<div class="content post-nav">
 
+				<?php if(!empty($prevPost)): ?>
+				<a href="<?php echo get_permalink($prevPost->ID); ?>">
+					<div class="post-nav__cell">
+						<div class="arrow left post-nav__arrow post-nav__arrow--prev"></div>
+						<div class="post-nav__direction">Previous post</div>
+						<?php echo $prevPost->post_title; ?>
+					</div>
+				</a>
+				<?php endif; ?>
+
+				<div class="post-nav__cell">
+
+
+					<?php
+
+
+					if(!empty($nextPost)): ?>
+						<p class="post-nav__title">Next Post</p>
+						<a href="<?php echo get_permalink($nextPost->ID); ?>"><?php echo $nextPost->post_title; ?></a>
+					<?php endif; ?>
+
+				</div>
+			</div>
+			<?php
 			// End of the loop.
 		endwhile;
 		?>

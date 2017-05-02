@@ -4,11 +4,17 @@ $grid-columns: 12;
 $max-width: 900px;
 
 // colours
-$grey-light: #FEFEFE;
-$grey: #999;
+$dark-grey: #4d4d4f;
+$medium-grey: #e6e7e8;
+$light-grey: #f1f1f2;
+
+$light-blue: #6dcff6;
+$medium-blue: #20c3f3;
+$dark-blue: #14b0e6;
+
 $white: #fff;
 $black: #000;
-$brandBlue: #10B0E6;
+$brandBlue: $medium-blue;
 
 // fonts
 $base-font-size: 14px;
@@ -20,7 +26,7 @@ $light-font-weight: 300;
 $heavy-font-weight: 800;
 
 // borders
-$base-border: solid 1px $grey;
+$base-border: solid 1px $medium-grey;
 
 // animations
 $base-duration: 0.2s;

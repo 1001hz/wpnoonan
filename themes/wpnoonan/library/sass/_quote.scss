@@ -1,0 +1,16 @@
+.quote {
+
+  text-align: center;
+  margin: 20px;
+
+  &__copy {
+    font-size: 28px;
+    color: $dark-blue;
+    margin-bottom: 20px;
+  }
+
+  &__author {
+    color: $dark-grey;
+    font-style: italic;
+  }
+}

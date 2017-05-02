@@ -1,0 +1,33 @@
+.post-nav {
+
+
+  &__direction {
+    color: $dark-grey;
+
+  }
+
+  &__cell {
+    @include span-columns(6);
+
+    padding: 60px 0;
+    position: relative;
+
+    a {
+      font-size: 18px;
+    }
+
+    padding-left: 30px;
+
+    &:nth-child(2) {
+      text-align: right;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    top: calc(50% - 10px);
+    &--prev {
+      left: 0;
+    }
+  }
+}

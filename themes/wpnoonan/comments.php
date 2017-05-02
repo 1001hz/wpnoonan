@@ -20,8 +20,9 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments__area">
 
+	<div class="content">
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
@@ -76,4 +77,5 @@ if ( post_password_required() ) {
 		) );
 	?>
 
+	</div>
 </div><!-- .comments-area -->

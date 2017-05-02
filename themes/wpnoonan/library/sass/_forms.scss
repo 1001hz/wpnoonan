@@ -1,0 +1,15 @@
+label {
+  display: block;
+}
+input[type=text], input[type=email], input[type=url] {
+  padding: 10px;
+}
+input[type=submit] {
+  @include link-btn($brandBlue, 40px, 'false');
+}
+
+.comments__area {
+  .form-submit {
+    margin-top: 20px;
+  }
+}
