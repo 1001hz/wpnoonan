@@ -24,9 +24,9 @@ function wpn_quotes_constructor( $param ) {
             $margin_bottom = '';
         }
 
-        $quote = '<div class="quote '.$margin_top.' '.$margin_bottom.'">';
-        $quote .= '<p class="h3">'.$param['content'].'</p>';
-        $quote .= '<p class="h6">'.$param['author'].'</p>';
+        $quote = '<div class="quote  wow fadeInUp '.$margin_top.' '.$margin_bottom.'">';
+        $quote .= '<p class="quote__copy">"'.$param['content'].'"</p>';
+        $quote .= '<p class="quote__author"> - '.$param['author'].'</p>';
         $quote .= '</div>';
 
         return $quote;
