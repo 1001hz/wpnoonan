@@ -1,0 +1,31 @@
+.blog {
+
+  &__avatar {
+    max-width: $max-width;
+    text-align: left;
+    margin: 0;
+  }
+
+  &__about-cell {
+    @include span-columns(12);
+    margin-bottom: 20px;
+  }
+
+  &__book-btn {
+    font-size: $font-small;
+  }
+
+  &__cat-btn {
+    @include link-btn($dark-grey, 20px, 'false');
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+}
+
+@include media($desktop) {
+  .blog {
+    &__about-cell {
+      @include span-columns(12);
+    }
+  }
+}

@@ -29,7 +29,7 @@
   }
 
   &__name {
-    text-align: center;
+    text-align: left;
     color: $brandBlue;
     text-transform: uppercase;
     padding: 12px 0;
@@ -37,19 +37,49 @@
   }
 
   &__author {
-    text-align: center;
+    text-align: left;
     color: $dark-grey;
     padding: 0;
     font-size: 16px;
     margin-bottom: 0;
   }
 
-  &__post-date {
-    text-align: center;
-    color: $medium-grey;
-    padding: 0 0 12px 0;
-    font-size: 14px;
-    margin: 0;
+  &__card {
+    position: relative;
+    margin-top: 20px;
+  }
+
+  &__card-details {
+    min-height: 60px;
+  }
+
+  &__card-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    position: absolute;
+    left:0;
+    top:0;
+  }
+
+  &__card-name {
+    margin-left: 70px;
+    color: $dark-grey;
+    padding-top: 10px;
+    font-weight: bold;
+  }
+
+  &__card-role {
+    margin-left: 70px;
+    color: $dark-grey;
+    font-size: $font-small;
+    font-style: italic;
+    text-transform: capitalize;
+    padding-top: 3px;
+  }
+
+  &__card-description {
+
   }
 
   &__image {

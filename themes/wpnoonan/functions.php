@@ -44,3 +44,47 @@ function wpn_homepage_mb($meta_boxes) {
 
     return $meta_boxes;
 }
+
+
+
+add_filter( 'rwmb_meta_boxes', 'wpn_blog_mb' );
+
+function wpn_blog_mb($meta_boxes) {
+
+	$cpt = array();
+
+	$query = new WP_Query(array(
+        'post_type' => 'wpn_staff',
+        'post_status' => 'publish',
+        'posts_per_page' => -1
+    ));
+
+
+    while ($query->have_posts()) {
+        $query->the_post();
+        $post_id = get_the_ID();
+		$arrMeta = get_post_custom( $post_id );
+		$staffFirstName = $arrMeta['wpn_staff_fname'][0];
+		$staffLastName = $arrMeta['wpn_staff_lname'][0];
+        $cpt[get_the_ID()] = $staffFirstName . ' ' . $staffLastName;
+    }
+
+    wp_reset_query();
+
+	$meta_boxes[] = array(
+		'id'  => 'wpn_blog_mb',
+        'title'  => 'Meta',
+		'post_types' => 'post',
+		'priority'   => 'low',
+		'fields' => array(
+			array(
+				'name' => 'Author',
+				'id'    => 'wpn_blog_author',
+				'type'  => 'select',
+				'options' => $cpt
+			)
+		)
+	);
+
+    return $meta_boxes;
+}
