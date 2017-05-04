@@ -71,12 +71,12 @@ get_header(); ?>
     <section class="hp__section about">
         <div class="hp__inner-section content">
             <h2>About</h2>
-            <div class="hp__content hp__content--half hp__content--pad  wow fadeInUp wow fadeInUp">
+            <div class="hp__content hp__content--half hp__content--pad">
                 <h3>Lorem Ipsum Dolar</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p><a class="hp__cta" href="#">Meet our team</a></p>
+                <p class="wow fadeIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p class="wow fadeInUp"><a class="hp__cta" href="/staff">Meet our team</a></p>
             </div>
-            <div class="hp__content hp__content--half  wow fadeInUp">
+            <div class="hp__content hp__content--half  wow fadeIn">
                 <img src="http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-13.jpg" />
             </div>
         </div>
@@ -104,6 +104,7 @@ get_header(); ?>
                 while ($query->have_posts()) {
                         $query->the_post();
                         $post_id = get_the_ID();
+                        $staffLink = get_the_permalink();
                         $arrMeta = get_post_custom( $post_id );
 
                         $staffFirstName = $arrMeta['wpn_staff_fname'][0];
@@ -115,10 +116,10 @@ get_header(); ?>
 
                         <div class="staff__wrapper">
                             <div class="staff__image staff__image--round staff__image--medium">
-                                <img src="<?php echo $staffImg; ?>" />
+                                <div style="background-image: url(<?php echo $staffImg; ?>)"></div>
                             </div>
-                            <div class="staff__name"><?php echo $staffFirstName . ' ' . $staffLastName; ?></div>
-                            <div class="staff__link-wrapper"><a href="#" class="staff__link">Read about <?php echo $staffFirstName; ?></a></div>
+                            <div class="staff__name staff__name--homepage"><?php echo $staffFirstName . ' ' . $staffLastName; ?></div>
+                            <div class="staff__link-wrapper"><a href="<?php echo $staffLink; ?>" class="staff__link">Read about <?php echo $staffFirstName; ?></a></div>
                         </div>
 
                         <?php

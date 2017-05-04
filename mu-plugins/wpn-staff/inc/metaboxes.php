@@ -42,6 +42,12 @@ function wpn_staff_mb($meta_boxes) {
 				'type' => 'textarea'
 			),
 			array(
+				'name' => 'Contact Message',
+				'id'    => 'wpn_staff_contact',
+				'type' => 'text',
+				'size' => 80
+			),
+			array(
 				'name'             => __( 'Image Upload', 'image' ),
 				'id'               => "wpn_staff_image",
 				'type'             => 'plupload_image',

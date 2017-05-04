@@ -31,7 +31,7 @@
 
 @include media($desktop) {
   .heading {
-    height: 120px;
+    height: 140px;
     padding-top: 20px;
 
     &__logo-wrapper {
@@ -44,14 +44,15 @@
     &__menu-wrapper {
       float: none;
       display: block;
-      height: 40px;
+      height: 60px;
+      padding-top: 20px;
     }
 
     &__cta-wrapper {
       display: block;
       position: absolute;
       top: 20px;
-      right: 0;
+      right: 20px;
       width: 240px;
 
       a {
@@ -65,12 +66,13 @@
         text-align: center;
         text-decoration: none;
         font-weight: bold;
+        font-family: sans-serif;
 
         &:nth-child(1) {
-          background-color: $light-grey;
+          background-color: $dark-grey;
           margin-bottom: 5px;
           &:hover {
-            background-color: darken($light-grey, 10%);
+            background-color: darken($dark-grey, 10%);
             transition: background-color $base-duration $base-easing;
           }
         }

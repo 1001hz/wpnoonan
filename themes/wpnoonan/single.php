@@ -27,30 +27,48 @@ get_header(); ?>
 $prevPost = get_previous_post();
 $nextPost = get_next_post();
 			?>
-			<div class="content post-nav">
+			<div class="content">
 
 				<?php if(!empty($prevPost)): ?>
-				<a href="<?php echo get_permalink($prevPost->ID); ?>">
-					<div class="post-nav__cell">
-						<div class="arrow left post-nav__arrow post-nav__arrow--prev"></div>
-						<div class="post-nav__direction">Previous post</div>
-						<?php echo $prevPost->post_title; ?>
-					</div>
-				</a>
+
+				<div class="blog__split-cell">
+					<h2>Previous Post</h2>
+				</div>
 				<?php endif; ?>
 
-				<div class="post-nav__cell">
-
-
-					<?php
-
-
-					if(!empty($nextPost)): ?>
-						<p class="post-nav__title">Next Post</p>
-						<a href="<?php echo get_permalink($nextPost->ID); ?>"><?php echo $nextPost->post_title; ?></a>
-					<?php endif; ?>
-
+				<?php if(!empty($nextPost)): ?>
+				<div class="blog__split-cell blog__split-cell--right">
+					<h2>Next Post</h2>
 				</div>
+				<?php endif; ?>
+
+</div>
+<div class="content">
+				<?php if(!empty($prevPost)): ?>
+				<div class="blog__related-cell">
+					<a href="<?php echo get_the_permalink($prevPost->ID);?> ">
+						<div class="wow fadeIn">
+							<h1 class="content__title content__title--small"><?php echo $prevPost->post_title; ?></h1>
+
+						</div>
+					</a>
+				</div>
+
+				<?php endif; ?>
+				<?php if(!empty($nextPost)): ?>
+				<div class="blog__related-cell">
+					<a href="<?php echo get_permalink($nextPost->ID); ?>">
+						<div class="wow fadeIn">
+							<h1 class="content__title content__title--small"><?php echo $nextPost->post_title; ?></h1>
+
+						</div>
+					</a>
+				</div>
+
+
+				<?php endif; ?>
+
+
 			</div>
 			<?php
 			// End of the loop.

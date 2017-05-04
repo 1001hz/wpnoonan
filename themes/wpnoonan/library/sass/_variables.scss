@@ -1,5 +1,5 @@
 $column: 90px;
-$gutter: 10px;
+$gutter: 20px;
 $grid-columns: 12;
 $max-width: 800px;
 
@@ -19,8 +19,11 @@ $brandBlue: $medium-blue;
 // fonts
 $base-font-size: 14px;
 $font-large: 16px;
+$font-heading-small: 22px;
 $font-x-large: 40px;
 $font-small: 12px;
+
+$link-color: $dark-blue;
 
 $base-font-weight: 500;
 $light-font-weight: 300;

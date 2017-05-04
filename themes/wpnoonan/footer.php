@@ -32,10 +32,10 @@
             <div class="footer__section">
                 <h3>Connect With Us</h3>
                 <div class="footer__social-icon">
-                    <a href="#"><img src="wp-content/themes/wpnoonan/images/instagram.png" /></a>
+                    <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/instagram.png" /></a>
                 </div>
                 <div class="footer__social-icon">
-                    <a href="#"><img src="wp-content/themes/wpnoonan/images/facebook.png" /></a>
+                    <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/facebook.png" /></a>
                 </div>
 
             </div>

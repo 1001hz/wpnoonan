@@ -1,14 +1,45 @@
 .blog {
 
+  &__header {
+    background-color: $light-grey;
+    border-bottom: solid 1px $medium-grey;
+  }
+
   &__avatar {
     max-width: $max-width;
     text-align: left;
     margin: 0;
   }
 
+  &__related-cell {
+    @include span-columns(12);
+    margin-bottom: 20px;
+    border: solid 1px $medium-grey;
+    border-radius: 2px;
+    padding: 20px;
+    min-height: 116px;
+
+    &:hover {
+      background-color: $light-grey;
+      transition: background-color $base-duration $base-easing;
+    }
+  }
+
+  &__split-cell {
+    @include span-columns(12);
+  }
+
   &__about-cell {
     @include span-columns(12);
     margin-bottom: 20px;
+  }
+
+  &__read-on {
+    color: $link-color;
+  }
+
+  &__about {
+
   }
 
   &__book-btn {
@@ -26,6 +57,20 @@
   .blog {
     &__about-cell {
       @include span-columns(12);
+    }
+
+    &__split-cell {
+      @include span-columns(6);
+
+      &--right {
+        text-align: right;
+      }
+    }
+
+    &__related-cell {
+      @include span-columns(6);
+      @include omega(2);
+      margin-bottom: 20px;
     }
   }
 }
