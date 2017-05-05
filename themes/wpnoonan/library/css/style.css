@@ -559,7 +559,22 @@ html, body {
   font-family: "Roboto", sans-serif; }
   .staff__name--homepage {
     font-size: 14px;
-    text-align: center; }
+    text-align: center;
+    padding: 12px 0 0 0; }
+
+.staff__qualification {
+  text-align: left;
+  color: #20c3f3;
+  text-transform: uppercase;
+  padding: 0 0 12px 0;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif; }
+  .staff__qualification--homepage {
+    font-size: 12px;
+    text-align: center;
+    padding: 0 0 12px 0;
+    font-style: italic;
+    min-height: 26px; }
 
 .staff__author {
   text-align: left;
@@ -597,6 +612,17 @@ html, body {
   font-weight: bold;
   font-family: "Roboto", sans-serif; }
   .staff__card-name--medium {
+    margin-left: 120px; }
+
+.staff__card-qualification {
+  margin-left: 70px;
+  color: #4d4d4f;
+  padding-top: 3px;
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  font-style: italic;
+  font-size: 14px; }
+  .staff__card-qualification--medium {
     margin-left: 120px; }
 
 .staff__card-role {

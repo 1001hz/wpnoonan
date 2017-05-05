@@ -50,6 +50,23 @@
     &--homepage {
       font-size: $base-font-size;
       text-align: center;
+      padding: 12px 0 0 0;
+    }
+  }
+
+  &__qualification {
+    text-align: left;
+    color: $brandBlue;
+    text-transform: uppercase;
+    padding: 0 0 12px 0;
+    font-size: 20px;
+    font-family: $font-sans;
+    &--homepage {
+      font-size: $font-small;
+      text-align: center;
+      padding: 0 0 12px 0;
+      font-style: italic;
+      min-height: 26px;
     }
   }
 
@@ -90,6 +107,20 @@
     padding-top: 10px;
     font-weight: bold;
     font-family: $font-sans;
+
+    &--medium {
+      margin-left: 120px;
+    }
+  }
+
+  &__card-qualification {
+    margin-left: 70px;
+    color: $dark-grey;
+    padding-top: 3px;
+    font-weight: normal;
+    font-family: $font-sans;
+    font-style: italic;
+    font-size: $base-font-size;
 
     &--medium {
       margin-left: 120px;

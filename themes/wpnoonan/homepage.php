@@ -109,6 +109,7 @@ get_header(); ?>
 
                         $staffFirstName = $arrMeta['wpn_staff_fname'][0];
                         $staffLastName = $arrMeta['wpn_staff_lname'][0];
+                        $staffQualification = $arrMeta['wpn_staff_qualification'][0];
                         $staffDescription = $arrMeta['wpn_staff_description'][0];
                         $staffImg = wp_get_attachment_url($arrMeta['wpn_staff_image'][0]);
 
@@ -119,6 +120,7 @@ get_header(); ?>
                                 <div style="background-image: url(<?php echo $staffImg; ?>)"></div>
                             </div>
                             <div class="staff__name staff__name--homepage"><?php echo $staffFirstName . ' ' . $staffLastName; ?></div>
+                            <div class="staff__qualification staff__qualification--homepage"><?php echo $staffQualification; ?></div>
                             <div class="staff__link-wrapper"><a href="<?php echo $staffLink; ?>" class="staff__link">Read about <?php echo $staffFirstName; ?></a></div>
                         </div>
 

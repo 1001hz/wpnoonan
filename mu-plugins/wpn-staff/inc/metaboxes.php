@@ -25,6 +25,12 @@ function wpn_staff_mb($meta_boxes) {
 				'size' => 80
 			),
 			array(
+				'name' => 'Qualification',
+				'id'    => 'wpn_staff_qualification',
+				'type' => 'text',
+				'size' => 80
+			),
+			array(
 				'name' => 'Role',
 				'id'    => 'wpn_staff_role',
 				'type' => 'text',

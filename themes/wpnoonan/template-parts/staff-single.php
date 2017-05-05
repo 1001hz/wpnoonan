@@ -14,6 +14,7 @@
 		$staffId = $post->ID;
 		$staffFirstName = $arrUserMeta['wpn_staff_fname'][0];
 		$staffLastName = $arrUserMeta['wpn_staff_lname'][0];
+		$staffQualification = $arrUserMeta['wpn_staff_qualification'][0];
 		$staffDescription = $arrUserMeta['wpn_staff_description'][0];
 		$staffRole = $arrUserMeta['wpn_staff_role'][0];
 		$staffBio = $arrUserMeta['wpn_staff_bio'][0];
@@ -33,6 +34,7 @@
     			</div>
 				<div class="staff__card-details staff__card-details--medium">
 					<div class="staff__card-name staff__card-name--medium"><?php echo $staffFirstName .' '.$staffLastName ; ?></div>
+					<div class="staff__card-qualification staff__card-qualification--medium"><?php echo $staffQualification; ?></div>
 					<div class="staff__card-role staff__card-role--medium"><?php echo $staffRole; ?></div>
 				</div>
 
