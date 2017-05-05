@@ -45,7 +45,7 @@ function wpn_staff_mb($meta_boxes) {
 			array(
 				'name' => 'Full Bio',
 				'id'    => 'wpn_staff_bio',
-				'type' => 'textarea'
+				'type' => 'wysiwyg'
 			),
 			array(
 				'name' => 'Contact Message',

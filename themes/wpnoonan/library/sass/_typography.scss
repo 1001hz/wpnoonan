@@ -28,6 +28,12 @@ a {
   color: $link-color;
 }
 
+ul, ol {
+  line-height: 26px;
+  font-size: 16px;
+  color: $dark-grey;
+}
+
 img {
   width: 100%;
 }
