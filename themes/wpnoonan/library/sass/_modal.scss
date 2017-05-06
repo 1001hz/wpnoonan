@@ -1,0 +1,72 @@
+.modal {
+  opacity: 0;
+  position: absolute;
+  left: -10000px;
+  display: none;
+
+  &__btn-close {
+    float: right;
+    cursor: pointer;
+  }
+
+  &__inner {
+    max-width: 600px;
+    width: 100%;
+    background-color: $white;
+    padding: 20px;
+    border: solid 1px $medium-grey;
+    border-radius: 2px;
+    max-height: calc(100vh);
+    overflow-y: auto;
+    transform: translateX(-50%);
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 202;
+  }
+
+  &:before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $black;
+    opacity: 0.5;
+    z-index: 201;
+    transition: opacity $base-duration $base-easing;
+  }
+
+  &.open {
+    opacity: 1;
+    left:0;
+    display: block;
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: $black;
+    opacity: 0;
+    z-index: -1;
+
+    &.open {
+      opacity: 0.5;
+      z-index: 201;
+      transition: opacity $base-duration $base-easing;
+    }
+  }
+}
+
+@include media($desktop) {
+  .modal {
+    &__inner {
+      max-height: calc(100vh - 100px);
+      top: 60px;
+    }
+  }
+}

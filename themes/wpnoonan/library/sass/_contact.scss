@@ -1,0 +1,49 @@
+.contact {
+
+  &__email {
+    padding-right: 5px;
+    font-family: $font-sans;
+  }
+
+  &__phone {
+    padding-right: 5px;
+    font-family: $font-sans;
+  }
+
+  &__address {
+    padding-right: 5px;
+    position: relative;
+    font-family: $font-sans;
+
+    span {
+      margin-left: 20px;
+      display: inline-block;
+    }
+
+    .fa {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  &__book-btn {
+    @include link-btn($white, 40px, 'true');
+  }
+}
+
+@include media($desktop) {
+  .contact {
+    &__email {
+      @include span-columns(4);
+    }
+
+    &__phone {
+      @include span-columns(4);
+    }
+
+    &__address {
+      @include span-columns(4);
+    }
+  }
+}

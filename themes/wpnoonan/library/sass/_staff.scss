@@ -28,10 +28,7 @@
     font-size: 12px;
   }
 
-  &__book-btn {
-    @include link-btn($white, 40px, 'false');
-    color: $brandBlue;
-  }
+
 
   &__cta {
     text-align: center;

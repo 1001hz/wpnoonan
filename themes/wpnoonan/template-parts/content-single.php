@@ -45,8 +45,13 @@
 	</div>
 	</header><!-- .entry-header -->
 
-
-
+<div class="content">
+	<div class="breadcrumb">
+		<a href="/blog" class="breadcrumb__link">Blog</a>
+		<span class="arrow right breadcrumb__arrow"></span>
+		<span class="breadcrumb__current"><?php echo the_title(); ?></span>
+	</div>
+</div>
 	<div class="content content__copy">
 		<?php
 			the_content();
@@ -93,7 +98,7 @@
 
 				<p class="staff__cta wow fadeInUp"><?php echo $staffContactMessage; ?></p>
 				<div class="content--center wow fadeInUp">
-					<a href="#" class="staff__book-btn">Book with <?php echo $staffFirstName; ?></a>
+					<span class="btn btn--large btn--on-blue staff__book-with" data-staff-id="<?php echo $blogAuthorID; ?>">Book with <?php echo $staffFirstName; ?></span>
 				</div>
 			</div>
 		</div>

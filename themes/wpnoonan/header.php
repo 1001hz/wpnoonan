@@ -8,7 +8,11 @@
  * @since Wpnoonan 1.0
  */
 
-?><!DOCTYPE html>
+?>
+<?php
+    $options = get_option( 'wpn_settings' );
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -24,7 +28,9 @@
 	<div class="heading">
 
 		<div class="heading__logo-wrapper">
-			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/WLPLogo.png" alt="logo" />
+			<a href="<?php echo get_site_url(); ?>">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/WLPLogo.png" alt="logo" />
+			</a>
 		</div>
 
 		<div class="heading__menu-wrapper">
@@ -41,8 +47,8 @@
 		</div>
 
 		<div class="heading__cta-wrapper">
-			<a href="#">Book an appointment</a>
-			<a href="tel:+3536977700">Call us: (069) 77700</a>
+			<span class="booking btn btn--small btn--grey btn--full">Book an appointment</span>
+			<a href="tel:<?php echo $options['wpn_options_phone']; ?>" class="btn btn--small btn--blue btn--full">Call us: <?php echo $options['wpn_options_phone']; ?></a>
 		</div>
 
 	</div>

@@ -1,7 +1,7 @@
 label {
   display: block;
 }
-input[type=text], input[type=email], input[type=url] {
+input[type=tel], input[type=text], input[type=email], input[type=url], select {
   padding: 10px;
 }
 input[type=submit] {
@@ -12,5 +12,58 @@ input[type=submit] {
 .comments__area {
   .form-submit {
     margin-top: 20px;
+  }
+}
+
+
+.nf-form-title {
+  h3 {
+    color: $brandBlue;
+  }
+}
+.nf-form-fields-required {
+  color: $dark-grey;
+  font-family: $font-sans;
+  padding-bottom: 10px;
+  text-align: left;
+  font-style: italic;
+}
+.nf-after-form-content, .nf-form-content  {
+  @include clearfix;
+}
+.nf-field-element {
+  input[type=button] {
+    @include link-btn($brandBlue, 40px, 'false');
+  }
+}
+.nf-response-msg {
+  font-family: $font-sans;
+  color: $dark-grey;
+}
+nf-field {
+  @include span-columns(12);
+  vertical-align: top;
+
+  label {
+    font-family: $font-sans;
+    color: $dark-grey;
+  }
+
+  &:last-child {
+    width: 100%;
+  }
+}
+
+@include media($desktop) {
+  nf-field {
+    @include span-columns(6);
+    @include omega(2n);
+
+    &:last-child {
+      .nf-field-element {
+        text-align: right;
+      }
+    }
+
   }
 }

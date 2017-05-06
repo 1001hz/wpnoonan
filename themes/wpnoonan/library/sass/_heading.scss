@@ -4,7 +4,7 @@
 
   &__logo-wrapper {
     display: inline-block;
-    width: 200px;
+    width: 180px;
     img {
       width: 100%;
     }
@@ -33,6 +33,8 @@
   .heading {
     height: 140px;
     padding-top: 20px;
+    position: relative;
+    z-index: 200;
 
     &__logo-wrapper {
       display: block;
@@ -55,35 +57,39 @@
       right: 20px;
       width: 240px;
 
-      a {
-        display: block;
-        border-radius: 20px;
-        width: 100%;
-        color: $white;
-        text-transform: uppercase;
-        font-size: $base-font-size;
-        padding: 5px 0;
-        text-align: center;
-        text-decoration: none;
-        font-weight: bold;
-        font-family: sans-serif;
-
-        &:nth-child(1) {
-          background-color: $dark-grey;
-          margin-bottom: 5px;
-          &:hover {
-            background-color: darken($dark-grey, 10%);
-            transition: background-color $base-duration $base-easing;
-          }
-        }
-        &:nth-child(2) {
-          background-color: $brandBlue;
-          &:hover {
-            background-color: darken($brandBlue, 10%);
-            transition: background-color $base-duration $base-easing;
-          }
-        }
+      .btn {
+        margin-bottom: 8px;
       }
+
+      //a {
+      //  display: block;
+      //  border-radius: 20px;
+      //  width: 100%;
+      //  color: $white;
+      //  text-transform: uppercase;
+      //  font-size: $base-font-size;
+      //  padding: 5px 0;
+      //  text-align: center;
+      //  text-decoration: none;
+      //  font-weight: bold;
+      //  font-family: sans-serif;
+      //
+      //  &:nth-child(1) {
+      //    background-color: $dark-grey;
+      //    margin-bottom: 5px;
+      //    &:hover {
+      //      background-color: darken($dark-grey, 10%);
+      //      transition: background-color $base-duration $base-easing;
+      //    }
+      //  }
+      //  &:nth-child(2) {
+      //    background-color: $brandBlue;
+      //    &:hover {
+      //      background-color: darken($brandBlue, 10%);
+      //      transition: background-color $base-duration $base-easing;
+      //    }
+      //  }
+      //}
     }
   }
 }

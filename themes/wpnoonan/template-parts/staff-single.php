@@ -55,13 +55,13 @@
 	</div>
 
 	<div class="content-full-wrapper content-full-wrapper--brand">
-	<div class="content content--bump-bottom content--thin">
+		<div class="content content--bump-bottom content--thin">
 
-		<p class="staff__cta wow fadeInUp"><?php echo $staffContactMessage; ?></p>
-		<div class="content--center wow fadeInUp">
-			<a href="#" class="staff__book-btn">Book with <?php echo $staffFirstName; ?></a>
+			<p class="staff__cta wow fadeInUp"><?php echo $staffContactMessage; ?></p>
+			<div class="content--center wow fadeInUp">
+				<span class="btn btn--large btn--on-blue staff__book-with" data-staff-id="<?php echo $staffId; ?>">Book with <?php echo $staffFirstName; ?></span>
+			</div>
 		</div>
-	</div>
 	</div>
 
 
@@ -77,7 +77,7 @@
 		$blogAuthorID = $arrBlogMeta['wpn_blog_author'][0];
 
 		if((int)$staffId === (int)$blogAuthorID) {
-			array_push($usersBlogs, array("title" => $post->post_title, "date" => $post->post_date));
+			array_push($usersBlogs, array("id" => $post->ID, "title" => $post->post_title, "date" => $post->post_date));
 		}
 		endforeach;
 
@@ -97,7 +97,7 @@
 	?>
 
 		<div class="blog__related-cell">
-			<a href="<?php echo get_the_permalink($post->ID);?> ">
+			<a href="<?php echo get_the_permalink($blog["id"]);?> ">
 				<div class="wow fadeIn">
 					<h3 class="content__title content__title--small"><?php echo $blog["title"] ?></h3>
 					<div class="content__post-date">Published <?php echo date_format($dat, 'd-m-Y') ?></div>

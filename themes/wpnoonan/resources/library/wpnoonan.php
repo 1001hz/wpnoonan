@@ -52,6 +52,7 @@ function wpnoonan_resources() {
 	wp_register_style( 'animate-css', get_stylesheet_directory_uri() . '/css/animate.min.css', array(), '', 'all' );
 	wp_register_style( 'bxslider-css', get_stylesheet_directory_uri() . '/css/jquery.bxslider.min.css', array(), '', 'all' );
 	wp_register_style( 'slick-css', get_stylesheet_directory_uri() . '/css/slick.css', array(), '', 'all' );
+	wp_register_style( 'font-awesome-css', get_stylesheet_directory_uri() . '/fonts/font-awesome-4.7.0/css/font-awesome.min.css', array(), '', 'all' );
 
 
 
@@ -76,6 +77,7 @@ function wpnoonan_resources() {
 	wp_enqueue_style( 'animate-css' );
 	wp_enqueue_style( 'bxslider-css' );
 	wp_enqueue_style( 'slick-css' );
+	wp_enqueue_style( 'font-awesome-css' );
 
 	wp_enqueue_script( 'jquery');
 	wp_enqueue_script( 'jquery-scrollTo');
@@ -159,3 +161,195 @@ function wpnoonan_remove_wp_ver_css_js( $src ) {
 		$src = remove_query_arg( 'ver', $src );
 	return $src;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**
+Settings page for contact
+*/
+add_action( 'admin_menu', 'wpn_add_admin_menu' );
+add_action( 'admin_init', 'wpn_settings_init' );
+
+
+function wpn_add_admin_menu(  ) {
+
+	add_options_page( 'Contact', 'Contact', 'manage_options', 'wpnoonan', 'wpn_options_page' );
+
+}
+
+
+function wpn_settings_init(  ) {
+
+	register_setting( 'pluginPage', 'wpn_settings' );
+
+	add_settings_section(
+		'wpn_pluginPage_section',
+		__( 'Contact Settings', 'wordpress' ),
+		'wpn_settings_section_callback',
+		'pluginPage'
+	);
+
+	add_settings_field(
+		'wpn_options_phone',
+		__( 'Phone', 'wordpress' ),
+		'wpn_options_phone_render',
+		'pluginPage',
+		'wpn_pluginPage_section'
+	);
+
+	add_settings_field(
+		'wpn_options_email',
+		__( 'Email', 'wordpress' ),
+		'wpn_options_email_render',
+		'pluginPage',
+		'wpn_pluginPage_section'
+	);
+
+	add_settings_field(
+		'wpn_options_address',
+		__( 'Address', 'wordpress' ),
+		'wpn_options_address_render',
+		'pluginPage',
+		'wpn_pluginPage_section'
+	);
+
+	add_settings_field(
+    		'wpn_options_maps_link',
+    		__( 'Maps link', 'wordpress' ),
+    		'wpn_options_maps_link_render',
+    		'pluginPage',
+    		'wpn_pluginPage_section'
+    	);
+
+	add_settings_field(
+		'wpn_options_maps_embed_url',
+		__( 'Maps embed url', 'wordpress' ),
+		'wpn_options_maps_embed_url_render',
+		'pluginPage',
+		'wpn_pluginPage_section'
+	);
+
+	add_settings_field(
+		'wpn_options_facebook_url',
+		__( 'Facebook URL', 'wordpress' ),
+		'wpn_options_facebook_url_render',
+		'pluginPage',
+		'wpn_pluginPage_section'
+	);
+
+	add_settings_field(
+		'wpn_options_instagram_url',
+		__( 'Instagram URL', 'wordpress' ),
+		'wpn_options_instagram_url_render',
+		'pluginPage',
+		'wpn_pluginPage_section'
+	);
+
+}
+
+
+function wpn_options_phone_render(  ) {
+
+	$options = get_option( 'wpn_settings' );
+	?>
+	<input type='text' name='wpn_settings[wpn_options_phone]' value='<?php echo $options['wpn_options_phone']; ?>'>
+	<?php
+
+}
+
+
+function wpn_options_email_render(  ) {
+
+	$options = get_option( 'wpn_settings' );
+	?>
+	<input type='text' name='wpn_settings[wpn_options_email]' value='<?php echo $options['wpn_options_email']; ?>'>
+	<?php
+
+}
+
+
+function wpn_options_address_render(  ) {
+
+	$options = get_option( 'wpn_settings' );
+	?>
+	<textarea cols='40' rows='5' name='wpn_settings[wpn_options_address]'>
+		<?php echo $options['wpn_options_address']; ?>
+ 	</textarea>
+	<?php
+
+}
+
+
+function wpn_options_maps_embed_url_render(  ) {
+
+	$options = get_option( 'wpn_settings' );
+	?>
+	<input type='text' name='wpn_settings[wpn_options_maps_url]' value='<?php echo $options['wpn_options_maps_url']; ?>'>
+	<?php
+
+}
+
+function wpn_options_maps_link_render(  ) {
+
+	$options = get_option( 'wpn_settings' );
+	?>
+	<input type='text' name='wpn_settings[wpn_options_maps_link]' value='<?php echo $options['wpn_options_maps_link']; ?>'>
+	<?php
+
+}
+
+
+function wpn_options_facebook_url_render(  ) {
+
+	$options = get_option( 'wpn_settings' );
+	?>
+	<input type='text' name='wpn_settings[wpn_options_facebook_url]' value='<?php echo $options['wpn_options_facebook_url']; ?>'>
+	<?php
+
+}
+
+function wpn_options_instagram_url_render(  ) {
+
+	$options = get_option( 'wpn_settings' );
+	?>
+	<input type='text' name='wpn_settings[wpn_options_instagram_url]' value='<?php echo $options['wpn_options_instagram_url']; ?>'>
+	<?php
+
+}
+
+function wpn_settings_section_callback(  ) {
+
+	echo __( 'Manage the contact details here', 'wordpress' );
+
+}
+
+
+function wpn_options_page(  ) {
+
+	?>
+	<form action='options.php' method='post'>
+
+		<h2>wpnoonan</h2>
+
+		<?php
+		settings_fields( 'pluginPage' );
+		do_settings_sections( 'pluginPage' );
+		submit_button();
+		?>
+
+	</form>
+	<?php
+
+}
+

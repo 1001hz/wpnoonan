@@ -4,6 +4,20 @@ html, body {
   height: 100%;
 }
 
+body {
+  background-color: $white;
+
+  &.modal-open {
+    overflow: hidden;
+
+    .heading {
+      z-index: 0;
+    }
+  }
+
+
+}
+
 .container {
   min-height:100%;
   position:relative;
@@ -12,6 +26,10 @@ html, body {
 .content-full-wrapper {
 
   padding: 20px 0;
+
+  &--center {
+    text-align: center;
+  }
 
   &--grey {
     background-color: $light-grey;
@@ -45,9 +63,9 @@ html, body {
     padding-top: 60px;
     padding-bottom: 60px;
 
-    &:first-child {
-      margin-top: 20px;
-    }
+    //&:first-child {
+    //  margin-top: 20px;
+    //}
 
     //&:nth-child(2n) {
     //  background-color: $medium-grey;
@@ -62,6 +80,14 @@ html, body {
   &__copy {
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+
+  &__left {
+    @include span-columns(12);
+  }
+
+  &__right {
+    @include span-columns(12);
   }
 
   &__title {
@@ -103,7 +129,7 @@ html, body {
   }
 
   &--bump-top {
-    margin-top: 40px;
+    margin-top: 20px;
   }
 }
 
@@ -119,7 +145,19 @@ html, body {
 }
 
 @include media($desktop) {
+  #main {
+    position: relative;
+    z-index: 199;
+  }
+  .content {
+    &__left {
+      @include span-columns(8);
+    }
 
+    &__right {
+      @include span-columns(4);
+    }
+  }
 }
 
 @include media($largedesktop) {

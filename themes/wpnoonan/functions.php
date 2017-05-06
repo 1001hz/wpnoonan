@@ -15,35 +15,7 @@ function theme_go() {
 add_action( 'after_setup_theme', 'theme_go' );
 
 
-add_filter( 'rwmb_meta_boxes', 'wpn_homepage_mb' );
 
-function wpn_homepage_mb($meta_boxes) {
-
-	$meta_boxes[] = array(
-		'id'  => 'wpn_homepage_mb',
-        'title'  => 'Homepage',
-		'post_types' => 'page',
-		'priority'   => 'low',
-		'default_hidden'  => true,
-		'fields' => array(
-			array(
-				'name' => 'About Title',
-				'id'    => 'wpn_hp_about_title',
-				'type'  => 'text',
-				'size' => 80
-			),
-			array(
-				'name'             => __( 'Image Upload', 'image' ),
-				'id'               => "wpn_hp_about_image",
-				'sort_clone'	   => true,
-				'type'             => 'plupload_image',
-				'max_file_uploads' => 1
-			),
-		)
-	);
-
-    return $meta_boxes;
-}
 
 
 
@@ -83,6 +55,67 @@ function wpn_blog_mb($meta_boxes) {
 				'type'  => 'select',
 				'options' => $cpt
 			)
+		)
+	);
+
+    return $meta_boxes;
+}
+
+
+
+
+
+
+
+add_filter( 'rwmb_meta_boxes', 'wpn_homepage_mb' );
+
+function wpn_homepage_mb($meta_boxes) {
+
+	$allPages = array();
+
+	$query = new WP_Query(array(
+        'post_type' => 'page',
+        'post_status' => 'publish',
+        'posts_per_page' => -1
+    ));
+
+
+    while ($query->have_posts()) {
+        $query->the_post();
+        $pageId = get_the_ID();
+        $pageTitle = get_the_title();
+        $allPages[$pageId] = $pageTitle;
+    }
+
+    wp_reset_query();
+
+	$meta_boxes[] = array(
+		'id'  => 'wpn_homepage_mb',
+        'title'  => 'Homepage',
+		'post_types' => 'page',
+		'priority'   => 'high',
+		'fields' => array(
+			array(
+				'name' => 'Show on homepage',
+				'id'    => 'wpn_homepage_show',
+				'type'  => 'checkbox'
+			),
+			array(
+				'name' => 'Homepage content',
+				'id'    => 'wpn_homepage_content',
+				'type'  => 'textarea'
+			),
+			array(
+				'name' => 'Link to',
+				'id'    => 'wpn_homepage_link_id',
+				'type'  => 'select',
+				'options' => $allPages
+			),
+			array(
+				'name' => 'Custom link title',
+				'id'    => 'wpn_homepage_custom_link_title',
+				'type'  => 'text'
+			),
 		)
 	);
 

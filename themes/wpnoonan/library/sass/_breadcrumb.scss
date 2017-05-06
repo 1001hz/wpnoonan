@@ -1,0 +1,21 @@
+.breadcrumb {
+
+  font-style: italic;
+  font-size: $font-small;
+  margin-top: 20px;
+
+  &__arrow {
+    border-width: 0 1px 1px 0;
+    padding: 3px;
+    cursor: default;
+    color: $dark-blue;
+  }
+
+  &__link {
+    text-decoration: underline;
+  }
+
+  &__current {
+    padding-left: 4px;
+  }
+}

@@ -5,6 +5,10 @@
  */
 
 get_header(); ?>
+
+<?php
+    $options = get_option( 'wpn_settings' );
+?>
 <div class="hp">
 
     <section class="hp__section hp__section--carousel">
@@ -54,10 +58,10 @@ get_header(); ?>
                 <div class="hero-carousel__content">
                     <h1><?php echo $carouselTitle[0]; ?></h1>
                     <div class="hero-carousel__cta-wrapper">
-                        <a href="#" class="hero-carousel__cta">Book an appointment</a>
+                        <span class="hero-carousel__cta booking">Book an appointment</a>
                     </div>
                     <div class="hero-carousel__cta-wrapper">
-                        <a href="#" class="hero-carousel__cta hero-carousel__cta--transparent">See our services</a>
+                        <a href="/services" class="hero-carousel__cta hero-carousel__cta--transparent">See our services</a>
                     </div>
                 </div>
             </div>
@@ -66,21 +70,62 @@ get_header(); ?>
         <div class="scroll-arrow scroll-arrow--about wow bounceInUp"></div>
     </section>
 
+    <?php
+        $cpt = array();
+
+    	$query = new WP_Query(array(
+            'post_type' => 'page',
+            'post_status' => 'publish',
+            'posts_per_page' => -1
+        ));
 
 
-    <section class="hp__section about">
-        <div class="hp__inner-section content">
-            <h2>About</h2>
-            <div class="hp__content hp__content--half hp__content--pad">
-                <h3>Lorem Ipsum Dolar</h3>
-                <p class="wow fadeIn">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <p class="wow fadeInUp"><a class="hp__cta" href="/staff">Meet our team</a></p>
-            </div>
-            <div class="hp__content hp__content--half  wow fadeIn">
-                <img src="http://www.technocrazed.com/wp-content/uploads/2015/12/beautiful-wallpaper-download-13.jpg" />
-            </div>
-        </div>
-    </section>
+        while ($query->have_posts()) {
+            $query->the_post();
+            $post_id = get_the_ID();
+    		$arrMeta = get_post_custom( $post_id );
+    		$showOnHomepage = $arrMeta['wpn_homepage_show'][0];
+    		$homepageContent = $arrMeta['wpn_homepage_content'][0];
+            $image = get_the_post_thumbnail_url();
+            $linkId = $arrMeta['wpn_homepage_link_id'][0];
+            $linkCustomTitle = $arrMeta['wpn_homepage_custom_link_title'][0];
+            $relatedLinkPost = get_post($linkId);
+            $relatedLinkUrl = get_the_permalink($relatedLinkPost);
+            if($linkCustomTitle) {
+                $linkTitle = $linkCustomTitle;
+            }
+            else{
+                $linkTitle = $relatedLinkPost->post_title;
+            }
+
+
+    		if($showOnHomepage) :
+    		?>
+
+    		<section class="hp__section about">
+                <div class="hp__inner-section content">
+                    <h2><?php the_title(); ?></h2>
+                    <div class="hp__content <?php if($image) : ?>hp__content--half<?php endif; ?>">
+
+                        <p class="wow fadeIn"><?php echo $homepageContent; ?></p>
+                        <p class="wow fadeInUp"><a class="hp__cta" href="<?php echo $relatedLinkUrl; ?>"><?php echo $linkTitle; ?></a></p>
+                    </div>
+                    <?php if($image) : ?>
+                        <div class="hp__content hp__content--half wow fadeIn">
+                            <img src="<?php echo $image; ?>" />
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </section>
+
+    		<?php
+    		endif;
+        }
+
+        wp_reset_query();
+    ?>
+
+
 
     <section class="hp__section">
         <div class="hp__inner-section content services">
@@ -139,21 +184,39 @@ get_header(); ?>
     </section>
 
     <section class="hp__section">
-        <div class="hp__inner-section content contact">
+        <div class="content hp__inner-section">
             <h2>Contact</h2>
-            <div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d12613.528707585925!2d145.0217797!3d-37.781082399999995!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1492239203630" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-            </div>
+            <p class="contact__phone">
+                <i class="fa fa-phone fa-lg"></i>
+                <a href="tel:<?php echo $options['wpn_options_phone']; ?>"><?php echo $options['wpn_options_phone']; ?></a></p>
+            <p class="contact__email">
+                <i class="fa fa-at fa-lg"></i>
+                <a href="mailto:<?php echo $options['wpn_options_email']; ?>"><?php echo $options['wpn_options_email']; ?></a></p>
+            <p class="contact__address">
+                <i class="fa fa-map-marker fa-lg"></i>
+                <span>
+                    <a href="<?php echo $options['wpn_options_maps_link']; ?>">
+                        <?php echo $options['wpn_options_address']; ?>
+                    </a>
+                </span>
+            </p>
 
-            <div class="hp__content hp__content--half hp__content--pad bump-top bump-bottom">
-                <a href="#" class="btn">Book an appointment</a>
-            </div>
+        </div>
+        <div>
 
-            <div class="hp__content hp__content--half hp__content--pad">
-                <h3>Our Location</h3>
-                <p>Lorem Ipsum dolar</p>
+            <iframe src="<?php echo $options['wpn_options_maps_url']; ?>" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+        </div>
+
+        <div class="content-full-wrapper content-full-wrapper--brand content-full-wrapper--center">
+            <div class="content content--bump-top content--bump-bottom">
+                <div class="btn btn--large btn--on-blue booking">
+                    Book an appointment
+                </div>
             </div>
         </div>
+
+
     </section>
 
 </div>

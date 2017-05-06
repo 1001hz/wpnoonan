@@ -3,21 +3,12 @@
   @if $transparent == 'true' {
     background-color: transparent;
     color: $color;
-    &:hover {
-      background-color: darken($color, 10%);
-      color: $white;
-    }
   } @else {
     background-color: $color;
     color: $white;
-    &:hover {
-      background-color: darken($color, 10%);
-    }
   }
 
-  &:hover {
-    transition: all $base-duration $base-easing;
-  }
+
 
   border: solid 1px $color;
   border-radius: $size;
@@ -30,5 +21,23 @@
   letter-spacing: 1.5px;
   cursor: pointer;
   font-family: $font-sans;
+
+  @include media($desktop) {
+
+    @if $transparent == 'true' {
+      &:hover {
+        background-color: darken($color, 10%);
+        color: $white;
+      }
+    } @else {
+      &:hover {
+        background-color: darken($color, 10%);
+      }
+    }
+
+    &:hover {
+      transition: all $base-duration $base-easing;
+    }
+  }
 
 }
