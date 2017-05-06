@@ -31,7 +31,7 @@
                 // Sorry! No Web Storage support..
             }
 
-            window.location.href = "/wpnoonan/contact";
+            window.location.href = "/contact";
         });
 
         $('.booking').bind('click', function() {
@@ -42,7 +42,7 @@
                 // Sorry! No Web Storage support..
             }
 
-            window.location.href = "/wpnoonan/contact";
+            window.location.href = "/contact";
         });
 
         if($('#appointment').length) {
