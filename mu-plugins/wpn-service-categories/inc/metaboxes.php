@@ -8,16 +8,21 @@ function wpn_service_categories_mb($meta_boxes) {
 	$meta_boxes[] = array(
 		'id'  => 'wpn_service_categories_mb',
         'title'  => 'Service Categories',
-		'post_types' => 'wpn_service_categories',
+		'post_types' => 'wpn_service_cat',
 		'priority'   => 'low',
 		'fields' => array(
 			array(
-				'name' => 'Name',
-				'id'    => 'wpn_service_categories_name',
+				'name' => 'Desc',
+				'id'    => 'wpn_service_categories_desc',
 				'type'  => 'text',
 				'size' => 80
 			),
-
+			array(
+				'name'             => __( 'Image Upload', 'image' ),
+				'id'               => "wpn_service_categories_image",
+				'type'             => 'plupload_image',
+				'max_file_uploads' => 1,
+			),
 		)
 	);
 

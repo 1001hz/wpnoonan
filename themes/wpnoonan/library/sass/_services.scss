@@ -1,0 +1,81 @@
+.service {
+
+  @include clearfix();
+
+  &__panel-wrapper {
+  }
+
+  &__panel-desc {
+    opacity: 0;
+    padding: 20px;
+    color: $white;
+    font-family: $font-sans;
+    position: relative;
+    max-height: 200px;
+    overflow: hidden;
+    line-height: 1.3;
+    font-weight: bold;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &:hover {
+
+    }
+
+  }
+
+  &__panel-title {
+    text-transform: uppercase;
+    color: $dark-grey;
+    font-weight: normal;
+  }
+
+  &__panel-items {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      margin-top: 5px;
+    }
+  }
+
+  &__panel-image {
+    background-position: center;
+    background-size: cover;
+    height: 200px;
+    position: relative;
+
+    &:before {
+      content: '';
+      background-color: $dark-blue;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      opacity: 0.5;
+      display: none;
+    }
+
+    &:hover {
+      &:before {
+        display: block;
+      }
+
+      .service__panel-desc {
+        opacity: 1;
+        transition: opacity $base-duration $base-easing;
+      }
+    }
+  }
+}
+@include media($desktop) {
+  .service {
+
+    &__panel-wrapper {
+      @include span-columns(4);
+    }
+  }
+}

@@ -33,7 +33,7 @@
 @include media($desktop) {
   .heading {
     @include clearfix();
-    height: 100px;
+    height: 150px;
     z-index: 200;
 
     &__logo-wrapper {
