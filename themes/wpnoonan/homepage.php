@@ -129,47 +129,80 @@ get_header(); ?>
     ?>
 
 
+<?php
+        $args = array('post_type' => 'wpn_service_cat', 'post_status' => 'publish', 'posts_per_page' => 5, 'orderby' => 'menu_order');
+		$all_service_categories = get_posts($args);
+
+		$args = array('post_type' => 'wpn_services', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'menu_order');
+        $all_services = get_posts($args);
+    ?>
 
     <section class="hp__section">
         <div class="hp__inner-section hp__inner-section--mosaic  services">
             <h2>Our Services</h2>
             <ul class="hp-services">
-                <li class="hp-services__item active">
-                    <h4>Physiotherapy</h4>
-                </li><li class="hp-services__item">
-                <h4>Women's Health</h4>
-                                </li><li class="hp-services__item">
-                                <h4>Sports Injuries</h4>
-                </li><li class="hp-services__item">
-                <h4>Pilates</h4>
-                </li><li class="hp-services__item">
-                <h4>Masage</h4>
-                </li>
+            <?php
+                $index = 0;
+                foreach($all_service_categories as $category) :
+                        $arrCatMeta = get_post_custom( $category->ID );
+                			$categoryImg = wp_get_attachment_url($arrCatMeta['wpn_service_categories_image'][0]);
+                			$categoryDesc = $arrCatMeta['wpn_service_categories_desc'][0];
+                			$class = "";
+                			if($index === 0) {
+                			    $class = "active";
+                			}
+                			$index++;
+                			?><li class="hp-services__item <?php echo $class; ?>" data-tab-for="tab-panel-<?php echo $category->ID; ?>">
+                			<span class="before" style="background-image: url(<?php echo $categoryImg; ?>)"></span>
+                    <h4><?php echo $category->post_title; ?></h4>
+                </li><?php endforeach; ?>
             </ul>
 
         </div>
     </section>
 
+
+
     <section class="hp__section">
         <div class="hp__inner-section content services">
-            <div class="hp-services__panel-wrapper">
-                            <div class="hp-services__panel">
-                                <div>
-                                    <h5>Physiotherapy</h5>
-                                     <ul>
-                                        <li class="fadeIn wow">Physiotherapy</li>
-                                        <li class="fadeIn wow">Physiotherapy</li>
-                                        <li class="fadeIn wow">Physiotherapy</li>
-                                        <li class="fadeIn wow">Physiotherapy</li>
-                                        <li class="fadeIn wow">Physiotherapy</li>
-                                        <li class="fadeIn wow">Physiotherapy</li>
-                                     </ul>
-                                     <div>
-                                        <span class="btn btn--large booking">Book an appointment</span>
-                                     </div>
-                                </div>
-                            </div>
-                        </div>
+            <?php
+            $index = 0;
+            foreach($all_service_categories as $category) :
+                $class = "";
+                if($index === 0) {
+                    $class = "active";
+                }
+                $index++;
+            ?>
+            <div class="hp-services__panel-wrapper <?php echo $class; ?>" id="tab-panel-<?php echo $category->ID; ?>">
+                <div class="hp-services__panel">
+                    <div>
+                        <h5><?php echo $category->post_title; ?></h5>
+                         <ul>
+                         <?php
+                         foreach($all_services as $post):
+
+                            $arrServiceMeta = get_post_custom( $post->ID );
+                            $serviceName = $arrServiceMeta['wpn_services_name'][0];
+                            $serviceCategory = $arrServiceMeta['wpn_services_category'][0];
+
+                            if((int)$category->ID === (int)$serviceCategory) :
+                         ?>
+                            <li><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $serviceName; ?></a></li>
+                         <?php
+                            endif;
+                          endforeach;
+                        ?>
+                         </ul>
+                         <div>
+                            <span class="btn btn--large booking">Book an appointment</span>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            <?php
+            endforeach;
+            ?>
         </div>
     </div>
 
@@ -183,7 +216,9 @@ get_header(); ?>
 
                 $query = new WP_Query(array(
                     'post_type' => 'wpn_staff',
-                    'post_status' => 'publish'
+                    'post_status' => 'publish',
+                    'orderby' => 'menu_order',
+                    'posts_per_page' => -1,
                 ));
 
                 while ($query->have_posts()) {
@@ -226,21 +261,14 @@ get_header(); ?>
     <section class="hp__section hp__section--gradient">
         <div class="content hp__inner-section content--no-pad">
         <a href="<?php echo $options['wpn_options_maps_link']; ?>">
-                    <p class="hp-contact hp-contact__address">
-                        <i class="fa fa-map-marker fa-lg zoomIn wow"></i>
-                        <span class="fadeInUp wow">
+        <p class="hp-contact hp-contact__address">
+            <i class="fa fa-map-marker fa-lg zoomIn wow"></i>
+            <span class="fadeInUp wow">
+                    <?php echo $options['wpn_options_address']; ?>
+            </span>
+        </p>
+        </a>
 
-                                <?php echo $options['wpn_options_address']; ?>
-
-                        </span>
-                    </p>
-                    </a>
-        <a href="tel:<?php echo $options['wpn_options_phone']; ?>">
-            <p class="hp-contact hp-contact__phone">
-                <i class="fa fa-phone fa-lg zoomIn wow"></i>
-                <span class="fadeInUp wow"><?php echo $options['wpn_options_phone']; ?>
-                </span></p>
-            </a>
             <a href="mailto:<?php echo $options['wpn_options_email']; ?>">
             <p class="hp-contact hp-contact__email">
                 <i class="fa fa-at fa-lg zoomIn wow"></i>
@@ -248,7 +276,25 @@ get_header(); ?>
                 <?php echo $options['wpn_options_email']; ?>
                 </span></p>
             </a>
+            </div>
+</section>
+<section class="hp__section hp__section--r-gradient">
+<div class="content hp__inner-section content--no-pad">
 
+<a href="tel:<?php echo $options['wpn_options_phone']; ?>">
+            <p class="hp-contact hp-contact__phone">
+                <i class="fa fa-phone fa-lg zoomIn wow"></i>
+                <span class="fadeInUp wow"><?php echo $options['wpn_options_phone']; ?>
+                </span></p>
+            </a>
+
+
+        <p class="hp-contact hp-contact__fax">
+            <i class="fa fa-fax fa-lg zoomIn wow"></i>
+            <span class="fadeInUp wow">
+                    <?php echo $options['wpn_options_fax']; ?>
+            </span>
+        </p>
 
         </div>
 

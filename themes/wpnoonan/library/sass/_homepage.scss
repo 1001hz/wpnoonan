@@ -107,7 +107,7 @@
   color: $white;
   padding: 50px;
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   font-family: $font-sans;
 
   a {
@@ -125,14 +125,16 @@
   }
 
   &__phone {
-    background-color: $medium-blue;
+    background-color: $light-blue;
   }
 
   &__email {
     background-color: $dark-blue;
   }
 
-
+  &__fax {
+    background-color: $dark-blue;
+  }
 }
 
 .hero-carousel {
@@ -198,6 +200,15 @@
   list-style: none;
   margin: 0;
   padding: 0;
+
+  &__panel-wrapper {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+
   &__item {
     min-height: 250px;
     background-color: $light-grey;
@@ -242,14 +253,14 @@
       &:after {
         //background: none;
       }
-      &:before {
+      .before {
         opacity: 0.2;
         transform: scale(1.1);
         transition: transform 2s $base-easing,opacity $base-duration $base-easing;
       }
     }
 
-    &:before {
+    .before {
       transition: transform $base-duration $base-easing;
       content: '';
       position: absolute;
@@ -272,41 +283,7 @@
     //  background: linear-gradient(to left, #000, transparent);
     //}
 
-    &:nth-child(1) {
-      &:before{
-        background-image: url(http://localhost/wpnoonan/wp-content/uploads/2017/03/DEC_4971.jpg);
-      }
-      &:after {
-        //background: linear-gradient(to right, #000, transparent);
-      }
-    }
 
-    &:nth-child(2) {
-      &:before{
-        background-image: url(http://localhost/wpnoonan/wp-content/uploads/2017/03/Finished-Art_Facebook-Cover-Photo_UPLOAD-ME-TO-FACEBOOK.png);
-      }
-    }
-
-    &:nth-child(3) {
-      &:before{
-        background-image: url(http://localhost/wpnoonan/wp-content/uploads/2017/03/DEC_4971.jpg);
-      }
-      &:after {
-        //background: linear-gradient(to right, #000, transparent);
-      }
-    }
-
-    &:nth-child(4) {
-      &:before{
-        background-image: url(http://localhost/wpnoonan/wp-content/uploads/2017/03/DEC_4971.jpg);
-      }
-    }
-
-    &:nth-child(5) {
-      &:before{
-        background-image: url(http://localhost/wpnoonan/wp-content/uploads/2017/03/DEC_4971.jpg);
-      }
-    }
   }
 
   &__panel {
@@ -329,6 +306,13 @@
         text-transform: uppercase;
         display: inline-block;
         width: 49%;
+
+        a {
+          color: $dark-grey;
+          &:hover {
+            color: $dark-blue;
+          }
+        }
 
         &:before {
           content: '\f00c';
@@ -360,6 +344,9 @@
         background: linear-gradient(to right, $light-blue 50%, $dark-blue 50%);
       }
 
+      &--r-gradient {
+        background: linear-gradient(to left, $light-blue 50%, $dark-blue 50%);
+      }
 
       .scroll-arrow {
         display: block;
@@ -415,9 +402,25 @@
   }
 
   .hp-contact {
-    @include span-columns(4);
+    @include span-columns(6);
+
     min-height: 210px;
     padding: 50px 10px;
+
+    &__phone {
+      background-color: $dark-blue;
+    }
+
+    &__fax {
+      background-color: $light-blue;
+    }
+
+    &__address {
+      span {
+        width: 250px;
+        display: inline-block;
+      }
+    }
 
     &:hover {
       .fa {

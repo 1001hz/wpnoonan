@@ -217,12 +217,36 @@ function wpn_settings_init(  ) {
 	);
 
 	add_settings_field(
+		'wpn_options_fax',
+		__( 'Fax', 'wordpress' ),
+		'wpn_options_fax_render',
+		'pluginPage',
+		'wpn_pluginPage_section'
+	);
+
+	add_settings_field(
 		'wpn_options_address',
 		__( 'Address', 'wordpress' ),
 		'wpn_options_address_render',
 		'pluginPage',
 		'wpn_pluginPage_section'
 	);
+
+	add_settings_field(
+		'wpn_options_hours',
+		__( 'Clinic Hours', 'wordpress' ),
+		'wpn_options_hours_render',
+		'pluginPage',
+		'wpn_pluginPage_section'
+	);
+
+	add_settings_field(
+    		'wpn_options_directions',
+    		__( 'Directions', 'wordpress' ),
+    		'wpn_options_directions_render',
+    		'pluginPage',
+    		'wpn_pluginPage_section'
+    	);
 
 	add_settings_field(
     		'wpn_options_maps_link',
@@ -278,6 +302,15 @@ function wpn_options_email_render(  ) {
 
 }
 
+function wpn_options_fax_render(  ) {
+
+	$options = get_option( 'wpn_settings' );
+	?>
+	<input type='text' name='wpn_settings[wpn_options_fax]' value='<?php echo $options['wpn_options_fax']; ?>'>
+	<?php
+
+}
+
 
 function wpn_options_address_render(  ) {
 
@@ -285,6 +318,29 @@ function wpn_options_address_render(  ) {
 	?>
 	<textarea cols='40' rows='5' name='wpn_settings[wpn_options_address]'>
 		<?php echo $options['wpn_options_address']; ?>
+ 	</textarea>
+	<?php
+
+}
+
+
+function wpn_options_hours_render(  ) {
+
+	$options = get_option( 'wpn_settings' );
+	?>
+	<textarea cols='40' rows='5' name='wpn_settings[wpn_options_hours]'>
+		<?php echo $options['wpn_options_hours']; ?>
+ 	</textarea>
+	<?php
+
+}
+
+function wpn_options_directions_render(  ) {
+
+	$options = get_option( 'wpn_settings' );
+	?>
+	<textarea cols='40' rows='5' name='wpn_settings[wpn_options_directions]'>
+		<?php echo $options['wpn_options_directions']; ?>
  	</textarea>
 	<?php
 
@@ -353,3 +409,13 @@ function wpn_options_page(  ) {
 
 }
 
+
+
+//remove image width and height attrs
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+   return $html;
+}

@@ -14,9 +14,13 @@ $options = get_option( 'wpn_settings' );
 
 	<div class="content">
 		<h1>Contact</h1>
+
 		<p class="contact__phone">
 			<i class="fa fa-phone fa-lg"></i>
 			<a href="tel:<?php echo $options['wpn_options_phone']; ?>"><?php echo $options['wpn_options_phone']; ?></a></p>
+		<p class="contact__fax">
+			<i class="fa fa-fax fa-lg"></i>
+			<span> <?php echo $options['wpn_options_fax']; ?></span></p>
 		<p class="contact__email">
 			<i class="fa fa-at fa-lg"></i>
 			<a href="mailto:<?php echo $options['wpn_options_email']; ?>"><?php echo $options['wpn_options_email']; ?></a></p>
@@ -30,6 +34,31 @@ $options = get_option( 'wpn_settings' );
 		</p>
 
 	</div>
+
+	<?php
+	if('' !== $options['wpn_options_directions']):
+	?>
+	<div class="content">
+		<h2>Directions</h2>
+		<p class="contact_directions">
+    		<?php echo $options['wpn_options_directions']; ?>
+		</p>
+	</div>
+	<?php endif; ?>
+
+
+	<?php
+
+	if( '' !== $options['wpn_options_hours'] ):
+	?>
+	<div class="content">
+		<h2>Clinic Hours</h2>
+		<p class="contact_hours">
+    		<?php echo $options['wpn_options_hours']; ?>
+		</p>
+	</div>
+	<?php endif; ?>
+
 
 
 	<div class="content">

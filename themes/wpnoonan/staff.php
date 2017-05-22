@@ -24,7 +24,7 @@ get_header(); ?>
     <div class="content content--bump-top content--bump-bottom">
 
         <?php
-        $args = array('post_type' => 'wpn_staff', 'post_status' => 'publish', 'posts_per_page' => -1);
+        $args = array('post_type' => 'wpn_staff', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'menu_order');
         $all_staff = get_posts($args);
 
 

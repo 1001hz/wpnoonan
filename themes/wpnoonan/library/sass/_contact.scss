@@ -10,6 +10,11 @@
     font-family: $font-sans;
   }
 
+  &__fax {
+    padding-right: 5px;
+    font-family: $font-sans;
+  }
+
   &__address {
     padding-right: 5px;
     position: relative;
@@ -35,15 +40,21 @@
 @include media($desktop) {
   .contact {
     &__email {
-      @include span-columns(4);
+      @include span-columns(6);
+    }
+
+    &__fax {
+      @include span-columns(6);
+      @include omega();
     }
 
     &__phone {
-      @include span-columns(4);
+      @include span-columns(6);
     }
 
     &__address {
-      @include span-columns(4);
+      @include span-columns(6);
+      @include omega();
     }
   }
 }
