@@ -65,7 +65,7 @@ function wpnoonan_resources() {
 	//wp_register_script('slick-js', 'https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js', false, '1.6.0', true);
 
 
-    wp_register_script( 'wpnoonan-js', get_stylesheet_directory_uri() . '/js/app.js', false, '', true );
+    wp_register_script( 'wpnoonan-js', get_stylesheet_directory_uri() . '/js/app.js?v0.2', false, '', true );
 
     wp_register_script( 'jquery', get_stylesheet_directory_uri() . '/js/jquery.min.js', false, '', true );
     wp_register_script( 'wow-js', get_stylesheet_directory_uri() . '/js/wow.min.js', array('jquery'), '', true );
