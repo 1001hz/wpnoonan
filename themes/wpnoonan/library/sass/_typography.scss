@@ -1,10 +1,12 @@
-//@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
 
-$font-sans: 'Roboto', sans-serif;
+$font-sans: 'Abel', sans-serif;
+$font-copy: 'Poppins', sans-serif;
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-sans;
-  letter-spacing: -0.5px;
+  letter-spacing: 1.1px;
 }
 
 h1 {
@@ -21,15 +23,18 @@ p {
   line-height: 26px;
   font-size: 16px;
   color: $dark-grey;
+  font-family: $font-copy;
 }
 
 a {
   text-decoration: none;
   color: $link-color;
+  font-family: $font-copy;
 }
 
 ul, ol {
   line-height: 26px;
   font-size: 16px;
   color: $dark-grey;
+  font-family: $font-copy;
 }

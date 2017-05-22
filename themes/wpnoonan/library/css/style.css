@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Abel");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
 html {
   box-sizing: border-box; }
 
@@ -5,8 +7,8 @@ html {
   box-sizing: inherit; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Roboto", sans-serif;
-  letter-spacing: -0.5px; }
+  font-family: "Abel", sans-serif;
+  letter-spacing: 1.1px; }
 
 h1 {
   font-size: 28px;
@@ -19,16 +21,19 @@ h2 {
 p {
   line-height: 26px;
   font-size: 16px;
-  color: #4d4d4f; }
+  color: #4d4d4f;
+  font-family: "Poppins", sans-serif; }
 
 a {
   text-decoration: none;
-  color: #14b0e6; }
+  color: #14b0e6;
+  font-family: "Poppins", sans-serif; }
 
 ul, ol {
   line-height: 26px;
   font-size: 16px;
-  color: #4d4d4f; }
+  color: #4d4d4f;
+  font-family: "Poppins", sans-serif; }
 
 .hp__content h3 {
   margin-top: 0;
@@ -50,7 +55,7 @@ ul, ol {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   cursor: pointer;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
   @media screen and (min-width: 960px) {
     .hp__cta:hover {
       background-color: #0ba7d5;
@@ -120,7 +125,7 @@ ul, ol {
   padding: 50px;
   text-align: center;
   font-size: 18px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
   .hp-contact a {
     color: #fff; }
   .hp-contact .fa {
@@ -164,7 +169,7 @@ ul, ol {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     cursor: pointer;
-    font-family: "Roboto", sans-serif;
+    font-family: "Abel", sans-serif;
     font-size: 13px;
     margin-top: 20px; }
     @media screen and (min-width: 960px) {
@@ -185,7 +190,7 @@ ul, ol {
       text-transform: uppercase;
       letter-spacing: 1.5px;
       cursor: pointer;
-      font-family: "Roboto", sans-serif; }
+      font-family: "Abel", sans-serif; }
       @media screen and (min-width: 960px) {
         .hero-carousel__cta--transparent:hover {
           background-color: #0ba7d5;
@@ -276,7 +281,7 @@ ul, ol {
     padding: 0;
     list-style: none; }
     .hp-services__panel ul li {
-      font-family: "Roboto", sans-serif;
+      font-family: "Abel", sans-serif;
       color: #4d4d4f;
       font-size: 18px;
       margin: 8px 0;
@@ -363,6 +368,9 @@ html, body {
   padding: 0;
   margin: 0;
   height: 100%; }
+
+* {
+  -webkit-font-smoothing: antialiased; }
 
 body {
   background-color: #fff; }
@@ -554,7 +562,9 @@ body {
         max-width: 240px;
         margin-top: 13px;
         margin-right: 10px;
-        display: inline-block; } }
+        display: inline-block;
+        text-align: center;
+        font-weight: bold; } }
 
 .nav {
   opacity: 0;
@@ -581,10 +591,10 @@ body {
       .nav ul li a {
         color: #fff;
         font-size: 40px;
-        font-family: "Roboto", sans-serif;
+        font-family: "Abel", sans-serif;
         text-decoration: none;
         line-height: 50px;
-        letter-spacing: -2.5px; }
+        font-weight: bold; }
       .nav ul li ul {
         display: none; }
   .nav.open {
@@ -673,7 +683,7 @@ body {
   width: 100%;
   color: #fff;
   font-weight: bold;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
   .menu__sidebar-heading .arrow {
     padding: 5px;
     float: right;
@@ -723,7 +733,7 @@ body {
     .menu__sidebar li.active:before {
       border-left-color: #14b0e6; }
   .menu__sidebar a {
-    font-family: "Roboto", sans-serif;
+    font-family: "Abel", sans-serif;
     position: relative;
     padding: 10px 20px;
     text-decoration: none;
@@ -849,7 +859,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   cursor: pointer;
-  font-family: "Roboto", sans-serif;
+  font-family: "Abel", sans-serif;
   text-align: center;
   font-size: 12px; }
   @media screen and (min-width: 960px) {
@@ -860,7 +870,7 @@ body {
 
 .staff__cta {
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: "Abel", sans-serif;
   padding-bottom: 10px; }
 
 .staff__name {
@@ -869,7 +879,7 @@ body {
   text-transform: uppercase;
   padding: 12px 0;
   font-size: 20px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
   .staff__name--homepage {
     font-size: 14px;
     text-align: center;
@@ -881,7 +891,7 @@ body {
   text-transform: uppercase;
   padding: 0 0 12px 0;
   font-size: 20px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
   .staff__qualification--homepage {
     font-size: 12px;
     text-align: center;
@@ -925,7 +935,7 @@ body {
   color: #4d4d4f;
   padding-top: 10px;
   font-weight: bold;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
   .staff__card-name--medium {
     margin-left: 170px; }
   .staff__card-name--large {
@@ -936,7 +946,7 @@ body {
   color: #4d4d4f;
   padding-top: 3px;
   font-weight: normal;
-  font-family: "Roboto", sans-serif;
+  font-family: "Abel", sans-serif;
   font-style: italic;
   font-size: 14px; }
   .staff__card-qualification--medium {
@@ -1022,7 +1032,7 @@ body {
 
 .footer {
   background-color: #20c3f3;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
   .footer__section {
     padding: 20px; }
     .footer__section h3 {
@@ -1091,7 +1101,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   cursor: pointer;
-  font-family: "Roboto", sans-serif;
+  font-family: "Abel", sans-serif;
   font-size: 14px; }
   @media screen and (min-width: 960px) {
     .btn:hover {
@@ -1111,7 +1121,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     cursor: pointer;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Abel", sans-serif; }
     @media screen and (min-width: 960px) {
       .btn--grey:hover {
         background-color: #343435; }
@@ -1132,7 +1142,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     cursor: pointer;
-    font-family: "Roboto", sans-serif;
+    font-family: "Abel", sans-serif;
     font-size: 14px; }
     @media screen and (min-width: 960px) {
       .btn--large:hover {
@@ -1152,7 +1162,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 1.5px;
     cursor: pointer;
-    font-family: "Roboto", sans-serif;
+    font-family: "Abel", sans-serif;
     color: #20c3f3; }
     @media screen and (min-width: 960px) {
       .btn--on-blue:hover {
@@ -1198,7 +1208,7 @@ input[type=submit] {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   cursor: pointer;
-  font-family: "Roboto", sans-serif;
+  font-family: "Abel", sans-serif;
   font-size: 12px; }
   @media screen and (min-width: 960px) {
     input[type=submit]:hover {
@@ -1214,7 +1224,7 @@ input[type=submit] {
 
 .nf-form-fields-required {
   color: #4d4d4f;
-  font-family: "Roboto", sans-serif;
+  font-family: "Abel", sans-serif;
   padding-bottom: 10px;
   text-align: left;
   font-style: italic; }
@@ -1237,7 +1247,7 @@ input[type=submit] {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   cursor: pointer;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
   @media screen and (min-width: 960px) {
     .nf-field-element input[type=button]:hover {
       background-color: #0ba7d5; }
@@ -1245,7 +1255,7 @@ input[type=submit] {
       transition: all 0.15s ease-in; } }
 
 .nf-response-msg {
-  font-family: "Roboto", sans-serif;
+  font-family: "Abel", sans-serif;
   color: #4d4d4f; }
 
 nf-field {
@@ -1257,7 +1267,7 @@ nf-field {
   nf-field:last-child {
     margin-right: 0; }
   nf-field label {
-    font-family: "Roboto", sans-serif;
+    font-family: "Abel", sans-serif;
     color: #4d4d4f; }
   nf-field:last-child {
     width: 100%; }
@@ -1371,7 +1381,7 @@ nf-field {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   cursor: pointer;
-  font-family: "Roboto", sans-serif;
+  font-family: "Abel", sans-serif;
   font-size: 12px;
   margin-bottom: 20px; }
   @media screen and (min-width: 960px) {
@@ -1424,20 +1434,20 @@ nf-field {
 
 .contact__email {
   padding-right: 5px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
 
 .contact__phone {
   padding-right: 5px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
 
 .contact__fax {
   padding-right: 5px;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
 
 .contact__address {
   padding-right: 5px;
   position: relative;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
   .contact__address span {
     margin-left: 20px;
     display: inline-block; }
@@ -1459,7 +1469,7 @@ nf-field {
   text-transform: uppercase;
   letter-spacing: 1.5px;
   cursor: pointer;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Abel", sans-serif; }
   @media screen and (min-width: 960px) {
     .contact__book-btn:hover {
       background-color: #e6e6e6;
@@ -1568,7 +1578,7 @@ nf-field {
   opacity: 0;
   padding: 20px;
   color: #fff;
-  font-family: "Roboto", sans-serif;
+  font-family: "Abel", sans-serif;
   position: relative;
   max-height: 200px;
   overflow: hidden;
