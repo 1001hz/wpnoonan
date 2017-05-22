@@ -13,6 +13,7 @@
     <?php
     $options = get_option( 'wpn_settings' );
     ?>
+
     <div id="footer" class="footer">
         <div class="footer__inner">
             <div class="footer__section">
@@ -51,6 +52,7 @@
 
     <?php wp_footer(); ?>
     </div>
+
 </div>
 
 </body>

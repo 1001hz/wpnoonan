@@ -33,24 +33,33 @@
 			</a>
 		</div>
 
+
+
+		<div class="heading__cta-wrapper">
+			<ul>
+				<li>
+					<span class="booking btn btn--small btn--grey btn--full">Book an appointment</span>
+				</li>
+				<li>
+					<a href="tel:<?php echo $options['wpn_options_phone']; ?>" class="btn btn--small btn--blue btn--full">Call us: <?php echo $options['wpn_options_phone']; ?></a>
+				</li>
+			</ul>
+		</div>
+
 		<div class="heading__menu-wrapper">
 			<div class="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			</div>
 
 			<nav class="nav">
 			<?php wp_nav_menu( array( "menu" => "main-nav" ) ); ?>
 			</nav>
 		</div>
 
-		<div class="heading__cta-wrapper">
-			<span class="booking btn btn--small btn--grey btn--full">Book an appointment</span>
-			<a href="tel:<?php echo $options['wpn_options_phone']; ?>" class="btn btn--small btn--blue btn--full">Call us: <?php echo $options['wpn_options_phone']; ?></a>
-		</div>
-
 	</div>
+
 
 	<div id="main">

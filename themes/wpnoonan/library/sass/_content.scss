@@ -131,6 +131,10 @@ body {
   &--bump-top {
     margin-top: 20px;
   }
+
+  &--no-pad {
+    padding: 0;
+  }
 }
 
 #footer {

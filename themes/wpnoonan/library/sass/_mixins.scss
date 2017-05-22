@@ -41,3 +41,37 @@
   }
 
 }
+
+
+@mixin arrow($dir, $size) {
+  border: solid $brandBlue;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 9px;
+  cursor: pointer;
+
+  @if $size == 'small' {
+    border-width: 0 1px 1px 0;
+    padding: 3px;
+  }
+
+  @if $dir == 'up' {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+  }
+
+  @if $dir == 'down' {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+  @if $dir == 'left' {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+
+  @if $dir == 'right' {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}

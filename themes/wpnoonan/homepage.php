@@ -54,6 +54,9 @@ get_header(); ?>
 
                 ?>
 
+                <div class="hero-carousel__watermark">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/WLP_Finished Art_Circle Device_CMYK-01.png" alt="logo" />
+                </div>
 
                 <div class="hero-carousel__content">
                     <h1><?php echo $carouselTitle[0]; ?></h1>
@@ -67,7 +70,7 @@ get_header(); ?>
             </div>
 
         </div>
-        <div class="scroll-arrow scroll-arrow--about wow bounceInUp"></div>
+        <!--<div class="scroll-arrow scroll-arrow--about wow bounceInUp"></div>-->
     </section>
 
     <?php
@@ -128,10 +131,47 @@ get_header(); ?>
 
 
     <section class="hp__section">
-        <div class="hp__inner-section content services">
-            <h2>Services</h2>
+        <div class="hp__inner-section hp__inner-section--mosaic  services">
+            <h2>Our Services</h2>
+            <ul class="hp-services">
+                <li class="hp-services__item active">
+                    <h4>Physiotherapy</h4>
+                </li><li class="hp-services__item">
+                <h4>Women's Health</h4>
+                                </li><li class="hp-services__item">
+                                <h4>Sports Injuries</h4>
+                </li><li class="hp-services__item">
+                <h4>Pilates</h4>
+                </li><li class="hp-services__item">
+                <h4>Masage</h4>
+                </li>
+            </ul>
+
         </div>
     </section>
+
+    <section class="hp__section">
+        <div class="hp__inner-section content services">
+            <div class="hp-services__panel-wrapper">
+                            <div class="hp-services__panel">
+                                <div>
+                                    <h5>Physiotherapy</h5>
+                                     <ul>
+                                        <li class="fadeIn wow">Physiotherapy</li>
+                                        <li class="fadeIn wow">Physiotherapy</li>
+                                        <li class="fadeIn wow">Physiotherapy</li>
+                                        <li class="fadeIn wow">Physiotherapy</li>
+                                        <li class="fadeIn wow">Physiotherapy</li>
+                                        <li class="fadeIn wow">Physiotherapy</li>
+                                     </ul>
+                                     <div>
+                                        <span class="btn btn--large booking">Book an appointment</span>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+    </div>
 
     <section class="hp__section">
         <div class="hp__inner-section content team">
@@ -183,25 +223,38 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="hp__section">
-        <div class="content hp__inner-section">
-            <h2>Contact</h2>
-            <p class="contact__phone">
-                <i class="fa fa-phone fa-lg"></i>
-                <a href="tel:<?php echo $options['wpn_options_phone']; ?>"><?php echo $options['wpn_options_phone']; ?></a></p>
-            <p class="contact__email">
-                <i class="fa fa-at fa-lg"></i>
-                <a href="mailto:<?php echo $options['wpn_options_email']; ?>"><?php echo $options['wpn_options_email']; ?></a></p>
-            <p class="contact__address">
-                <i class="fa fa-map-marker fa-lg"></i>
-                <span>
-                    <a href="<?php echo $options['wpn_options_maps_link']; ?>">
-                        <?php echo $options['wpn_options_address']; ?>
+    <section class="hp__section hp__section--gradient">
+        <div class="content hp__inner-section content--no-pad">
+        <a href="<?php echo $options['wpn_options_maps_link']; ?>">
+                    <p class="hp-contact hp-contact__address">
+                        <i class="fa fa-map-marker fa-lg zoomIn wow"></i>
+                        <span class="fadeInUp wow">
+
+                                <?php echo $options['wpn_options_address']; ?>
+
+                        </span>
+                    </p>
                     </a>
-                </span>
-            </p>
+        <a href="tel:<?php echo $options['wpn_options_phone']; ?>">
+            <p class="hp-contact hp-contact__phone">
+                <i class="fa fa-phone fa-lg zoomIn wow"></i>
+                <span class="fadeInUp wow"><?php echo $options['wpn_options_phone']; ?>
+                </span></p>
+            </a>
+            <a href="mailto:<?php echo $options['wpn_options_email']; ?>">
+            <p class="hp-contact hp-contact__email">
+                <i class="fa fa-at fa-lg zoomIn wow"></i>
+                <span class="fadeInUp wow">
+                <?php echo $options['wpn_options_email']; ?>
+                </span></p>
+            </a>
+
 
         </div>
+
+    </section>
+    <section class="hp__section">
+
         <div>
 
             <iframe src="<?php echo $options['wpn_options_maps_url']; ?>" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>

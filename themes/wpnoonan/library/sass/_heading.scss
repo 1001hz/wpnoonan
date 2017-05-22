@@ -7,6 +7,7 @@
     width: 180px;
     img {
       width: 100%;
+      vertical-align: top;
     }
   }
 
@@ -31,69 +32,44 @@
 
 @include media($desktop) {
   .heading {
-    height: 140px;
-    padding-top: 20px;
-    position: relative;
+    @include clearfix();
+    height: 100px;
     z-index: 200;
 
     &__logo-wrapper {
-      display: block;
-      height: 60px;
-      width: 200px;
-      margin: 0 auto;
+      @include span-columns(3);
+      height: 100px;
     }
 
     &__menu-wrapper {
-      float: none;
-      display: block;
-      height: 60px;
-      padding-top: 20px;
+      @include span-columns(12);
     }
 
     &__cta-wrapper {
-      display: block;
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 240px;
+      @include span-columns(9);
+      @include omega();
+      height: 100px;
+      text-align: right;
 
-      .btn {
-        margin-bottom: 8px;
+      ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
       }
 
-      //a {
-      //  display: block;
-      //  border-radius: 20px;
-      //  width: 100%;
-      //  color: $white;
-      //  text-transform: uppercase;
-      //  font-size: $base-font-size;
-      //  padding: 5px 0;
-      //  text-align: center;
-      //  text-decoration: none;
-      //  font-weight: bold;
-      //  font-family: sans-serif;
-      //
-      //  &:nth-child(1) {
-      //    background-color: $dark-grey;
-      //    margin-bottom: 5px;
-      //    &:hover {
-      //      background-color: darken($dark-grey, 10%);
-      //      transition: background-color $base-duration $base-easing;
-      //    }
-      //  }
-      //  &:nth-child(2) {
-      //    background-color: $brandBlue;
-      //    &:hover {
-      //      background-color: darken($brandBlue, 10%);
-      //      transition: background-color $base-duration $base-easing;
-      //    }
-      //  }
-      //}
+      .btn {
+        max-width: 240px;
+        margin-top: 13px;
+        margin-right: 10px;
+        display: inline-block;
+      }
+
     }
   }
 }
 
 @include media($largedesktop) {
+  .heading {
 
+  }
 }
