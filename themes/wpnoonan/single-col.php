@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-    <div class="content content--bump-bottom">
+    <div class="content content__copy content--bump-bottom">
 
         <?php
             while ( have_posts() ) : the_post();
