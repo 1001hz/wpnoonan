@@ -1,6 +1,7 @@
 .btn {
   @include link-btn($brandBlue, 28px, 'false');
   font-size: $base-font-size;
+  font-weight: bold;
 
   &--grey {
     @include link-btn($dark-grey, 28px, 'false');
