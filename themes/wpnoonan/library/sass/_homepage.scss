@@ -87,7 +87,12 @@
   }
 
   &__inner-section {
-    padding: 40px 0;
+    //padding: 40px 0;
+
+    &--content {
+      padding: 40px 0;
+    }
+
     h2 {
       margin-top: 0;
     }

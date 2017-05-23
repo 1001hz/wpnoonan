@@ -361,7 +361,7 @@
       top: 0;
       transform: translateY(0%);
       margin-top: 0;
-      z-index: 2000;
+      z-index: 202;
 
       > li {
         float: left;
@@ -394,6 +394,8 @@
           }
 
           ul {
+            box-shadow: 7px 7px 15px -9px rgba(150,150,150,1);
+            border: solid 1px #efefef;
             display: inline-block;
             position: absolute;
             left: 0;
@@ -425,5 +427,11 @@
       }
     }
 
+  }
+}
+
+.modal-open {
+  #menu-main-nav {
+    z-index: 199;
   }
 }

@@ -6,25 +6,31 @@
     margin-bottom: 40px;
     background-color: $light-grey;
   }
+  //
+  //&__panel-desc {
+  //  opacity: 0;
+  //  padding: 20px;
+  //  color: $white;
+  //  font-family: $font-sans;
+  //  position: relative;
+  //  max-height: 200px;
+  //  overflow: hidden;
+  //  line-height: 1.3;
+  //  text-align: center;
+  //  top: 50%;
+  //  transform: translateY(-50%);
+  //
+  //  &:hover {
+  //
+  //  }
+  //
+  //}
 
-  &__panel-desc {
-    opacity: 0;
-    padding: 20px;
-    color: $white;
-    font-family: $font-sans;
-    position: relative;
-    max-height: 200px;
-    overflow: hidden;
-    line-height: 1.3;
+  &__panel-content {
     text-align: center;
-    top: 50%;
-    transform: translateY(-50%);
-
-    &:hover {
-
-    }
-
   }
+
+
 
   &__panel-title {
     text-transform: uppercase;
@@ -37,7 +43,7 @@
   &__panel-items {
     margin: 0;
     list-style: none;
-    padding: 0 20px 20px 20px;
+    padding: 0 0 20px 0;
     li {
       margin-top: 5px;
     }
@@ -49,36 +55,54 @@
     height: 200px;
     position: relative;
 
-    &:before {
-      content: '';
-      background-color: $dark-blue;
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      opacity: 0.5;
-      display: none;
-    }
-
-    &:hover {
-      &:before {
-        display: block;
-      }
-
-      .service__panel-desc {
-        opacity: 1;
-        transition: opacity $base-duration $base-easing;
-      }
-    }
+    //&:before {
+    //  content: '';
+    //  background-color: $dark-blue;
+    //  position: absolute;
+    //  left: 0;
+    //  right: 0;
+    //  top: 0;
+    //  bottom: 0;
+    //  opacity: 0.5;
+    //  display: none;
+    //}
+    //
+    //&:hover {
+    //  &:before {
+    //    display: block;
+    //  }
+    //
+    //  .service__panel-desc {
+    //    opacity: 1;
+    //    transition: opacity $base-duration $base-easing;
+    //  }
+    //}
   }
 }
 @include media($desktop) {
   .service {
 
     &__panel-wrapper {
+      @include clearfix();
+      background-color: $white;
+    }
+
+    &__panel-image {
       @include span-columns(4);
-      @include omega(3);
+    }
+
+    &__panel-content {
+      @include span-columns(8);
+    }
+
+    &__panel-title {
+      text-align: left;
+      font-size: 24px;
+      margin-top: 0;
+    }
+
+    &__panel-content {
+      text-align: left;
     }
   }
 }

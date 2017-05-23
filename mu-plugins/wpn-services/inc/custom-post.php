@@ -24,7 +24,9 @@ function wpn_services() {
         'query_var' => true,
         'capability_type' => 'post',
         'hierarchical' => true,
-        'rewrite' => true,
+        'rewrite' => array(
+                        'slug' => 'our-services'
+                    ),
         'menu_position' => 4,
         'exclude_from_search' => true,
         'menu_icon' => 'dashicons-admin-links',

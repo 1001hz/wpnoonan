@@ -138,7 +138,7 @@ get_header(); ?>
     ?>
 
     <section class="hp__section">
-        <div class="hp__inner-section hp__inner-section--mosaic  services">
+        <div class="hp__inner-section content hp__inner-section--mosaic  services">
             <h2>Our Services</h2>
             <ul class="hp-services">
             <?php
@@ -308,7 +308,7 @@ get_header(); ?>
         </div>
 
         <div class="content-full-wrapper content-full-wrapper--brand content-full-wrapper--center">
-            <div class="content content--bump-top content--bump-bottom">
+            <div class=" content--bump-top content--bump-bottom">
                 <div class="btn btn--large btn--on-blue booking">
                     Book an appointment
                 </div>

@@ -85,6 +85,9 @@ $options = get_option( 'wpn_settings' );
 				the_content();
 				endwhile;
 			?>
+			<div class="modal__btn-cancel modal__btn-close" data-modal-close-for="appointment">
+				Cancel
+			</div>
 			</div>
 		</div>
 	</div>

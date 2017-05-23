@@ -44,6 +44,14 @@
     display: block;
   }
 
+  &__btn-cancel {
+    color: $dark-blue;
+    font-family: $font-sans;
+    text-decoration: underline;
+    text-align: center;
+    padding: 0 25px;
+  }
+
   &__overlay {
     position: fixed;
     top: 0;
@@ -67,6 +75,10 @@
     &__inner {
       max-height: calc(100vh - 100px);
       top: 60px;
+    }
+
+    &__btn-cancel {
+      text-align: right;
     }
   }
 }

@@ -16,7 +16,7 @@ get_header(); ?>
 
 
 
-    <div class="content content--bump-top content--bump-bottom service">
+    <div class="content service">
         <?php
         $args = array('post_type' => 'wpn_service_cat', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'menu_order');
 		$all_service_categories = get_posts($args);
@@ -34,12 +34,10 @@ get_header(); ?>
         <article class="service__panel-wrapper">
         	<div>
         		<div class="service__panel-image" style="background-image: url(<?php echo $categoryImg; ?>)">
-        			<div class="service__panel-desc">
-        				<?php echo $categoryDesc; ?>
-        			</div>
         		</div>
+        		<div class="service__panel-content">
         		<h2 class="service__panel-title"><?php echo $category->post_title; ?></h2>
-
+				<p> <?php echo $categoryDesc; ?> </p>
         		<ul class="service__panel-items">
         			<?php
         			foreach($all_services as $post):
@@ -56,6 +54,7 @@ get_header(); ?>
 	        			endforeach;
 					?>
         		</ul>
+        		</div>
         	</div>
         </article>
 		<?php endforeach; ?>

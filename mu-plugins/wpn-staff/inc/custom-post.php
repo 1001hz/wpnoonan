@@ -24,7 +24,9 @@ function wpn_staff() {
         'query_var' => true,
         'capability_type' => 'post',
         'hierarchical' => true,
-        'rewrite' => true,
+        'rewrite' => array(
+            'slug' => 'about/staff'
+        ),
         'menu_position' => 5,
         'exclude_from_search' => true,
         'menu_icon' => 'dashicons-admin-links',
