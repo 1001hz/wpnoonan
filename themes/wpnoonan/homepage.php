@@ -108,7 +108,7 @@ get_header(); ?>
     		<section class="hp__section about">
                 <div class="hp__inner-section content">
                     <h2><?php the_title(); ?></h2>
-                    <div class="hp__content <?php if($image) : ?>hp__content--half<?php endif; ?>">
+                    <div class="hp__content <?php if($image) : ?>hp__content--half<?php endif; ?> <?php if(!$image) : ?>hp__content--center<?php endif; ?>">
 
                         <p class="wow fadeIn"><?php echo $homepageContent; ?></p>
                         <p class="wow fadeInUp"><a class="hp__cta" href="<?php echo $relatedLinkUrl; ?>"><?php echo $linkTitle; ?></a></p>

@@ -145,6 +145,14 @@ ul, ol {
   position: relative;
   overflow: hidden;
   height: 100%; }
+  .hero-carousel__watermark {
+    position: absolute;
+    opacity: 0.4;
+    left: -400px;
+    top: 50%;
+    transform: translateY(-25%); }
+    .hero-carousel__watermark img {
+      width: 120vh; }
   .hero-carousel__content {
     z-index: 11;
     padding: 20px 40px;
@@ -319,6 +327,8 @@ ul, ol {
     width: 49%;
     display: inline-block;
     vertical-align: top; }
+  .hp__content--center {
+    text-align: center; }
   .hp__content h3 {
     margin-top: 0;
     color: #20c3f3; }
@@ -328,7 +338,9 @@ ul, ol {
     position: absolute;
     opacity: 0.4;
     left: -500px;
-    bottom: -300px; }
+    bottom: -300px;
+    top: auto;
+    transform: translateY(0%); }
     .hero-carousel__watermark img {
       width: 1000px; }
   .hero-carousel__content {

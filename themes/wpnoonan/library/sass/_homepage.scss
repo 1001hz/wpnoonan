@@ -143,6 +143,17 @@
   overflow: hidden;
   height: 100%;
 
+  &__watermark {
+    position: absolute;
+    opacity: 0.4;
+    left: -400px;
+    top: 50%;
+    transform: translateY(-25%);
+    img {
+      width: 120vh;
+    }
+  }
+
   &__content {
     z-index: 11;
     padding: 20px 40px;
@@ -150,6 +161,8 @@
     left: 0;
     top: calc(50% - 0px);
     transform: translateY(-50%);
+
+
 
     h1 {
       color: $white;
@@ -366,6 +379,10 @@
         vertical-align: top;
       }
 
+      &--center {
+        text-align: center;
+      }
+
       h3 {
         margin-top: 0;
         color: $brandBlue;
@@ -382,6 +399,8 @@
       opacity: 0.4;
       left: -500px;
       bottom: -300px;
+      top: auto;
+      transform: translateY(0%);
       img {
         width: 1000px;
       }
