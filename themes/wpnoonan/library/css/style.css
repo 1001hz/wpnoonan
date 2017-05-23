@@ -324,7 +324,8 @@ ul, ol {
   .hp__section .scroll-arrow {
     display: block; }
   .hp__inner-section--mosaic {
-    padding-bottom: 0; }
+    padding-bottom: 0;
+    margin-top: 40px; }
   .hp__content--half {
     width: 49%;
     display: inline-block;
