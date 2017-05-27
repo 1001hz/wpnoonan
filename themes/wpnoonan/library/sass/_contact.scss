@@ -5,6 +5,16 @@
     font-family: $font-sans;
   }
 
+  &__hours {
+    width: 100%;
+    td {
+      font-family: $font-sans;
+      color: $dark-grey;
+      font-size: 16px;
+      padding: 5px 5px 5px 0;
+    }
+  }
+
   &__phone {
     padding-right: 5px;
     font-family: $font-sans;

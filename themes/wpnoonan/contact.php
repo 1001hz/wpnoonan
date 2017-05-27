@@ -53,11 +53,32 @@ $options = get_option( 'wpn_settings' );
 	?>
 	<div class="content">
 		<h2>Clinic Hours</h2>
-		<p class="contact_hours">
-    		<?php echo $options['wpn_options_hours']; ?>
+		<table class="contact__hours">
+		<?php
+			$days = explode(';',$options['wpn_options_hours']);
+			$dayNames = array('Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun');
+			for($i=0; $i<count($dayNames);$i++) : ?>
+
+					<tr>
+						<td><?php echo $dayNames[$i]; ?></td>
+						<td><?php echo $days[$i]; ?></td>
+					</tr>
+
+			<?php endfor;
+		?>
+		</table>
+		<?php
+			if( '' !== $options['wpn_options_clinic_desc'] ):
+			?>
+			<p class="contact_hours">
+				<?php echo $options['wpn_options_clinic_desc']; ?>
+			</p>
+			<?php endif; ?>
 		</p>
 	</div>
 	<?php endif; ?>
+
+
 
 
 

@@ -44,7 +44,7 @@ function wpnoonan_resources() {
     // register stylesheet
     wp_register_style( 'normalize-css', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '', 'all' );
 
-    wp_register_style( 'wpnoonan-css', get_stylesheet_directory_uri() . '/library/css/style.css', array(), 'v0.9', 'all' );
+    wp_register_style( 'wpnoonan-css', get_stylesheet_directory_uri() . '/library/css/style.css', array(), 'v0.10', 'all' );
 	wp_register_style( 'animate-css', get_stylesheet_directory_uri() . '/css/animate.min.css', array(), '', 'all' );
 	wp_register_style( 'bxslider-css', get_stylesheet_directory_uri() . '/css/jquery.bxslider.min.css', array(), '', 'all' );
 	wp_register_style( 'slick-css', get_stylesheet_directory_uri() . '/css/slick.css', array(), '', 'all' );
@@ -231,6 +231,14 @@ function wpn_settings_init(  ) {
 	);
 
 	add_settings_field(
+		'wpn_options_clinic_desc',
+		__( 'Clinic Description', 'wordpress' ),
+		'wpn_options_clinic_desc_render',
+		'pluginPage',
+		'wpn_pluginPage_section'
+	);
+
+	add_settings_field(
     		'wpn_options_directions',
     		__( 'Directions', 'wordpress' ),
     		'wpn_options_directions_render',
@@ -317,9 +325,63 @@ function wpn_options_address_render(  ) {
 function wpn_options_hours_render(  ) {
 
 	$options = get_option( 'wpn_settings' );
+	$hoursData = $options[wpn_options_hours];
+
+	if($hoursData === '') {
+		$hoursData = 'Closed;Closed;Closed;Closed;Closed;Closed;Closed';
+	}
+
+	$days = explode(";", $hoursData);
+	$dayNames = array('Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun');
+	for($i=0; $i<count($dayNames);$i++) :
+		?>
+		<div>
+		<label><?php echo $dayNames[$i]; ?></label>
+		<input type="text" class="day" value="<?php echo $days[$i]; ?>">
+		</div>
+	<?php endfor; ?>
+
+	<input id="hiddenHours" type="hidden" name='wpn_settings[wpn_options_hours]'>
+
+ 	</input>
+
+ 	<script>
+ 	(function($, window, document) {
+        $(document).ready(function(){
+
+        	function fillFields(){
+        		var data = '';
+				var length = $(this).find('.day').length;
+
+				$('.day').each(function(index){
+					data += $(this).val();
+					data +=  ';';
+					if(index < length - 1) {
+
+					}
+				});
+
+				$('#hiddenHours').val(data);
+        	}
+
+			fillFields();
+			$('.day').change(function(){
+				fillFields();
+			});
+ 	    });
+
+    }(window.jQuery, window, document));
+ 	</script>
+	<?php
+
+}
+
+function wpn_options_clinic_desc_render(  ) {
+
+	$options = get_option( 'wpn_settings' );
 	?>
-	<textarea cols='40' rows='5' name='wpn_settings[wpn_options_hours]'>
-		<?php echo $options['wpn_options_hours']; ?>
+	<textarea cols='40' rows='5' name='wpn_settings[wpn_options_clinic_desc]'>
+		<?php echo $options['wpn_options_clinic_desc']; ?>
  	</textarea>
 	<?php
 
