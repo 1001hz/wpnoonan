@@ -704,11 +704,12 @@ body {
 
 .menu__sidebar-heading {
   padding: 15px 20px;
-  background-color: #14b0e6;
+  background-color: #6dcff6;
   width: 100%;
   color: #fff;
   font-weight: bold;
-  font-family: "Abel", sans-serif; }
+  font-family: "Abel", sans-serif;
+  text-transform: uppercase; }
   .menu__sidebar-heading .arrow {
     padding: 5px;
     float: right;
@@ -751,12 +752,19 @@ body {
     border-bottom: solid 1px #f1f1f2; }
     .menu__sidebar li:before {
       content: '';
-      border-left: 2px solid #6dcff6;
+      border-left: 0px solid #14b0e6;
       position: absolute;
       left: 0;
-      height: 100%; }
-    .menu__sidebar li.active:before {
-      border-left-color: #14b0e6; }
+      top: 20px;
+      border: solid #20c3f3;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 9px;
+      cursor: pointer;
+      border-width: 0 1px 1px 0;
+      padding: 3px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg); }
   .menu__sidebar a {
     font-family: "Abel", sans-serif;
     position: relative;
@@ -772,12 +780,9 @@ body {
       display: none; }
   .menu__sidebar {
     max-height: none; }
-    .menu__sidebar li:hover:before {
-      border-left-width: 245px;
-      border-left-color: #6dcff6;
-      transition: border-left-width 0.15s ease-in; }
     .menu__sidebar li:hover a {
-      color: #fff; }
+      color: #6dcff6;
+      transition: color 0.15s ease-in; }
     .menu__sidebar a {
       width: 245px; }
   .hamburger {

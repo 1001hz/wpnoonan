@@ -159,11 +159,12 @@
 
   &__sidebar-heading {
     padding: 15px 20px;
-    background-color: $dark-blue;
+    background-color: $light-blue;
     width: 100%;
     color: $white;
     font-weight: bold;
     font-family: $font-sans;
+    text-transform: uppercase;
 
     .arrow {
       padding: 5px;
@@ -258,15 +259,16 @@
 
       &:before {
         content: '';
-        border-left: 2px solid $light-blue;
+        border-left: 0px solid $dark-blue;
         position: absolute;
         left: 0;
-        height: 100%;
+        top: 20px;
+        @include arrow('right', 'small');
       }
 
       &.active {
         &:before {
-          border-left-color: $dark-blue;
+
         }
       }
     }
@@ -306,14 +308,9 @@
 
       li {
         &:hover {
-          &:before {
-            border-left-width: 245px;
-            border-left-color: $light-blue;
-            transition: border-left-width $base-duration $base-easing;
-          }
-
           a {
-            color: $white;
+            color: $light-blue;
+            transition: color $base-duration $base-easing;
           }
         }
       }
