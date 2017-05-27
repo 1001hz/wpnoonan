@@ -52,7 +52,7 @@
 	</div>
 	</header><!-- .entry-header -->
 
-<div class="content">
+<div class="content content--no-pad">
 	<div class="breadcrumb">
 		<a href="/blog" class="breadcrumb__link">Blog</a>
 		<span class="arrow right breadcrumb__arrow"></span>

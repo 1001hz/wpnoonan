@@ -435,6 +435,8 @@ body {
     .content__header--list {
       background-color: #fff;
       border-bottom: solid 1px #e6e7e8; }
+    .content__header--no-pad {
+      padding: 0; }
   .content__copy {
     padding-top: 40px;
     padding-bottom: 40px; }
@@ -558,6 +560,8 @@ body {
       height: 100px; }
       .heading__logo-wrapper:last-child {
         margin-right: 0; }
+      .heading__logo-wrapper img {
+        max-width: 300px; }
     .heading__menu-wrapper {
       float: left;
       display: block;

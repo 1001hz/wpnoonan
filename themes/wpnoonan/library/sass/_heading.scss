@@ -39,6 +39,9 @@
     &__logo-wrapper {
       @include span-columns(3);
       height: 100px;
+      img {
+        max-width: 300px;
+      }
     }
 
     &__menu-wrapper {
