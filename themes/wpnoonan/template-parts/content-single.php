@@ -4,16 +4,23 @@
  *
  */
 ?>
-
+<?php
+	$featuredImageUrl = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' );
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<header class="content__header blog__header">
+	<header class="content__header blog__header" <?php if($featuredImageUrl !== ''): ?> style="background-image: url(<?php echo $featuredImageUrl; ?>);" <?php endif; ?>>
+		<div class="blog__watermark">
+
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/WLP_Finished Art_Circle Device_CMYK-01.png" alt="logo" />
+		</div>
 		<?php
-		$dat = date_create_from_format('Y-m-d H:i:s', $post->post_date);
+			$dat = date_create_from_format('Y-m-d H:i:s', $post->post_date);
 		?>
-		<div class="content wow fadeIn">
-			<h1 class="content__title"><?php echo the_title(); ?></h1>
-			<div class="content__post-date">Published <?php echo date_format($dat, 'd-m-Y') ?></div>
+		<img src="<?php echo $url ?>" />
+		<div class="content wow fadeIn blog__heading-content">
+			<h1 class="content__title content__title--white blog__title"><?php echo the_title(); ?></h1>
+			<div class="content__post-date content__post-date--on-color">Published <?php echo date_format($dat, 'd-m-Y') ?></div>
 		<div>
 
 		<?php
@@ -35,8 +42,8 @@
 				<div style="background-image: url(<?php echo $staffImg; ?>)"></div>
 			</div>
 			<div class="staff__card-details">
-				<div class="staff__card-name"><?php echo $staffFirstName .' '.$staffLastName ; ?></div>
-				<div class="staff__card-role"><?php echo $staffRole; ?></div>
+				<div class="staff__card-name staff__card-name--on-color"><?php echo $staffFirstName .' '.$staffLastName ; ?></div>
+				<div class="staff__card-role staff__card-role--on-color"><?php echo $staffRole; ?></div>
 			</div>
 		</div>
 
@@ -52,6 +59,7 @@
 		<span class="breadcrumb__current"><?php echo the_title(); ?></span>
 	</div>
 </div>
+
 	<div class="content content__copy">
 		<?php
 			the_content();

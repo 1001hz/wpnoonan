@@ -463,6 +463,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.3; }
+    .content__title--white {
+      color: #fff; }
     .content__title--small {
       font-size: 22px; }
   .content__author {
@@ -477,6 +479,8 @@ body {
     font-size: 12px;
     font-style: italic;
     margin-top: 3px; }
+    .content__post-date--on-color {
+      color: #fff; }
   .content--center {
     text-align: center; }
   .content--bump-bottom {
@@ -958,6 +962,8 @@ body {
   padding-top: 10px;
   font-weight: bold;
   font-family: "Abel", sans-serif; }
+  .staff__card-name--on-color {
+    color: #fff; }
   .staff__card-name--medium {
     margin-left: 170px; }
   .staff__card-name--large {
@@ -983,6 +989,8 @@ body {
   font-style: italic;
   text-transform: capitalize;
   padding-top: 3px; }
+  .staff__card-role--on-color {
+    color: #fff; }
   .staff__card-role--medium {
     margin-left: 170px; }
   .staff__card-role--large {
@@ -1343,9 +1351,33 @@ nf-field {
   .post-nav__arrow--prev {
     left: 0; }
 
+.blog__watermark {
+  position: absolute;
+  opacity: 0.4;
+  right: 10%;
+  transform: translate(10%, -50%);
+  bottom: -300px;
+  top: 40%;
+  z-index: 1; }
+  .blog__watermark img {
+    height: 130vh; }
+
+.blog__title {
+  margin: 0;
+  max-width: 300px; }
+
+.blog__heading-content {
+  z-index: 2;
+  position: relative; }
+
 .blog__header {
-  background-color: #f1f1f2;
-  border-bottom: solid 1px #e6e7e8; }
+  background-color: #6dcff6;
+  border-bottom: solid 1px #e6e7e8;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden; }
 
 .blog__avatar {
   max-width: 800px;
@@ -1413,7 +1445,22 @@ nf-field {
     .blog__cat-btn:hover {
       transition: all 0.15s ease-in; } }
 
+@media screen and (min-width: 720px) {
+  .blog__watermark {
+    right: 50%; } }
+
 @media screen and (min-width: 960px) {
+  .blog__watermark {
+    position: absolute;
+    opacity: 0.4;
+    right: 50%;
+    transform: translate(10%, -50%);
+    bottom: -300px;
+    top: 40%;
+    z-index: 1; }
+    .blog__watermark img {
+      width: 100vw;
+      height: auto; }
   .blog__about-cell {
     float: left;
     display: block;

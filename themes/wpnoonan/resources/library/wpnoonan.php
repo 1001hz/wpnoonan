@@ -44,7 +44,7 @@ function wpnoonan_resources() {
     // register stylesheet
     wp_register_style( 'normalize-css', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '', 'all' );
 
-    wp_register_style( 'wpnoonan-css', get_stylesheet_directory_uri() . '/library/css/style.css', array(), '0.6', 'all' );
+    wp_register_style( 'wpnoonan-css', get_stylesheet_directory_uri() . '/library/css/style.css', array(), 'v0.7', 'all' );
 	wp_register_style( 'animate-css', get_stylesheet_directory_uri() . '/css/animate.min.css', array(), '', 'all' );
 	wp_register_style( 'bxslider-css', get_stylesheet_directory_uri() . '/css/jquery.bxslider.min.css', array(), '', 'all' );
 	wp_register_style( 'slick-css', get_stylesheet_directory_uri() . '/css/slick.css', array(), '', 'all' );
@@ -406,6 +406,6 @@ add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
 add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
 
 function remove_width_attribute( $html ) {
-   $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
-   return $html;
+   $html2 = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+   return $html2;
 }

@@ -1,8 +1,36 @@
 .blog {
 
+  &__watermark {
+    position: absolute;
+    opacity: 0.4;
+    right: 10%;
+    transform: translate(10%,-50%);
+    bottom: -300px;
+    top: 40%;
+    z-index: 1;
+    img {
+      height: 130vh;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    max-width: 300px;
+  }
+
+  &__heading-content {
+    z-index: 2;
+    position: relative;
+  }
+
   &__header {
-    background-color: $light-grey;
+    background-color: $light-blue;
     border-bottom: solid 1px $medium-grey;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
   }
 
   &__avatar {
@@ -53,8 +81,33 @@
   }
 }
 
+@include media($tablet) {
+  .blog {
+
+    &__watermark {
+      right: 50%;
+    }
+
+  }
+}
+
 @include media($desktop) {
   .blog {
+
+    &__watermark {
+      position: absolute;
+      opacity: 0.4;
+      right: 50%;
+      transform: translate(10%,-50%);
+      bottom: -300px;
+      top: 40%;
+      z-index: 1;
+      img {
+        width: 100vw;
+        height: auto;
+      }
+    }
+
     &__about-cell {
       @include span-columns(12);
     }

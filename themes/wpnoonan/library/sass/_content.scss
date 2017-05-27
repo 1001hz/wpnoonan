@@ -114,6 +114,10 @@ body {
     margin: 0 auto;
     line-height: 1.3;
 
+    &--white {
+      color: $white;
+    }
+
     &--small {
       font-size: $font-heading-small;
     }
@@ -133,6 +137,10 @@ body {
     font-size: $font-small;
     font-style: italic;
     margin-top: 3px;
+
+    &--on-color {
+      color: $white;
+    }
   }
 
   &--center {
