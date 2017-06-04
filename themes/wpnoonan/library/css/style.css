@@ -320,6 +320,8 @@ ul, ol {
         margin-right: 10px; }
 
 @media screen and (min-width: 960px) {
+  .hp__section h2 {
+    margin-bottom: 35px; }
   .hp__section--carousel {
     height: calc(100vh - 100px); }
   .hp__section .scroll-arrow {

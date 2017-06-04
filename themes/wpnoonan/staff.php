@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Staff listing
+ *
  * The staff listing
  *
  * @package wpnoonan

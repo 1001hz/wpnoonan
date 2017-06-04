@@ -362,6 +362,10 @@
   .hp {
 
     &__section {
+
+      h2 {
+        margin-bottom: 35px;
+      }
       &--carousel {
         height: calc(100vh - 100px);
       }
