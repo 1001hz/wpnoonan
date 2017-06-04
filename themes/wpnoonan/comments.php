@@ -78,4 +78,6 @@ if ( post_password_required() ) {
 	?>
 
 	</div>
-</div><!-- .comments-area -->
+</div>
+
+<!-- .comments-area -->

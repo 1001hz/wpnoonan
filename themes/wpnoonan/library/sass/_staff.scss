@@ -23,7 +23,7 @@
   }
 
   &__link {
-    @include link-btn($brandBlue, 24px, false);
+    @include link-btn($custom-grey, 24px, false);
     text-align: center;
     font-size: 12px;
   }
@@ -48,6 +48,7 @@
       font-size: $base-font-size;
       text-align: center;
       padding: 12px 0 0 0;
+      font-weight: bold;
     }
   }
 

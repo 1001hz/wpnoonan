@@ -21,7 +21,11 @@
       width: 100%;
     }
 
-    &:nth-of-type(2n) {
+    &--divider {
+      border-bottom: solid 1px $medium-grey;
+    }
+
+    &--grey {
       background-color: $light-grey;
     }
     &:nth-of-type(3n) {
@@ -125,16 +129,20 @@
     margin-bottom: 20px;
   }
 
+  &__heading {
+    display: none;
+  }
+
   &__address {
     background-color: $light-blue;
   }
 
   &__phone {
-    background-color: $light-blue;
+    background-color: $dark-blue;
   }
 
   &__email {
-    background-color: $dark-blue;
+    background-color: $light-blue ;
   }
 
   &__fax {
@@ -257,7 +265,7 @@
         height: 0;
         border-left: 25px solid transparent;
         border-right: 25px solid transparent;
-        border-bottom: 25px solid $light-grey;
+        border-bottom: 25px solid $white;
         transform: translateX(-50%);
       }
     }
@@ -287,7 +295,7 @@
       top:0;
       bottom: 0;
       opacity: 0.3;
-      background-position: center;
+      background-position: center top;
       background-size: cover;
     }
 
@@ -337,7 +345,7 @@
           width: 20px;
           height: 20px;
           font-size: 20px;
-          color: $brandBlue;
+          color: $custom-grey;
           font-family: FontAwesome;
           font-style: normal;
           font-weight: normal;
@@ -358,13 +366,13 @@
         height: calc(100vh - 100px);
       }
 
-      &--gradient {
-        background: linear-gradient(to right, $light-blue 50%, $dark-blue 50%);
-      }
-
-      &--r-gradient {
-        background: linear-gradient(to left, $light-blue 50%, $dark-blue 50%);
-      }
+      //&--gradient {
+      //  background: linear-gradient(to right, $light-blue 50%, $dark-blue 50%);
+      //}
+      //
+      //&--r-gradient {
+      //  background: linear-gradient(to left, $light-blue 50%, $dark-blue 50%);
+      //}
 
       .scroll-arrow {
         display: block;
@@ -427,17 +435,46 @@
   }
 
   .hp-contact {
-    @include span-columns(6);
+    @include span-columns(4);
 
     min-height: 210px;
     padding: 50px 10px;
+    color: $dark-grey;
+    background-color: $light-grey;
+
+    a {
+      color: $dark-grey;
+    }
+
+    &__icon-wrapper{
+      text-align: center;
+    }
+
+    .fa {
+      width: 80px;
+      margin: 0 auto;
+      height: 80px;
+      background-color: $dark-grey;
+      border-radius: 40px;
+      padding-top: 25px;
+      color: $white;
+    }
+
+    &__heading {
+      display: block;
+      text-transform: uppercase;
+      color: $dark-grey;
+      text-align: center;
+      font-weight: bold;
+      margin: 10px 0;
+    }
 
     &__phone {
-      background-color: $dark-blue;
+
     }
 
     &__fax {
-      background-color: $light-blue;
+
     }
 
     &__address {
@@ -449,8 +486,8 @@
 
     &:hover {
       .fa {
-        opacity: 0.5;
-        transition: opacity $base-duration $base-easing;
+        background-color: $dark-blue;
+        transition: background-color $base-duration $base-easing;
       }
     }
   }

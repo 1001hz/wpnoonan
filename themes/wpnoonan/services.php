@@ -48,7 +48,7 @@ get_header(); ?>
 
 						if((int)$category->ID === (int)$serviceCategory) :
         			?>
-        			<li><a href="<?php echo get_permalink($post->ID); ?>" class="btn "><?php echo $serviceName; ?></a></li>
+        			<li><a href="<?php echo get_permalink($post->ID); ?>" class="btn btn--grey"><?php echo $serviceName; ?></a></li>
         			<?php
         				endif;
 	        			endforeach;

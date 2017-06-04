@@ -104,5 +104,16 @@
     &__panel-content {
       text-align: left;
     }
+
+    &__panel-items {
+      li {
+        @include span-columns(6 of 12);
+        @include omega(2n);
+
+        a {
+          width: 100%;
+        }
+      }
+    }
   }
 }

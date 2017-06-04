@@ -39,6 +39,7 @@
     &__logo-wrapper {
       @include span-columns(3);
       height: 100px;
+      padding-top: 6px;
       img {
         max-width: 300px;
       }

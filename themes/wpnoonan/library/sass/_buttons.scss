@@ -4,7 +4,7 @@
   font-weight: bold;
 
   &--grey {
-    @include link-btn($dark-grey, 28px, 'false');
+    @include link-btn($custom-grey, 28px, 'false');
   }
 
   &--full {
@@ -12,7 +12,7 @@
   }
 
   &--large {
-    @include link-btn($brandBlue, 40px, 'false');
+    @include link-btn($custom-grey, 40px, 'false');
     font-size: $base-font-size;
   }
 

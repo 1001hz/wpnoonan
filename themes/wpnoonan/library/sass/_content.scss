@@ -102,6 +102,10 @@ body {
 
   &__left {
     @include span-columns(12);
+
+    img {
+      width: 100%;
+    }
   }
 
   &__right {

@@ -105,7 +105,7 @@ get_header(); ?>
     		if($showOnHomepage) :
     		?>
 
-    		<section class="hp__section about">
+    		<section class="hp__section about hp__section--grey">
                 <div class="hp__inner-section content">
                     <h2><?php the_title(); ?></h2>
                     <div class="hp__content <?php if($image) : ?>hp__content--half<?php endif; ?> <?php if(!$image) : ?>hp__content--center<?php endif; ?>">
@@ -163,7 +163,7 @@ get_header(); ?>
 
 
 
-    <section class="hp__section">
+    <section class="hp__section hp__section--divider">
         <div class="hp__inner-section content services">
             <?php
             $index = 0;
@@ -258,43 +258,43 @@ get_header(); ?>
         </div>
     </section>
 
-    <section class="hp__section hp__section--gradient">
+    <section class="hp__section hp__section--grey">
         <div class="content hp__inner-section content--no-pad">
-        <a href="<?php echo $options['wpn_options_maps_link']; ?>">
-        <p class="hp-contact hp-contact__address">
-            <i class="fa fa-map-marker fa-lg zoomIn wow"></i>
-            <span class="fadeInUp wow">
-                    <?php echo $options['wpn_options_address']; ?>
-            </span>
-        </p>
-        </a>
+
+            <a href="<?php echo $options['wpn_options_maps_link']; ?>">
+                <div class="hp-contact hp-contact__address">
+                    <div class="hp-contact__icon-wrapper"><i class="fa fa-map-marker fa-lg zoomIn wow"></i></div>
+                    <div class="hp-contact__heading">Address</div>
+                    <div class="fadeInUp wow">
+                            <?php echo $options['wpn_options_address']; ?>
+                    </div>
+                </div>
+            </a>
+
+
+
+            <a href="tel:<?php echo $options['wpn_options_phone']; ?>">
+                <div class="hp-contact hp-contact__phone">
+                    <div class="hp-contact__icon-wrapper">
+                        <i class="fa fa-phone fa-lg zoomIn wow"></i>
+                    </div>
+                    <div class="hp-contact__heading">Phone</div>
+                    <div class="fadeInUp wow"><?php echo $options['wpn_options_phone']; ?>
+                    </div>
+                </div>
+            </a>
 
             <a href="mailto:<?php echo $options['wpn_options_email']; ?>">
-            <p class="hp-contact hp-contact__email">
-                <i class="fa fa-at fa-lg zoomIn wow"></i>
-                <span class="fadeInUp wow">
-                <?php echo $options['wpn_options_email']; ?>
-                </span></p>
+                <div class="hp-contact hp-contact__email">
+                    <div class="hp-contact__icon-wrapper">
+                        <i class="fa fa-at fa-lg zoomIn wow"></i>
+                    </div>
+                    <div class="hp-contact__heading">Email</div>
+                    <div class="fadeInUp wow">
+                    <?php echo $options['wpn_options_email']; ?>
+                    </div>
+                </div>
             </a>
-            </div>
-</section>
-<section class="hp__section hp__section--r-gradient">
-<div class="content hp__inner-section content--no-pad">
-
-<a href="tel:<?php echo $options['wpn_options_phone']; ?>">
-            <p class="hp-contact hp-contact__phone">
-                <i class="fa fa-phone fa-lg zoomIn wow"></i>
-                <span class="fadeInUp wow"><?php echo $options['wpn_options_phone']; ?>
-                </span></p>
-            </a>
-
-
-        <p class="hp-contact hp-contact__fax">
-            <i class="fa fa-fax fa-lg zoomIn wow"></i>
-            <span class="fadeInUp wow">
-                    <?php echo $options['wpn_options_fax']; ?>
-            </span>
-        </p>
 
         </div>
 

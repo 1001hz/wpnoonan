@@ -35,16 +35,7 @@ $options = get_option( 'wpn_settings' );
 
 	</div>
 
-	<?php
-	if('' !== $options['wpn_options_directions']):
-	?>
-	<div class="content">
-		<h2>Directions</h2>
-		<p class="contact_directions">
-    		<?php echo $options['wpn_options_directions']; ?>
-		</p>
-	</div>
-	<?php endif; ?>
+
 
 
 	<?php
@@ -79,7 +70,16 @@ $options = get_option( 'wpn_settings' );
 	<?php endif; ?>
 
 
-
+	<?php
+		if('' !== $options['wpn_options_directions']):
+		?>
+		<div class="content">
+			<h2>Directions</h2>
+			<p class="contact_directions">
+				<?php echo $options['wpn_options_directions']; ?>
+			</p>
+		</div>
+	<?php endif; ?>
 
 
 	<div class="content">

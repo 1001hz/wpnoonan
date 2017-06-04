@@ -79,7 +79,22 @@
 
 
     &__section {
-      @include span-columns(4);
+      &--left {
+        @include span-columns(4);
+      }
+    }
+
+    &__section {
+      &--middle {
+        @include span-columns(5);
+        padding-right:0;
+      }
+    }
+
+    &__section {
+      &--right {
+        @include span-columns(3);
+      }
     }
   }
 }

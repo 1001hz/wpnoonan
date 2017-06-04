@@ -66,7 +66,10 @@ ul, ol {
 .hp__section img {
   width: 100%; }
 
-.hp__section:nth-of-type(2n) {
+.hp__section--divider {
+  border-bottom: solid 1px #e6e7e8; }
+
+.hp__section--grey {
   background-color: #f1f1f2; }
 
 .hp__section--carousel {
@@ -134,12 +137,14 @@ ul, ol {
     display: block;
     font-size: 42px;
     margin-bottom: 20px; }
+  .hp-contact__heading {
+    display: none; }
   .hp-contact__address {
     background-color: #6dcff6; }
   .hp-contact__phone {
-    background-color: #6dcff6; }
-  .hp-contact__email {
     background-color: #14b0e6; }
+  .hp-contact__email {
+    background-color: #6dcff6; }
   .hp-contact__fax {
     background-color: #14b0e6; }
 
@@ -261,7 +266,7 @@ ul, ol {
         height: 0;
         border-left: 25px solid transparent;
         border-right: 25px solid transparent;
-        border-bottom: 25px solid #f1f1f2;
+        border-bottom: 25px solid #fff;
         transform: translateX(-50%); }
     .hp-services__item:hover, .hp-services__item.active {
       background-color: #20c3f3; }
@@ -280,7 +285,7 @@ ul, ol {
       top: 0;
       bottom: 0;
       opacity: 0.3;
-      background-position: center;
+      background-position: center top;
       background-size: cover; }
   .hp-services__panel h5 {
     color: #20c3f3;
@@ -307,7 +312,7 @@ ul, ol {
         width: 20px;
         height: 20px;
         font-size: 20px;
-        color: #20c3f3;
+        color: #cccccc;
         font-family: FontAwesome;
         font-style: normal;
         font-weight: normal;
@@ -317,10 +322,6 @@ ul, ol {
 @media screen and (min-width: 960px) {
   .hp__section--carousel {
     height: calc(100vh - 100px); }
-  .hp__section--gradient {
-    background: linear-gradient(to right, #6dcff6 50%, #14b0e6 50%); }
-  .hp__section--r-gradient {
-    background: linear-gradient(to left, #6dcff6 50%, #14b0e6 50%); }
   .hp__section .scroll-arrow {
     display: block; }
   .hp__inner-section--mosaic {
@@ -359,21 +360,38 @@ ul, ol {
     float: left;
     display: block;
     margin-right: 1.53846%;
-    width: 49.23077%;
+    width: 32.30769%;
     min-height: 210px;
-    padding: 50px 10px; }
+    padding: 50px 10px;
+    color: #4d4d4f;
+    background-color: #f1f1f2; }
     .hp-contact:last-child {
       margin-right: 0; }
-    .hp-contact__phone {
-      background-color: #14b0e6; }
-    .hp-contact__fax {
-      background-color: #6dcff6; }
+    .hp-contact a {
+      color: #4d4d4f; }
+    .hp-contact__icon-wrapper {
+      text-align: center; }
+    .hp-contact .fa {
+      width: 80px;
+      margin: 0 auto;
+      height: 80px;
+      background-color: #4d4d4f;
+      border-radius: 40px;
+      padding-top: 25px;
+      color: #fff; }
+    .hp-contact__heading {
+      display: block;
+      text-transform: uppercase;
+      color: #4d4d4f;
+      text-align: center;
+      font-weight: bold;
+      margin: 10px 0; }
     .hp-contact__address span {
       width: 250px;
       display: inline-block; }
     .hp-contact:hover .fa {
-      opacity: 0.5;
-      transition: opacity 0.15s ease-in; }
+      background-color: #14b0e6;
+      transition: background-color 0.15s ease-in; }
   .hp-services__item {
     display: inline-block;
     width: 20%;
@@ -449,6 +467,8 @@ body {
     width: 100%; }
     .content__left:last-child {
       margin-right: 0; }
+    .content__left img {
+      width: 100%; }
   .content__right {
     float: left;
     display: block;
@@ -557,7 +577,8 @@ body {
       display: block;
       margin-right: 1.53846%;
       width: 23.84615%;
-      height: 100px; }
+      height: 100px;
+      padding-top: 6px; }
       .heading__logo-wrapper:last-child {
         margin-right: 0; }
       .heading__logo-wrapper img {
@@ -882,9 +903,9 @@ body {
   text-align: center; }
 
 .staff__link {
-  background-color: #20c3f3;
+  background-color: #cccccc;
   color: #fff;
-  border: solid 1px #20c3f3;
+  border: solid 1px #cccccc;
   border-radius: 24px;
   height: 24px;
   display: inline-block;
@@ -899,7 +920,7 @@ body {
   font-size: 12px; }
   @media screen and (min-width: 960px) {
     .staff__link:hover {
-      background-color: #0ba7d5; }
+      background-color: #b3b3b3; }
     .staff__link:hover {
       transition: all 0.15s ease-in; } }
 
@@ -918,7 +939,8 @@ body {
   .staff__name--homepage {
     font-size: 14px;
     text-align: center;
-    padding: 12px 0 0 0; }
+    padding: 12px 0 0 0;
+    font-weight: bold; }
 
 .staff__qualification {
   text-align: left;
@@ -1119,12 +1141,27 @@ body {
       clear: both;
       content: "";
       display: block; }
-  .footer__section {
+  .footer__section--left {
     float: left;
     display: block;
     margin-right: 1.53846%;
     width: 32.30769%; }
-    .footer__section:last-child {
+    .footer__section--left:last-child {
+      margin-right: 0; }
+  .footer__section--middle {
+    float: left;
+    display: block;
+    margin-right: 1.53846%;
+    width: 40.76923%;
+    padding-right: 0; }
+    .footer__section--middle:last-child {
+      margin-right: 0; }
+  .footer__section--right {
+    float: left;
+    display: block;
+    margin-right: 1.53846%;
+    width: 23.84615%; }
+    .footer__section--right:last-child {
       margin-right: 0; } }
 
 .btn {
@@ -1149,9 +1186,9 @@ body {
     .btn:hover {
       transition: all 0.15s ease-in; } }
   .btn--grey {
-    background-color: #4d4d4f;
+    background-color: #cccccc;
     color: #fff;
-    border: solid 1px #4d4d4f;
+    border: solid 1px #cccccc;
     border-radius: 28px;
     height: 28px;
     display: inline-block;
@@ -1164,15 +1201,15 @@ body {
     font-family: "Abel", sans-serif; }
     @media screen and (min-width: 960px) {
       .btn--grey:hover {
-        background-color: #343435; }
+        background-color: #b3b3b3; }
       .btn--grey:hover {
         transition: all 0.15s ease-in; } }
   .btn--full {
     width: 100%; }
   .btn--large {
-    background-color: #20c3f3;
+    background-color: #cccccc;
     color: #fff;
-    border: solid 1px #20c3f3;
+    border: solid 1px #cccccc;
     border-radius: 40px;
     height: 40px;
     display: inline-block;
@@ -1186,7 +1223,7 @@ body {
     font-size: 14px; }
     @media screen and (min-width: 960px) {
       .btn--large:hover {
-        background-color: #0ba7d5; }
+        background-color: #b3b3b3; }
       .btn--large:hover {
         transition: all 0.15s ease-in; } }
   .btn--on-blue {
@@ -1720,4 +1757,17 @@ nf-field {
     font-size: 24px;
     margin-top: 0; }
   .service__panel-content {
-    text-align: left; } }
+    text-align: left; }
+  .service__panel-items li {
+    float: left;
+    display: block;
+    margin-right: 1.53846%;
+    width: 49.23077%; }
+    .service__panel-items li:last-child {
+      margin-right: 0; }
+    .service__panel-items li:nth-child(2n) {
+      margin-right: 0; }
+    .service__panel-items li:nth-child(2n+1) {
+      clear: left; }
+    .service__panel-items li a {
+      width: 100%; } }
