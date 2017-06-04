@@ -1,26 +1,41 @@
 <?php
 function wpn_staff_constructor($param) {
-//    extract(shortcode_atts(array(
-//        'margin_top' => false,
-//        'margin_bottom' => false
-//    ), $param));
+    $args = array('post_type' => 'wpn_staff', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'menu_order');
+        $all_staff = get_posts($args);
+$code = '<div class="staff__wrapper">';
 
-    $met = rwmb_meta( 'personal', $args = array(), $post_id = null );
+        foreach($all_staff as $post) :
+            $arrUserMeta = get_post_custom( $post->ID );
+            $staffLink = get_post_permalink($post->ID);
+            $staffFirstName = $arrUserMeta['wpn_staff_fname'][0];
+            $staffLastName = $arrUserMeta['wpn_staff_lname'][0];
+            $staffDescription = $arrUserMeta['wpn_staff_description'][0];
+            $staffRole = $arrUserMeta['wpn_staff_role'][0];
+            $staffImg = wp_get_attachment_url($arrUserMeta['wpn_staff_image'][0]);
 
-    var_dump($met);
-
-$staff .= "<h1>TEST</h1>";
-return $staff;
-    if(!empty($post)) {
+            $code .= '<a href="'.$staffLink.'" class="staff__card staff__card-item">';
 
 
-        global $wp;
-        $referrer = home_url(add_query_arg(array(),$wp->request));
+            $code .= '<div class="staff__card-image staff__image staff__image--round staff__image--small">';
+                    $code .= '<div style="background-image: url('.$staffImg.'"></div>';
+                $code .= '</div>';
 
-        $staff .= "<div>".$post["name"]."</div>";
+            $code .= '<div class="staff__card-details">';
+                    $code .= '<div class="staff__card-name">'.$staffFirstName .' '.$staffLastName .'</div>';
+                    $code .= '<div class="staff__card-role">'. $staffRole.'</div>';
+                $code .= '</div>';
+                $code .= '<div class="staff__card-description">';
+                    $code .= '<p>'.$staffDescription.'</p>';
+                $code .= '</div>';
 
-        return $staff;
-    }
+
+        $code .= '</a>';
+
+		endforeach;
+
+    $code .= '</div>';
+
+    return $code;
 }
 
-add_shortcode( 'wpnStaff', 'wpn_staff_constructor' );
+add_shortcode( 'staff', 'wpn_staff_constructor' );

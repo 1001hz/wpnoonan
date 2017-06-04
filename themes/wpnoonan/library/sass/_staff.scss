@@ -16,6 +16,7 @@
   &__wrapper {
     display: inline-block;
     width: 100%;
+    @include clearfix();
   }
 
   &__link-wrapper {
@@ -220,10 +221,11 @@
   .staff {
 
     &__card-item {
-      @include span-columns(6);
-      @include omega(2n);
+      //@include span-columns(6);
+      //@include omega(2n);
 
       &:hover {
+
         .staff__card-name {
           color: $dark-blue;
           transition: color $base-duration $base-easing;
