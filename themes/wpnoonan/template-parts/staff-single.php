@@ -17,6 +17,7 @@
 		$staffQualification = $arrUserMeta['wpn_staff_qualification'][0];
 		$staffDescription = $arrUserMeta['wpn_staff_description'][0];
 		$staffRole = $arrUserMeta['wpn_staff_role'][0];
+		$staffRole2 = $arrUserMeta['wpn_staff_role2'][0];
 		$staffBio = $arrUserMeta['wpn_staff_bio'][0];
 		$staffContactMessage = $arrUserMeta['wpn_staff_contact'][0];
 		$staffImg = wp_get_attachment_url($arrUserMeta['wpn_staff_image'][0]);
@@ -35,7 +36,7 @@
 				<div class="staff__card-details staff__card-details--medium">
 					<div class="staff__card-name staff__card-name--medium"><?php echo $staffFirstName .' '.$staffLastName ; ?></div>
 					<div class="staff__card-qualification staff__card-qualification--medium"><?php echo $staffQualification; ?></div>
-					<div class="staff__card-role staff__card-role--medium"><?php echo $staffRole; ?></div>
+					<div class="staff__card-role staff__card-role--medium"><?php echo $staffRole; ?><br /><?php echo $staffRole2; ?></div>
 				</div>
 
 			</div>

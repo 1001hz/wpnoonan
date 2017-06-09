@@ -32,6 +32,7 @@
 		$staffLastName = $arrUserMeta['wpn_staff_lname'][0];
 		$staffDescription = $arrUserMeta['wpn_staff_description'][0];
 		$staffRole = $arrUserMeta['wpn_staff_role'][0];
+		$staffRole2 = $arrUserMeta['wpn_staff_role2'][0];
 		$staffContactMessage = $arrUserMeta['wpn_staff_contact'][0];
 		$staffImg = wp_get_attachment_url($arrUserMeta['wpn_staff_image'][0]);
 		$categories = wp_get_post_categories($post->ID);
@@ -43,7 +44,7 @@
 			</div>
 			<div class="staff__card-details">
 				<div class="staff__card-name staff__card-name--on-color"><?php echo $staffFirstName .' '.$staffLastName ; ?></div>
-				<div class="staff__card-role staff__card-role--on-color"><?php echo $staffRole; ?></div>
+				<div class="staff__card-role staff__card-role--on-color"><?php echo $staffRole; ?><br /><?php echo $staffRole2; ?></div>
 			</div>
 		</div>
 
@@ -86,7 +87,7 @@
 					</div>
 					<div class="staff__card-details">
 						<div class="staff__card-name"><?php echo $staffFirstName .' '.$staffLastName ; ?></div>
-						<div class="staff__card-role"><?php echo $staffRole; ?></div>
+						<div class="staff__card-role"><?php echo $staffRole; ?><br /><?php echo $staffRole2; ?></div>
 					</div>
 				</a>
 				<p class="staff__card-description">

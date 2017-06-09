@@ -11,6 +11,7 @@ $code = '<div class="staff__wrapper">';
             $staffLastName = $arrUserMeta['wpn_staff_lname'][0];
             $staffDescription = $arrUserMeta['wpn_staff_description'][0];
             $staffRole = $arrUserMeta['wpn_staff_role'][0];
+            $staffRole2 = $arrUserMeta['wpn_staff_role2'][0];
             $staffImg = wp_get_attachment_url($arrUserMeta['wpn_staff_image'][0]);
 
             $code .= '<a href="'.$staffLink.'" class="staff__card staff__card-item">';
@@ -22,7 +23,7 @@ $code = '<div class="staff__wrapper">';
 
             $code .= '<div class="staff__card-details">';
                     $code .= '<div class="staff__card-name">'.$staffFirstName .' '.$staffLastName .'</div>';
-                    $code .= '<div class="staff__card-role">'. $staffRole.'</div>';
+                    $code .= '<div class="staff__card-role">'. $staffRole.'<br />'.$staffRole2.'</div>';
                 $code .= '</div>';
                 $code .= '<div class="staff__card-description">';
                     $code .= '<p>'.$staffDescription.'</p>';
