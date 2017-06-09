@@ -71,7 +71,7 @@
 		<?php foreach($categories as $c):
 			$cat = get_category( $c );
 		?>
-			<span class="blog__cat-btn"><?php echo $cat->name ?></span>
+			<span class="blog__pill"><?php echo $cat->name ?></span>
 		<?php endforeach; ?>
 	</div>
 

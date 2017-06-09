@@ -25,7 +25,7 @@
 	?>
 
 
-	<div class="content content--bump-top">
+	<div class="content  content--flat content--bump-top">
 
 		<div class="blog__about-cell">
 
@@ -45,7 +45,7 @@
 	</div>
 
 
-	<div class="content">
+	<div class="content content--flat">
 		<h2>About <?php echo $staffFirstName; ?></h2>
 		<p><?php echo $staffDescription; ?></p>
 	</div>

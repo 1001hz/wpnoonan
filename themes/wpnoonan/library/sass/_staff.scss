@@ -221,8 +221,8 @@
   .staff {
 
     &__card-item {
-      //@include span-columns(6);
-      //@include omega(2n);
+      @include span-columns(6);
+      @include omega(2n);
 
       &:hover {
 

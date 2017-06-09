@@ -68,6 +68,10 @@ body {
     max-width: 500px;
   }
 
+  &--flat {
+    padding-bottom: 0;
+  }
+
   &__header {
     background-color: $light-grey;
     padding-top: 60px;

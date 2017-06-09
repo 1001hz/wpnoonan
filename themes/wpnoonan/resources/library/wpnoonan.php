@@ -471,3 +471,11 @@ function remove_width_attribute( $html ) {
    $html2 = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
    return $html2;
 }
+
+
+// custom query vars
+function add_query_vars_filter( $vars ){
+  $vars[] = "category";
+  return $vars;
+}
+add_filter( 'query_vars', 'add_query_vars_filter' );

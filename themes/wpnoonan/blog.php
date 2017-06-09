@@ -12,10 +12,28 @@ get_header(); ?>
 
 
         <?php
-        $latest_posts = get_posts();
+        $args = array();
+        $cat_name = get_query_var('category');
 
+$cat_id = get_cat_ID($cat_name);
+        if(isset($cat_id)){
+        	$args = array( 'cat' => $cat_id );
+        }
+        $latest_posts = get_posts($args);
+?>
 
+<div class="content content--flat">
+        <h1>Blog</h1>
+
+		<?php if($cat_name !== '' && $cat_name !== null){ ?>
+        <p class="small">Filtering by: <span class="blog__pill"><?php echo $cat_name; ?></span> : <a href="/blog">Clear filter</a></p>
+
+        <?php } ?>
+		</div>
+
+<?php
         foreach($latest_posts as $post) :
+        $categories = wp_get_post_categories($post->ID, array(fields => 'names'));
         $userData = get_userdata($post->post_author);
         $dat = date_create_from_format('Y-m-d H:i:s', $post->post_date);
 
@@ -30,6 +48,9 @@ get_header(); ?>
 		$staffRole = $arrUserMeta['wpn_staff_role'][0];
 		$staffImg = wp_get_attachment_url($arrUserMeta['wpn_staff_image'][0]);
         ?>
+
+
+
         <header class="content__header content__header--list">
         <a href="<?php echo get_the_permalink($post->ID); ?>">
 			<div class="content wow fadeIn">
@@ -52,11 +73,14 @@ get_header(); ?>
 				<?php echo $blogDescription; ?>
 				<span class="blog__read-on">Read on &hellip;</span>
 			</p>
-
-		</div>
-
-		</div>
 		</a>
+		<p>
+			<ul class="blog__categories">
+				<?php foreach($categories as $cat): ?>
+					<li class=""><a class="blog__pill blog__pill--link" href="?category=<?php echo $cat ?>"><?php echo $cat; ?></a></li>
+				<?php endforeach; ?>
+			</ul>
+		</p>
 		</header><!-- .entry-header -->
 		<?php endforeach; ?>
 

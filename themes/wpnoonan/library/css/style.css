@@ -23,11 +23,15 @@ p {
   font-size: 16px;
   color: #4d4d4f;
   font-family: "Poppins", sans-serif; }
+  p.small {
+    font-size: 14px; }
 
 a {
   text-decoration: none;
   color: #14b0e6;
   font-family: "Poppins", sans-serif; }
+  a.pill {
+    color: #4d4d4f; }
 
 ul, ol {
   line-height: 26px;
@@ -460,6 +464,8 @@ body {
     text-transform: uppercase; }
   .content--thin {
     max-width: 500px; }
+  .content--flat {
+    padding-bottom: 0; }
   .content__header {
     background-color: #f1f1f2;
     padding-top: 60px;
@@ -1073,9 +1079,20 @@ body {
     border: 3px solid #fff; }
 
 @media screen and (min-width: 720px) {
-  .staff__card-item:hover .staff__card-name {
-    color: #14b0e6;
-    transition: color 0.15s ease-in; }
+  .staff__card-item {
+    float: left;
+    display: block;
+    margin-right: 1.53846%;
+    width: 49.23077%; }
+    .staff__card-item:last-child {
+      margin-right: 0; }
+    .staff__card-item:nth-child(2n) {
+      margin-right: 0; }
+    .staff__card-item:nth-child(2n+1) {
+      clear: left; }
+    .staff__card-item:hover .staff__card-name {
+      color: #14b0e6;
+      transition: color 0.15s ease-in; }
   .staff__image--round img {
     border-radius: 100px; } }
 
@@ -1517,6 +1534,39 @@ nf-field {
       background-color: #343435; }
     .blog__cat-btn:hover {
       transition: all 0.15s ease-in; } }
+
+.blog__categories {
+  margin: 0;
+  padding: 0; }
+  .blog__categories li {
+    display: inline-block; }
+
+.blog__pill {
+  background-color: transparent;
+  color: #4d4d4f;
+  border: solid 1px #4d4d4f;
+  border-radius: 28px;
+  height: 28px;
+  display: inline-block;
+  padding: 0 20px;
+  line-height: 28px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  font-family: "Abel", sans-serif;
+  font-family: "Poppins", sans-serif;
+  cursor: default; }
+  @media screen and (min-width: 960px) {
+    .blog__pill:hover {
+      background-color: #343435;
+      color: #fff; }
+    .blog__pill:hover {
+      transition: all 0.15s ease-in; } }
+  .blog__pill--link:hover {
+    background-color: #4d4d4f;
+    color: #fff !important;
+    cursor: pointer; }
 
 @media screen and (min-width: 720px) {
   .blog__watermark {
