@@ -177,7 +177,7 @@ get_header(); ?>
             <div class="hp-services__panel-wrapper <?php echo $class; ?>" id="tab-panel-<?php echo $category->ID; ?>">
                 <div class="hp-services__panel">
                     <div>
-                        <h5><?php echo $category->post_title; ?></h5>
+                        <h5><a href="/our-services#<?php echo $category->post_name; ?>"><?php echo $category->post_title; ?></a></h5>
                          <ul>
                          <?php
                          foreach($all_services as $post):
@@ -188,14 +188,14 @@ get_header(); ?>
 
                             if((int)$category->ID === (int)$serviceCategory) :
                          ?>
-                            <li><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $serviceName; ?></a></li>
+                            <li><?php echo $serviceName; ?></li>
                          <?php
                             endif;
                           endforeach;
                         ?>
                          </ul>
                          <div>
-                            <span class="btn btn--large booking">Book an appointment</span>
+                            <span class="btn btn--large booking btn--keyline">Book an appointment</span>
                          </div>
                     </div>
                 </div>
@@ -235,14 +235,14 @@ get_header(); ?>
 
                         ?>
 
-                        <div class="staff__wrapper">
+                        <a href="<?php echo $staffLink; ?>" class="staff__wrapper">
                             <div class="staff__image staff__image--round staff__image--medium">
                                 <div style="background-image: url(<?php echo $staffImg; ?>)"></div>
                             </div>
                             <div class="staff__name staff__name--homepage"><?php echo $staffFirstName . ' ' . $staffLastName; ?></div>
                             <div class="staff__qualification staff__qualification--homepage"><?php echo $staffQualification; ?></div>
-                            <div class="staff__link-wrapper"><a href="<?php echo $staffLink; ?>" class="staff__link">Read about <?php echo $staffFirstName; ?></a></div>
-                        </div>
+                            <div class="staff__link-wrapper"><span class="staff__link">Read about <?php echo $staffFirstName; ?></div>
+                        </a>
 
                         <?php
 

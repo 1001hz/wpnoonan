@@ -291,6 +291,18 @@ ul, ol {
     color: #20c3f3;
     font-size: 26px;
     margin: 0 0 16px 0; }
+    .hp-services__panel h5:after {
+      content: '';
+      margin-left: 10px;
+      border: solid #20c3f3;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 9px;
+      cursor: pointer;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg); }
+    .hp-services__panel h5 a:hover {
+      color: #14b0e6; }
   .hp-services__panel ul {
     margin: 0 0 20px 0;
     padding: 0;
@@ -1240,6 +1252,26 @@ body {
       .btn--on-blue:hover {
         background-color: #e6e6e6; }
       .btn--on-blue:hover {
+        transition: all 0.15s ease-in; } }
+  .btn--keyline {
+    background-color: transparent;
+    color: #20c3f3;
+    border: solid 1px #20c3f3;
+    border-radius: 40px;
+    height: 40px;
+    display: inline-block;
+    padding: 0 20px;
+    line-height: 40px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    font-family: "Abel", sans-serif; }
+    @media screen and (min-width: 960px) {
+      .btn--keyline:hover {
+        background-color: #0ba7d5;
+        color: #fff; }
+      .btn--keyline:hover {
         transition: all 0.15s ease-in; } }
 
 @media screen and (min-width: 960px) {

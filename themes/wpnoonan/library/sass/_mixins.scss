@@ -56,6 +56,11 @@
     padding: 3px;
   }
 
+  @if $size == 'medium' {
+    border-width: 0 2px 2px 0;
+    padding: 6px;
+  }
+
   @if $dir == 'up' {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);

@@ -318,6 +318,18 @@
       color: $brandBlue;
       font-size: 26px;
       margin: 0 0 16px 0;
+
+      &:after {
+        content: '';
+        margin-left: 10px;
+        @include arrow('right', 'large');
+      }
+
+      a {
+        &:hover {
+          color: $dark-blue;
+        }
+      }
     }
 
     ul {

@@ -31,7 +31,7 @@ get_header(); ?>
 			$categoryImg = wp_get_attachment_url($arrCatMeta['wpn_service_categories_image'][0]);
 			$categoryDesc = $arrCatMeta['wpn_service_categories_desc'][0];
         ?>
-        <article class="service__panel-wrapper">
+        <article class="service__panel-wrapper" id="<?php echo $category->post_name; ?>">
         	<div class="service__heading-wrapper">
 				<div class="content service__heading">
 					<h2 class="service__panel-title"><?php echo $category->post_title; ?></h2>

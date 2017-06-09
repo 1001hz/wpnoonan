@@ -22,6 +22,9 @@
   }
 
 
+  &--keyline {
+    @include link-btn($brandBlue, 40px, 'true');
+  }
 }
 
 @include media($desktop) {
