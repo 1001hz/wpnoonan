@@ -27,7 +27,7 @@ get_header(); ?>
 $prevPost = get_previous_post();
 $nextPost = get_next_post();
 			?>
-			<div class="content">
+			<div class="content content--flat">
 
 				<?php if(!empty($prevPost)): ?>
 

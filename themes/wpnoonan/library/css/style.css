@@ -556,7 +556,7 @@ body {
     .content__right:last-child {
       margin-right: 0; }
   .content__copy img {
-    width: 50%;
+    width: 75%;
     left: 50%;
     display: block;
     position: relative;
