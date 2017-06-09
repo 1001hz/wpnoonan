@@ -16,7 +16,7 @@ get_header(); ?>
 
 
 
-    <div class="content service">
+    <div>
         <?php
         $args = array('post_type' => 'wpn_service_cat', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'menu_order');
 		$all_service_categories = get_posts($args);
@@ -32,29 +32,36 @@ get_header(); ?>
 			$categoryDesc = $arrCatMeta['wpn_service_categories_desc'][0];
         ?>
         <article class="service__panel-wrapper">
+        	<div class="service__heading-wrapper">
+				<div class="content service__heading">
+					<h2 class="service__panel-title"><?php echo $category->post_title; ?></h2>
+				</div>
+        	</div>
         	<div>
-        		<div class="service__panel-image" style="background-image: url(<?php echo $categoryImg; ?>)">
-        		</div>
-        		<div class="service__panel-content">
-        		<h2 class="service__panel-title"><?php echo $category->post_title; ?></h2>
-				<p> <?php echo $categoryDesc; ?> </p>
-        		<ul class="service__panel-items">
-        			<?php
-        			foreach($all_services as $post):
+				<div class="content service__content">
+					<div class="service__panel-image" style="background-image: url(<?php echo $categoryImg; ?>)">
+					</div>
+					<div class="service__panel-content">
 
-        				$arrServiceMeta = get_post_custom( $post->ID );
-                    	$serviceName = $arrServiceMeta['wpn_services_name'][0];
-						$serviceCategory = $arrServiceMeta['wpn_services_category'][0];
+					<p> <?php echo $categoryDesc; ?> </p>
+					<ul class="service__panel-items">
+						<?php
+						foreach($all_services as $post):
 
-						if((int)$category->ID === (int)$serviceCategory) :
-        			?>
-        			<li><a href="<?php echo get_permalink($post->ID); ?>" class="btn btn--grey"><?php echo $serviceName; ?></a></li>
-        			<?php
-        				endif;
-	        			endforeach;
-					?>
-        		</ul>
-        		</div>
+							$arrServiceMeta = get_post_custom( $post->ID );
+							$serviceName = $arrServiceMeta['wpn_services_name'][0];
+							$serviceCategory = $arrServiceMeta['wpn_services_category'][0];
+
+							if((int)$category->ID === (int)$serviceCategory) :
+						?>
+						<li><a href="<?php echo get_permalink($post->ID); ?>" class="btn btn--grey"><?php echo $serviceName; ?></a></li>
+						<?php
+							endif;
+							endforeach;
+						?>
+					</ul>
+					</div>
+				</div>
         	</div>
         </article>
 		<?php endforeach; ?>

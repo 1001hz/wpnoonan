@@ -43,8 +43,9 @@
 }
 
 
-@mixin arrow($dir, $size) {
-  border: solid $brandBlue;
+@mixin arrow($dir, $size, $color: $brandBlue) {
+
+  border: solid $color;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 9px;

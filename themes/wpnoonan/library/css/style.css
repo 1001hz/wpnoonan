@@ -1703,14 +1703,34 @@ nf-field {
   margin-bottom: 40px;
   background-color: #f1f1f2; }
 
+.service__heading {
+  padding-top: 1px;
+  padding-bottom: 0;
+  background-color: #6dcff6;
+  position: relative; }
+  .service__heading:after {
+    content: '';
+    position: absolute;
+    bottom: -25px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 25px solid #6dcff6;
+    z-index: 1; }
+
+.service__content {
+  padding: 0; }
+
 .service__panel-content {
   text-align: center; }
 
 .service__panel-title {
   text-transform: uppercase;
-  color: #14b0e6;
+  color: #fff;
   font-weight: normal;
-  text-align: center;
+  text-align: left;
   font-size: 18px; }
 
 .service__panel-items {
@@ -1718,7 +1738,25 @@ nf-field {
   list-style: none;
   padding: 0 0 20px 0; }
   .service__panel-items li {
-    margin-top: 5px; }
+    margin-top: 10px; }
+    .service__panel-items li a {
+      position: relative; }
+      .service__panel-items li a:after {
+        content: '';
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 9px;
+        cursor: pointer;
+        border-width: 0 1px 1px 0;
+        padding: 3px;
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        color: #14b0e6;
+        font-weight: bold;
+        position: absolute;
+        right: 10px;
+        top: 10px; }
 
 .service__panel-image {
   background-position: center;
@@ -1727,6 +1765,8 @@ nf-field {
   position: relative; }
 
 @media screen and (min-width: 960px) {
+  .service__heading {
+    padding-top: 15px; }
   .service__panel-wrapper {
     background-color: #fff; }
     .service__panel-wrapper::after {
