@@ -332,40 +332,7 @@
       }
     }
 
-    ul {
-      margin: 0 0 20px 0;
-      padding: 0;
-      list-style: none;
-      li {
-        font-family: $font-sans;
-        color: $dark-grey;
-        font-size: 18px;
-        margin: 8px 0;
-        text-transform: uppercase;
-        display: inline-block;
-        width: 49%;
 
-        a {
-          color: $dark-grey;
-          &:hover {
-            color: $dark-blue;
-          }
-        }
-
-        &:before {
-          content: '\f00c';
-          width: 20px;
-          height: 20px;
-          font-size: 20px;
-          color: $custom-grey;
-          font-family: FontAwesome;
-          font-style: normal;
-          font-weight: normal;
-          text-decoration: inherit;
-          margin-right: 10px;
-        }
-      }
-    }
   }
 
 }

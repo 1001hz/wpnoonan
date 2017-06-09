@@ -44,7 +44,7 @@ get_header(); ?>
 					<div class="service__panel-content">
 
 					<p> <?php echo $categoryDesc; ?> </p>
-					<ul class="service__panel-items">
+					<ul class="tick-list">
 						<?php
 						foreach($all_services as $post):
 
@@ -54,7 +54,7 @@ get_header(); ?>
 
 							if((int)$category->ID === (int)$serviceCategory) :
 						?>
-						<li><a href="<?php echo get_permalink($post->ID); ?>" class="btn btn--grey"><?php echo $serviceName; ?></a></li>
+						<li><?php echo $serviceName; ?></li>
 						<?php
 							endif;
 							endforeach;

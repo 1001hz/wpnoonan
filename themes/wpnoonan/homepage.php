@@ -178,7 +178,7 @@ get_header(); ?>
                 <div class="hp-services__panel">
                     <div>
                         <h5><a href="/our-services#<?php echo $category->post_name; ?>"><?php echo $category->post_title; ?></a></h5>
-                         <ul>
+                         <ul class="tick-list">
                          <?php
                          foreach($all_services as $post):
 

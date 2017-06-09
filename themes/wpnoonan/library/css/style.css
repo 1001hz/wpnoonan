@@ -307,33 +307,6 @@ ul, ol {
       -webkit-transform: rotate(-45deg); }
     .hp-services__panel h5 a:hover {
       color: #14b0e6; }
-  .hp-services__panel ul {
-    margin: 0 0 20px 0;
-    padding: 0;
-    list-style: none; }
-    .hp-services__panel ul li {
-      font-family: "Abel", sans-serif;
-      color: #4d4d4f;
-      font-size: 18px;
-      margin: 8px 0;
-      text-transform: uppercase;
-      display: inline-block;
-      width: 49%; }
-      .hp-services__panel ul li a {
-        color: #4d4d4f; }
-        .hp-services__panel ul li a:hover {
-          color: #14b0e6; }
-      .hp-services__panel ul li:before {
-        content: '\f00c';
-        width: 20px;
-        height: 20px;
-        font-size: 20px;
-        color: #cccccc;
-        font-family: FontAwesome;
-        font-style: normal;
-        font-weight: normal;
-        text-decoration: inherit;
-        margin-right: 10px; }
 
 @media screen and (min-width: 960px) {
   .hp__section h2 {
@@ -1806,7 +1779,8 @@ nf-field {
   padding: 0; }
 
 .service__panel-content {
-  text-align: center; }
+  text-align: left;
+  padding: 20px; }
 
 .service__panel-title {
   text-transform: uppercase;
@@ -1866,7 +1840,8 @@ nf-field {
     float: left;
     display: block;
     margin-right: 1.53846%;
-    width: 66.15385%; }
+    width: 66.15385%;
+    padding: 0; }
     .service__panel-content:last-child {
       margin-right: 0; }
   .service__panel-title {
@@ -1888,3 +1863,38 @@ nf-field {
       clear: left; }
     .service__panel-items li a {
       width: 100%; } }
+
+.tick-list {
+  margin: 0 0 20px 0;
+  padding: 0;
+  list-style: none; }
+  .tick-list li {
+    font-family: "Abel", sans-serif;
+    color: #4d4d4f;
+    font-size: 18px;
+    margin: 8px 0;
+    text-transform: uppercase; }
+    .tick-list li a {
+      color: #4d4d4f; }
+      .tick-list li a:hover {
+        color: #14b0e6; }
+    .tick-list li:before {
+      content: '\f00c';
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      color: #cccccc;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+      margin-right: 10px; }
+
+@media screen and (min-width: 960px) {
+  .tick-list {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    column-count: 2;
+    column-gap: 20px; } }

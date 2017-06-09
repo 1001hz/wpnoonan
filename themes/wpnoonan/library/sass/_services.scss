@@ -54,7 +54,8 @@
   //}
 
   &__panel-content {
-    text-align: center;
+    text-align: left;
+    padding: 20px;
   }
 
 
@@ -137,6 +138,7 @@
 
     &__panel-content {
       @include span-columns(8);
+      padding: 0;
     }
 
     &__panel-title {
