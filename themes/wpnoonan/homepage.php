@@ -4,7 +4,8 @@
  *
  */
 
-get_header(); ?>
+get_header();
+?>
 
 <?php
     $options = get_option( 'wpn_settings' );
@@ -17,6 +18,9 @@ get_header(); ?>
 
                 <?php
 
+                    $carouselTitles = array();
+                    $carouselImages = array();
+
                     $query = new WP_Query(array(
                         'post_type' => 'wpn_carousel',
                         'post_status' => 'publish'
@@ -25,48 +29,52 @@ get_header(); ?>
                     while ($query->have_posts()) {
                         $query->the_post();
                         $post_id = get_the_ID();
-                        $carouselTitle = get_post_meta( $post_id, 'wpn_carousel_title', false );
-                        $carouselImages = get_post_meta( $post_id, 'wpn_carousel_image', true );
+
+                        $carouselTitle = get_post_meta( $post_id, 'wpn_carousel_title', true );
+                        $carouselImage = get_post_meta( $post_id, 'wpn_carousel_image', true );
+
+                        array_push($carouselTitles, $carouselTitle);
+                        array_push($carouselImages, $carouselImage);
+
+                       }
+                       wp_reset_query();
 
                     ?>
 
                     <div class="bxslider">
 
                         <?php
+                        $i = -1;
                         foreach($carouselImages as $imgId) {
-                            $img = wp_get_attachment_url($imgId[0]);
+                            $i++;
+                            $img = wp_get_attachment_url($carouselImages[$i]);
                             ?>
-
+                            <div class="hero-carousel__item-wrapper">
                             <div class="hero-carousel__item" style="background-image: url(<?php echo $img; ?>);"></div>
 
+                            <div class="hero-carousel__watermark">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/WLP_Finished Art_Circle Device_CMYK-01.png" alt="logo" />
+                            </div>
+
+                            <div class="hero-carousel__content">
+                                <h1><?php echo $carouselTitles[$i]; ?></h1>
+                                <div class="hero-carousel__cta-wrapper">
+                                    <span class="hero-carousel__cta booking">Book an appointment</a>
+                                </div>
+                                <div class="hero-carousel__cta-wrapper">
+                                    <a href="/services" class="hero-carousel__cta hero-carousel__cta--transparent">See our services</a>
+                                </div>
+                            </div>
+
+                            </div>
                             <?php
+
                         }
                         ?>
 
                     </div>
 
-                    <?php
 
-                        }
-
-
-                    wp_reset_query();
-
-                ?>
-
-                <div class="hero-carousel__watermark">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/WLP_Finished Art_Circle Device_CMYK-01.png" alt="logo" />
-                </div>
-
-                <div class="hero-carousel__content">
-                    <h1><?php echo $carouselTitle[0]; ?></h1>
-                    <div class="hero-carousel__cta-wrapper">
-                        <span class="hero-carousel__cta booking">Book an appointment</a>
-                    </div>
-                    <div class="hero-carousel__cta-wrapper">
-                        <a href="/services" class="hero-carousel__cta hero-carousel__cta--transparent">See our services</a>
-                    </div>
-                </div>
             </div>
 
         </div>

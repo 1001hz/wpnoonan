@@ -44,7 +44,7 @@ function wpnoonan_resources() {
     // register stylesheet
     wp_register_style( 'normalize-css', get_stylesheet_directory_uri() . '/css/normalize.css', array(), '', 'all' );
 
-    wp_register_style( 'wpnoonan-css', get_stylesheet_directory_uri() . '/library/css/style.css', array(), 'v0.26', 'all' );
+    wp_register_style( 'wpnoonan-css', get_stylesheet_directory_uri() . '/library/css/style.css', array(), 'v0.28', 'all' );
 	wp_register_style( 'animate-css', get_stylesheet_directory_uri() . '/css/animate.min.css', array(), '', 'all' );
 	wp_register_style( 'bxslider-css', get_stylesheet_directory_uri() . '/css/jquery.bxslider.min.css', array(), '', 'all' );
 	wp_register_style( 'slick-css', get_stylesheet_directory_uri() . '/css/slick.css', array(), '', 'all' );
@@ -55,7 +55,7 @@ function wpnoonan_resources() {
     // register javascript files in the footer
 	wp_deregister_script( 'jquery' );
 
-    wp_register_script( 'wpnoonan-js', get_stylesheet_directory_uri() . '/js/app.js?v0.2', false, '', true );
+    wp_register_script( 'wpnoonan-js', get_stylesheet_directory_uri() . '/js/app.js?v0.3', false, '', true );
 
     wp_register_script( 'jquery', get_stylesheet_directory_uri() . '/js/jquery.min.js', false, '', true );
     wp_register_script( 'wow-js', get_stylesheet_directory_uri() . '/js/wow.min.js', array('jquery'), '', true );

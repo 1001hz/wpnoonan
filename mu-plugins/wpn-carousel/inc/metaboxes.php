@@ -21,7 +21,7 @@ function wpn_carousel_mb($meta_boxes) {
 				'id'               => "wpn_carousel_image",
 				'sort_clone'	   => true,
 				'type'             => 'plupload_image',
-				'clone' => true,
+				'clone' => false,
 				//'desc'  => __( 'Upload a square/circluar image image only! This automatically becomes circular and has a grey border applied.', 'wptricks' ),
 				'max_file_uploads' => 1,
 			),

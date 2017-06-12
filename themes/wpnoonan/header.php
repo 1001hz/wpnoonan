@@ -39,7 +39,9 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('loading'); ?>>
+
+<div class="dots-loader"></div>
 
 <div id="container">
 

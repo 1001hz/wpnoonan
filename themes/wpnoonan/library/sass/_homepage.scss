@@ -199,6 +199,20 @@
     margin-top: 20px;
   }
 
+  &__item-wrapper {
+    &:before {
+      content: '';
+      background-color: $black;
+      opacity: 0.3;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: 10;
+    }
+  }
+
   &__item{
     height: calc(100vh - 60px);
     width: 100%;
@@ -212,17 +226,17 @@
     border: 0;
   }
 
-  &:before {
-    content: '';
-    background-color: $black;
-    opacity: 0.3;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: 10;
-  }
+  //&:before {
+  //  content: '';
+  //  background-color: $black;
+  //  opacity: 0.3;
+  //  left: 0;
+  //  right: 0;
+  //  top: 0;
+  //  bottom: 0;
+  //  position: absolute;
+  //  z-index: 10;
+  //}
 }
 
 .hp-services {
