@@ -102,6 +102,9 @@
             autoControlsCombine: true
         });
 
+        //$('.bx-viewport').css('height', '');
+        //$('.bx-viewport').height(0).css('min-height', '602px');
+        //$('hero-carousel').find('.bxslider').reloadSlider()
 
         $('.slick--staff').slick({
             dots: false,
@@ -185,10 +188,11 @@
      * Dom Ready
      */
     $(document).ready(function(){
-
-        $('body').addClass('loaded');
-        $('body').removeClass('loading');
-
+        setTimeout(function(){
+            var body = $('body');
+            body.addClass('loaded');
+            body.removeClass('loading');
+        }, 1000);
     });
 
 }(window.jQuery, window, document));

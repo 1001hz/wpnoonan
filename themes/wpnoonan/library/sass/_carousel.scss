@@ -1,0 +1,19 @@
+.carousel {
+
+  &__control {
+    position: absolute;
+    font-size: 40px;
+  }
+
+  &__prev {
+    left: 0;
+    top: 0;
+  }
+
+  &__next {
+    right: 0;
+    top: 0;
+  }
+}
+
+

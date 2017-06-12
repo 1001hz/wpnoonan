@@ -41,7 +41,16 @@
 
 <body <?php body_class('loading'); ?>>
 
-<div class="dots-loader"></div>
+<div class="loader">
+<div class="square">
+  <div class="square-part square-green"></div>
+  <div class="square-part square-pink"></div>
+  <div class="square-blend"></div>
+</div>
+<div class="text">loading</div>
+</div>
+
+<div class="page-wrapper">
 
 <div id="container">
 

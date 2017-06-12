@@ -6,10 +6,11 @@
      * Dom Ready
      */
     $(document).ready(function(){
-
-        $('body').addClass('loaded');
-        $('body').removeClass('loading');
-
+        setTimeout(function(){
+            var body = $('body');
+            body.addClass('loaded');
+            body.removeClass('loading');
+        }, 1000);
     });
 
 }(window.jQuery, window, document));

@@ -19,6 +19,9 @@
             autoControlsCombine: true
         });
 
+        //$('.bx-viewport').css('height', '');
+        //$('.bx-viewport').height(0).css('min-height', '602px');
+        //$('hero-carousel').find('.bxslider').reloadSlider()
 
         $('.slick--staff').slick({
             dots: false,

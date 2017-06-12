@@ -1967,62 +1967,80 @@ nf-field {
     column-count: 2;
     column-gap: 20px; } }
 
-.loading * {
+body.loading .page-wrapper {
+  opacity: 0; }
+
+body.loaded .page-wrapper {
+  opacity: 1;
+  transition: opacity 0.5s ease-in; }
+
+body.loaded .loader {
   display: none; }
 
-.dots-loader:not(:required) {
-  opacity: 1;
-  overflow: hidden;
-  position: absolute;
-  left: 50%;
+.loader {
+  position: fixed;
   top: 50%;
-  margin-left: -4px;
-  margin-top: -4px;
-  text-indent: -9999px;
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: transparent;
-  border-radius: 100%;
-  box-shadow: #6dcff6 -14px -14px 0 7px, #14b0e6 14px -14px 0 7px, #e6e7e8 14px 14px 0 7px, #4d4d4f -14px 14px 0 7px;
-  animation: dots-loader 5s infinite ease-in-out;
-  transform-origin: 50% 50%;
-  transform: scale(1);
-  transition: .3s all; }
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .loader .text {
+    color: #e6e7e8;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 0.4em; }
 
-@keyframes dots-loader {
+.square {
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg); }
+
+@keyframes part-anim {
   0% {
-    box-shadow: #6dcff6 -14px -14px 0 7px, #14b0e6 14px -14px 0 7px, #e6e7e8 14px 14px 0 7px, #4d4d4f -14px 14px 0 7px; }
-  8.33% {
-    box-shadow: #6dcff6 14px -14px 0 7px, #14b0e6 14px -14px 0 7px, #e6e7e8 14px 14px 0 7px, #4d4d4f -14px 14px 0 7px; }
-  16.67% {
-    box-shadow: #6dcff6 14px 14px 0 7px, #14b0e6 14px 14px 0 7px, #e6e7e8 14px 14px 0 7px, #4d4d4f -14px 14px 0 7px; }
-  25% {
-    box-shadow: #6dcff6 -14px 14px 0 7px, #14b0e6 -14px 14px 0 7px, #e6e7e8 -14px 14px 0 7px, #4d4d4f -14px 14px 0 7px; }
-  33.33% {
-    box-shadow: #6dcff6 -14px -14px 0 7px, #14b0e6 -14px 14px 0 7px, #e6e7e8 -14px -14px 0 7px, #4d4d4f -14px -14px 0 7px; }
-  41.67% {
-    box-shadow: #6dcff6 14px -14px 0 7px, #14b0e6 -14px 14px 0 7px, #e6e7e8 -14px -14px 0 7px, #4d4d4f 14px -14px 0 7px; }
-  50% {
-    box-shadow: #6dcff6 14px 14px 0 7px, #14b0e6 -14px 14px 0 7px, #e6e7e8 -14px -14px 0 7px, #4d4d4f 14px -14px 0 7px; }
-  58.33% {
-    box-shadow: #6dcff6 -14px 14px 0 7px, #14b0e6 -14px 14px 0 7px, #e6e7e8 -14px -14px 0 7px, #4d4d4f 14px -14px 0 7px; }
-  66.67% {
-    box-shadow: #6dcff6 -14px -14px 0 7px, #14b0e6 -14px -14px 0 7px, #e6e7e8 -14px -14px 0 7px, #4d4d4f 14px -14px 0 7px; }
-  75% {
-    box-shadow: #6dcff6 14px -14px 0 7px, #14b0e6 14px -14px 0 7px, #e6e7e8 14px -14px 0 7px, #4d4d4f 14px -14px 0 7px; }
-  83.33% {
-    box-shadow: #6dcff6 14px 14px 0 7px, #14b0e6 14px -14px 0 7px, #e6e7e8 14px 14px 0 7px, #4d4d4f 14px 14px 0 7px; }
-  91.67% {
-    box-shadow: #6dcff6 -14px 14px 0 7px, #14b0e6 14px -14px 0 7px, #e6e7e8 14px 14px 0 7px, #4d4d4f -14px 14px 0 7px; }
+    transform: translate3d(-10px, -10px, 0); }
   100% {
-    box-shadow: #6dcff6 -14px -14px 0 7px, #14b0e6 14px -14px 0 7px, #e6e7e8 14px 14px 0 7px, #4d4d4f -14px 14px 0 7px; } }
+    transform: translate3d(10px, 10px, 0); } }
 
-.loaded .dots-loader {
-  opacity: 0;
-  z-index: -1;
-  pointer-events: none;
-  transform: scale(0); }
+.square-part {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  animation: part-anim 0.8s cubic-bezier(0.445, 0.05, 0.55, 0.95) infinite alternate; }
+
+.square-green {
+  background: #6dcff6;
+  right: 0;
+  bottom: 0;
+  animation-direction: alternate-reverse; }
+
+.square-pink {
+  background: #14b0e6;
+  left: 0;
+  top: 0; }
+
+@keyframes blend-anim {
+  0% {
+    transform: scale(0.01, 0.01) rotateY(0);
+    animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715); }
+  50% {
+    transform: scale(1, 1) rotateY(0);
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1); }
+  100% {
+    transform: scale(0.01, 0.01) rotateY(0); } }
+
+.square-blend {
+  background: #75517D;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  animation: blend-anim 0.8s ease-in infinite; }
 
 .faqs__question {
   border: solid 1px #e6e7e8;
@@ -2055,3 +2073,15 @@ nf-field {
 .faqs p {
   padding: 20px;
   margin: 0; }
+
+.carousel__control {
+  position: absolute;
+  font-size: 40px; }
+
+.carousel__prev {
+  left: 0;
+  top: 0; }
+
+.carousel__next {
+  right: 0;
+  top: 0; }

@@ -78,7 +78,8 @@ get_header();
             </div>
 
         </div>
-        <!--<div class="scroll-arrow scroll-arrow--about wow bounceInUp"></div>-->
+
+
     </section>
 
     <?php
