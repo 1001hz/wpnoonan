@@ -31,6 +31,7 @@
 		$staffFirstName = $arrUserMeta['wpn_staff_fname'][0];
 		$staffLastName = $arrUserMeta['wpn_staff_lname'][0];
 		$staffDescription = $arrUserMeta['wpn_staff_description'][0];
+		$staffSellingPoint = $arrBlogMeta['wpn_blog_author_selling_point'][0];
 		$staffRole = $arrUserMeta['wpn_staff_role'][0];
 		$staffRole2 = $arrUserMeta['wpn_staff_role2'][0];
 		$staffContactMessage = $arrUserMeta['wpn_staff_contact'][0];
@@ -106,7 +107,7 @@
 					</div>
 				</a>
 				<p class="staff__card-description">
-					<?php echo $staffDescription; ?>
+					<?php echo $staffSellingPoint; ?>
 				</p>
 			</div>
 

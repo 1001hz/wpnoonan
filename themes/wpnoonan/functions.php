@@ -54,6 +54,11 @@ function wpn_blog_mb($meta_boxes) {
 				'id'    => 'wpn_blog_author',
 				'type'  => 'select',
 				'options' => $cpt
+			),
+			array(
+				'name' => 'Author Selling Point',
+				'id'    => 'wpn_blog_author_selling_point',
+				'type'  => 'textarea'
 			)
 		)
 	);
