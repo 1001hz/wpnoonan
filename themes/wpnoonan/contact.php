@@ -96,7 +96,7 @@ $options = get_option( 'wpn_settings' );
 				Book an appointment
 			</div>
 		</div>
-		<div class="modal" id="appointment">
+		<div class="modal contact__form" id="appointment">
 			<div class="modal__inner">
 			<div class="modal__btn-close" data-modal-close-for="appointment">
 				<i class="fa fa-close fa-lg"></i>

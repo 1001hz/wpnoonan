@@ -1,5 +1,15 @@
 .contact {
 
+  &__form {
+    h3 {
+      color: $brandBlue;
+    }
+
+    p {
+      color: $dark-grey;
+    }
+  }
+
   &__email {
     padding-right: 5px;
     font-family: $font-sans;
