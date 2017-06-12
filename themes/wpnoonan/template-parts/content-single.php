@@ -107,7 +107,12 @@
 					</div>
 				</a>
 				<p class="staff__card-description">
-					<?php echo $staffSellingPoint; ?>
+					<?php if($staffSellingPoint !== '') {
+						echo $staffSellingPoint; ?>
+					}
+					else {
+						echo $staffDescription; ?>
+					}
 				</p>
 			</div>
 
