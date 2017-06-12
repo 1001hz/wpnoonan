@@ -8,6 +8,10 @@
     &--pad {
       padding: 0 30px;
     }
+
+    ul {
+      @include ticklist();
+    }
   }
 
   &__cta {

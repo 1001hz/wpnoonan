@@ -103,7 +103,7 @@ function wpn_homepage_mb($meta_boxes) {
 			array(
 				'name' => 'Homepage content',
 				'id'    => 'wpn_homepage_content',
-				'type'  => 'textarea'
+				'type'  => 'wysiwyg'
 			),
 			array(
 				'name' => 'Link to',

@@ -46,6 +46,32 @@ ul, ol {
 .hp__content--pad {
   padding: 0 30px; }
 
+.hp__content ul {
+  margin: 0 0 20px 0;
+  padding: 0;
+  list-style: none; }
+  .hp__content ul li {
+    font-family: "Abel", sans-serif;
+    color: #4d4d4f;
+    font-size: 18px;
+    padding: 8px 0;
+    text-transform: uppercase; }
+    .hp__content ul li a {
+      color: #4d4d4f; }
+      .hp__content ul li a:hover {
+        color: #14b0e6; }
+    .hp__content ul li:before {
+      content: '\f00c';
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      color: #cccccc;
+      font-family: FontAwesome;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: inherit;
+      margin-right: 10px; }
+
 .hp__cta {
   background-color: transparent;
   color: #20c3f3;
