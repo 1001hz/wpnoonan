@@ -195,11 +195,11 @@ body {
     }
 
     &__left {
-      @include span-columns(8);
+      @include span-columns(9);
     }
 
     &__right {
-      @include span-columns(4);
+      @include span-columns(3);
     }
 
     &__copy {

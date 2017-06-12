@@ -23,13 +23,14 @@ $cat_id = get_cat_ID($cat_name);
 ?>
 
 <div class="content content--flat">
+	<div class="content__left">
         <h1>Blog</h1>
 
 		<?php if($cat_name !== '' && $cat_name !== null){ ?>
         <p class="small">Filtering by: <span class="blog__pill"><?php echo $cat_name; ?></span> : <a href="/blog">Clear filter</a></p>
 
         <?php } ?>
-		</div>
+
 
 <?php
         foreach($latest_posts as $post) :
@@ -84,5 +85,13 @@ $cat_id = get_cat_ID($cat_name);
 		</header><!-- .entry-header -->
 		<?php endforeach; ?>
 
+	</div>
 
+	<div class="content__right">
+		<?php
+		get_template_part( 'template-parts/hot-topics', '' );
+		?>
+	</div>
+
+</div>
 <?php get_footer(); ?>

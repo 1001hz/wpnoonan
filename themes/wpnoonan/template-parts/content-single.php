@@ -61,19 +61,34 @@
 	</div>
 </div>
 
-	<div class="content content__copy">
+<div class="content content__copy">
+
+	<div class="content__left">
 		<?php
 			the_content();
 		?>
-	</div><!-- .entry-content -->
+		<div>
+			<ul class="blog__pills">
+				<?php foreach($categories as $cat) :
+				?>
+				<li class="">
+					<a class="blog__pill blog__pill--link" href="/blog?category=<?php echo get_the_category_by_ID($cat); ?>"><?php echo get_the_category_by_ID($cat); ?></a>
+				</li>
+				<?php endforeach ?>
 
-	<div class="content">
-		<?php foreach($categories as $c):
-			$cat = get_category( $c );
-		?>
-			<span class="blog__pill"><?php echo $cat->name ?></span>
-		<?php endforeach; ?>
+			</ul>
+		</div>
 	</div>
+
+	<div class="content__right">
+		<?php
+		get_template_part( 'template-parts/hot-topics', '' );
+		?>
+	</div>
+
+</div><!-- .entry-content -->
+
+
 
 <div class="content-full-wrapper content-full-wrapper--grey">
 	<div class="blog__about content">
