@@ -1884,7 +1884,7 @@ nf-field {
     font-family: "Abel", sans-serif;
     color: #4d4d4f;
     font-size: 18px;
-    margin: 8px 0;
+    padding: 8px 0;
     text-transform: uppercase; }
     .tick-list li a {
       color: #4d4d4f; }
@@ -1931,7 +1931,7 @@ nf-field {
   max-height: 0;
   overflow: hidden; }
   .faqs__answer.active {
-    max-height: 500px;
+    max-height: 800px;
     transition: max-height 0.15s ease-in; }
 
 .faqs .arrow {
