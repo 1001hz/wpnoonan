@@ -14,8 +14,7 @@ function wpn_service_categories_mb($meta_boxes) {
 			array(
 				'name' => 'Desc',
 				'id'    => 'wpn_service_categories_desc',
-				'type'  => 'text',
-				'size' => 80
+				'type'  => 'wysiwyg'
 			),
 			array(
 				'name'             => __( 'Image Upload', 'image' ),
