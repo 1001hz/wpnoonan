@@ -888,7 +888,8 @@ body {
             top: 50px;
             background-color: #fff;
             z-index: 1000;
-            transform: translateY(0%); }
+            transform: translateY(0%);
+            min-width: 180px; }
             .nav #menu-main-nav > li:hover ul li {
               display: block;
               opacity: 1;
