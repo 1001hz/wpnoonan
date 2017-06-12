@@ -1588,7 +1588,7 @@ nf-field {
   font-family: "Abel", sans-serif;
   font-family: "Poppins", sans-serif;
   cursor: default;
-  font-size: 12px;
+  font-size: 11px;
   margin-bottom: 10px; }
   @media screen and (min-width: 960px) {
     .blog__pill:hover {
