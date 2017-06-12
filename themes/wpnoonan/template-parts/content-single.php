@@ -71,7 +71,7 @@
 			<ul class="blog__pills">
 				<?php foreach($categories as $cat) :
 				?>
-				<li class="">
+				<li class="blog__pill-item">
 					<a class="blog__pill blog__pill--link" href="/blog?category=<?php echo get_the_category_by_ID($cat); ?>"><?php echo get_the_category_by_ID($cat); ?></a>
 				</li>
 				<?php endforeach ?>

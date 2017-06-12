@@ -110,6 +110,11 @@
     padding: 0;
   }
 
+  &__pill-item {
+    list-style: none;
+    display: inline-block;
+  }
+
   &__pill {
     @include link-btn($dark-grey, 28px, 'true');
     font-family: $font-copy;

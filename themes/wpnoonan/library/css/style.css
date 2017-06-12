@@ -1568,6 +1568,10 @@ nf-field {
   margin: 0;
   padding: 0; }
 
+.blog__pill-item {
+  list-style: none;
+  display: inline-block; }
+
 .blog__pill {
   background-color: transparent;
   color: #4d4d4f;
