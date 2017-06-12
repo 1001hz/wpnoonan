@@ -1,0 +1,46 @@
+.faqs {
+
+  &__question {
+    border: solid 1px $medium-grey;
+    background-color: $light-grey;
+    margin-top: 20px;
+    cursor: pointer;
+    position: relative;
+
+    &.active {
+      background-color: $brandBlue;
+
+      transition: background-color $base-duration $base-easing;
+      p {
+        color: $white;
+      }
+
+      .arrow {
+        border-color: $white;
+      }
+    }
+  }
+
+  &__answer {
+    border: solid 1px $medium-grey;
+    border-top: none;
+    max-height: 0;
+    overflow: hidden;
+
+    &.active {
+      max-height: 800px;
+      transition: max-height $base-duration $base-easing;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    right: 20px;
+    top: 25px;
+  }
+
+  p {
+    padding: 20px;
+    margin: 0;
+  }
+}

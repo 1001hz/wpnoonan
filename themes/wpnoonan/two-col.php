@@ -10,7 +10,7 @@
 
 get_header(); ?>
 
-    <div class="content content--bump-bottom">
+    <div class="content content--flat">
 
         <?php
             while ( have_posts() ) : the_post();
@@ -18,7 +18,7 @@ get_header(); ?>
 
             <h1><?php the_title(); ?></h1>
 
-
+    </div>
 
 
             <?php
@@ -32,7 +32,7 @@ get_header(); ?>
 
                     ?>
                     <div class="content__menu">
-
+                        <div class="content content--flat">
                         <?php if(count($children) > 0) : ?>
                             <div class="menu__sidebar-heading">
                                 <span><?php echo $post->post_title ?></span>
@@ -88,7 +88,7 @@ get_header(); ?>
                             endif;
                         ?>
 
-
+                    </div>
                     </div>
 
 
