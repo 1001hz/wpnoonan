@@ -119,7 +119,7 @@ get_header();
                     <h2><?php the_title(); ?></h2>
                     <div class="hp__content <?php if($image) : ?>hp__content--half<?php endif; ?> <?php if(!$image) : ?>hp__content--center<?php endif; ?>">
 
-                        <p class="wow fadeIn"><?php echo $homepageContent; ?></p>
+                        <?php echo $homepageContent; ?>
                         <p class="wow fadeInUp"><a class="hp__cta" href="<?php echo $relatedLinkUrl; ?>"><?php echo $linkTitle; ?></a></p>
                     </div>
                     <?php if($image) : ?>
