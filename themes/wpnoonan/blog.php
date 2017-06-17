@@ -87,7 +87,7 @@ $cat_id = get_cat_ID($cat_name);
 
 	</div>
 
-	<div class="content__right">
+	<div class="content__right content__right--for-mobile">
 		<?php
 		get_template_part( 'template-parts/hot-topics', '' );
 		?>

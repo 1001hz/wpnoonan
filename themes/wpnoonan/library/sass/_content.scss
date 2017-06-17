@@ -115,6 +115,9 @@ body {
   &__right {
     @include span-columns(12);
     display: none;
+    &--for-mobile {
+      display: inline-block;
+    }
   }
 
   &__title {

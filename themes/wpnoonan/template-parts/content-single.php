@@ -81,7 +81,7 @@
 		</div>
 	</div>
 
-	<div class="content__right">
+	<div class="content__right content__right--for-mobile">
 		<?php
 		get_template_part( 'template-parts/hot-topics', '' );
 		?>

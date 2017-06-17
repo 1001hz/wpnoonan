@@ -496,6 +496,8 @@ body {
     display: none; }
     .content__right:last-child {
       margin-right: 0; }
+    .content__right--for-mobile {
+      display: inline-block; }
   .content__title {
     text-align: left;
     color: #20c3f3;
@@ -1657,7 +1659,8 @@ nf-field {
 .breadcrumb {
   font-style: italic;
   font-size: 12px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  padding: 0 20px; }
   .breadcrumb__arrow {
     border-width: 0 1px 1px 0;
     padding: 3px;
