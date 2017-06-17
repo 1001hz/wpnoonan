@@ -459,12 +459,16 @@ body {
     clear: both;
     content: "";
     display: block; }
+  .content h2 {
+    color: #4d4d4f; }
   .content__heading {
     text-transform: uppercase; }
   .content--thin {
     max-width: 500px; }
   .content--flat {
     padding-bottom: 0; }
+  .content--flat-top {
+    padding-top: 0; }
   .content__header {
     background-color: #f1f1f2;
     padding-top: 60px;
@@ -920,7 +924,8 @@ body {
 
 .staff__wrapper {
   display: inline-block;
-  width: 100%; }
+  width: 100%;
+  padding-top: 20px; }
   .staff__wrapper::after {
     clear: both;
     content: "";

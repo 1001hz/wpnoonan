@@ -93,7 +93,7 @@ get_header(); ?>
 
 
 
-        <div class="content">
+        <div class="content content--flat-top">
             <?php
                 the_content();
             ?>

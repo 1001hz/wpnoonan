@@ -60,6 +60,10 @@ body {
   padding-top: 40px;
   padding-bottom: 40px;
 
+  h2 {
+    color: $dark-grey;
+  }
+
   &__heading {
     text-transform: uppercase;
   }
@@ -70,6 +74,10 @@ body {
 
   &--flat {
     padding-bottom: 0;
+  }
+
+  &--flat-top {
+    padding-top: 0;
   }
 
   &__header {
