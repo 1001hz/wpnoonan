@@ -116,7 +116,7 @@ get_header();
 
     		<section class="hp__section about hp__section--grey">
                 <div class="hp__inner-section content">
-                    <h2><?php the_title(); ?></h2>
+                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     <div class="hp__content <?php if($image) : ?>hp__content--half<?php endif; ?> <?php if(!$image) : ?>hp__content--center<?php endif; ?>">
 
                         <?php echo $homepageContent; ?>
@@ -148,7 +148,7 @@ get_header();
 
     <section class="hp__section">
         <div class="hp__inner-section hp__inner-section--mosaic  services">
-            <h2>Our Services</h2>
+            <h2><a href="/our-services">Our Services</a></h2>
             <ul class="hp-services">
             <?php
                 $index = 0;
@@ -217,7 +217,7 @@ get_header();
 
     <section class="hp__section">
         <div class="hp__inner-section content team">
-            <h2>Meet Our Team</h2>
+            <h2><a href="/about-us/staff/">Meet Our Team</a></h2>
 
             <div class="slick--staff">
 
