@@ -68,10 +68,41 @@
       padding-right: 5px;
     }
   }
+
+  &__logos {
+    background-color: $white;
+    @include clearfix();
+  }
+
+  &__logo {
+    @include span-columns(6);
+    @include omega(2n);
+    padding: 20px;
+  }
+
+  &__logo-img {
+    width: 100%;
+  }
 }
+
+//@include media($tablet) {
+//  .footer {
+//    &__logo {
+//      @include span-columns(4);
+//      @include omega-reset(2n);
+//      @include omega(3n);
+//    }
+//  }
+//}
 
 @include media($desktop) {
   .footer {
+
+    &__logo {
+      @include span-columns(3);
+      @include omega-reset(2n);
+      @include omega(4n);
+    }
 
     &__inner {
       @include outer-container($max-width);
@@ -95,6 +126,10 @@
       &--right {
         @include span-columns(3);
       }
+    }
+
+    &__logos {
+
     }
   }
 }

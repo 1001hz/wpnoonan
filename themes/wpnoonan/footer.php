@@ -52,9 +52,33 @@
 
         </div>
 
-    <?php wp_footer(); ?>
+
     </div>
 
+    <div class="footer__logos">
+        <div class="footer__inner">
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="http://www.westlimerickphysio.com/wp-content/themes/wlp/images/wlp_lcoeb_logo.jpg" />
+            </div>
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="http://www.westlimerickphysio.com/wp-content/themes/wlp/images/wlp_lcoeb_logo.jpg" />
+            </div>
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="http://www.westlimerickphysio.com/wp-content/themes/wlp/images/wlp_lcoeb_logo.jpg" />
+            </div>
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="http://www.westlimerickphysio.com/wp-content/themes/wlp/images/wlp_lcoeb_logo.jpg" />
+            </div>
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="http://www.westlimerickphysio.com/wp-content/themes/wlp/images/wlp_lcoeb_logo.jpg" />
+            </div>
+            <div class="footer__logo">
+                <img class="footer__logo-img" src="http://www.westlimerickphysio.com/wp-content/themes/wlp/images/wlp_lcoeb_logo.jpg" />
+            </div>
+        </div>
+    </div>
+
+    <?php wp_footer(); ?>
 </div>
 
 </div>
