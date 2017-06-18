@@ -2121,7 +2121,8 @@ body.loaded .loader {
   background-color: #f1f1f2;
   margin-top: 20px;
   cursor: pointer;
-  position: relative; }
+  position: relative;
+  padding-right: 40px; }
   .faqs__question.active {
     background-color: #20c3f3;
     transition: background-color 0.15s ease-in; }
