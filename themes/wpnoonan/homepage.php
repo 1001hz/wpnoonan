@@ -62,7 +62,7 @@ get_header();
                                     <span class="hero-carousel__cta booking">Book an appointment</a>
                                 </div>
                                 <div class="hero-carousel__cta-wrapper">
-                                    <a href="/services" class="hero-carousel__cta hero-carousel__cta--transparent">See our services</a>
+                                    <a href="/our-services" class="hero-carousel__cta hero-carousel__cta--transparent">See our services</a>
                                 </div>
                             </div>
 
