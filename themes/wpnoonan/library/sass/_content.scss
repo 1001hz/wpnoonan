@@ -128,6 +128,15 @@ body {
     }
   }
 
+  &__page-full {
+    img {
+      width: 75%;
+      margin: 0 auto;
+      position: relative;
+      display: inherit;
+    }
+  }
+
   &__title {
     text-align: left;
     color: $brandBlue;

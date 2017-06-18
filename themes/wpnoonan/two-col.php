@@ -94,7 +94,7 @@ get_header(); ?>
 
 
         <div class="content content--flat-top">
-            <div class="content__left">
+            <div class="content__page-full">
             <?php
                 the_content();
             ?>

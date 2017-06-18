@@ -521,6 +521,11 @@ body {
       margin-right: 0; }
     .content__right--for-mobile {
       display: inline-block; }
+  .content__page-full img {
+    width: 75%;
+    margin: 0 auto;
+    position: relative;
+    display: inherit; }
   .content__title {
     text-align: left;
     color: #20c3f3;
