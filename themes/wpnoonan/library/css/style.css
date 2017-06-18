@@ -585,11 +585,9 @@ body {
     .content__right:last-child {
       margin-right: 0; }
   .content__copy img {
-    width: 75%;
-    left: 50%;
+    width: 100%;
     display: block;
     position: relative;
-    transform: translateX(-50%);
     margin: 40px 0; } }
 
 .bump-top {

@@ -224,11 +224,11 @@ body {
 
     &__copy {
       img {
-        width: 75%;
-        left: 50%;
+        width: 100%;
+        //left: 50%;
         display: block;
         position: relative;
-        transform: translateX(-50%);
+        //transform: translateX(-50%);
         margin: 40px 0;
       }
     }
