@@ -18,6 +18,13 @@
 
         });
 
+        $('.hp-services__select select').change(function(){
+            var val = $(this).val();
+            var target = 'tab-panel-'+val;
+            $('.hp-services__panel-wrapper').removeClass('active');
+            $('#'+target).addClass('active');
+        });
+
     });
 
 }(window.jQuery, window, document));

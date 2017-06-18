@@ -149,6 +149,28 @@ get_header();
     <section class="hp__section">
         <div class="hp__inner-section hp__inner-section--mosaic  services">
             <h2><a href="/our-services">Our Services</a></h2>
+
+            <div class="content content--flat-top content--flat hp-services__select">
+             <select>
+             <?php
+                 $index = 0;
+                 foreach($all_service_categories as $category) :
+                        $arrCatMeta = get_post_custom( $category->ID );
+                        $categoryImg = wp_get_attachment_url($arrCatMeta['wpn_service_categories_image'][0]);
+                        $categoryDesc = $arrCatMeta['wpn_service_categories_desc'][0];
+                        $class = "";
+                        if($index === 0) {
+                            $class = "active";
+                        }
+                        $index++;
+                        ?>
+                        <option value="<?php echo $category->ID; ?>" <?php if($index === 0){ echo 'selected'; } ?>>
+                            <?php echo $category->post_title; ?>
+                        </option>
+                    <?php endforeach; ?>
+          </select>
+          </div>
+
             <ul class="hp-services">
             <?php
                 $index = 0;

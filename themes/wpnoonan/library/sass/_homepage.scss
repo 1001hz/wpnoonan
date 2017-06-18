@@ -97,6 +97,10 @@
   &__inner-section {
     //padding: 40px 0;
 
+    &--mosaic {
+      margin-top: 40px;
+    }
+
     &--content {
       padding: 40px 0;
     }
@@ -244,6 +248,13 @@
   list-style: none;
   margin: 0;
   padding: 0;
+  display: none;
+
+  &__select {
+    select{
+      width: 100%;
+    }
+  }
 
   &__panel-wrapper {
     display: none;
@@ -334,13 +345,14 @@
 
     h5 {
       color: $brandBlue;
-      font-size: 26px;
+      font-size: 16px;
       margin: 0 0 16px 0;
 
       &:after {
         content: '';
         margin-left: 10px;
         @include arrow('right', 'large');
+        display: none;
       }
 
       a {
@@ -494,10 +506,28 @@
   }
 
   .hp-services {
+    display: block;
+
     &__item {
       display: inline-block;
       width: 20%;
       vertical-align:top;
+    }
+
+    &__select {
+      display: none;
+    }
+
+    &__panel {
+      h5 {
+        font-size: 26px;
+
+        &:after {
+          display: inline-block;
+        }
+      }
+
+
     }
   }
 }
