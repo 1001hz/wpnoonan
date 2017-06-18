@@ -1911,6 +1911,8 @@ nf-field {
   padding-bottom: 0;
   background-color: #6dcff6;
   position: relative; }
+  .service__heading h2 {
+    color: #fff; }
   .service__heading:after {
     content: '';
     position: absolute;

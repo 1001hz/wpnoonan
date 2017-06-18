@@ -16,6 +16,9 @@
     padding-bottom: 0;
     background-color: $light-blue;
     position: relative;
+    h2 {
+      color: $white;
+    }
     &:after {
       content: '';
       position: absolute;
