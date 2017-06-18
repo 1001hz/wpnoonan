@@ -1962,6 +1962,8 @@ nf-field {
 @media screen and (min-width: 960px) {
   .service__heading {
     padding-top: 15px; }
+    .service__heading h2 {
+      color: #fff; }
   .service__panel-wrapper {
     background-color: #fff; }
     .service__panel-wrapper::after {

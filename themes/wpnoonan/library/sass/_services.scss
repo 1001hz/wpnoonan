@@ -125,6 +125,9 @@
 
     &__heading {
       padding-top: 15px;
+      h2 {
+        color: $white;
+      }
     }
 
     &__panel-wrapper {
