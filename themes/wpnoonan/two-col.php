@@ -32,7 +32,7 @@ get_header(); ?>
 
                     ?>
                     <div class="content__menu">
-                        <div class="content content--flat">
+                        <div class="content content--flat-top">
                         <?php if(count($children) > 0) : ?>
                             <div class="menu__sidebar-heading">
                                 <span><?php echo $post->post_title ?></span>

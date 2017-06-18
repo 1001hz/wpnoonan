@@ -130,7 +130,7 @@ body {
 
   &__page-full {
     img {
-      width: 75%;
+      width: 100%;
       margin: 0 auto;
       position: relative;
       display: inherit;
@@ -220,6 +220,12 @@ body {
 
     &__right {
       @include span-columns(4);
+    }
+
+    &__page-full {
+      img {
+        width: 75%;
+      }
     }
 
     &__copy {
