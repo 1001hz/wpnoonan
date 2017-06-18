@@ -1510,6 +1510,12 @@ nf-field {
   .post-nav__arrow--prev {
     left: 0; }
 
+.blog__item {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #fff;
+  border-bottom: solid 1px #e6e7e8; }
+
 .blog__topics {
   padding: 0;
   margin: 0; }

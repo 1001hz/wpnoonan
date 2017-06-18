@@ -1,5 +1,11 @@
 .blog {
 
+  &__item {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    border-bottom: solid 1px #e6e7e8;
+  }
 
   &__topics {
 

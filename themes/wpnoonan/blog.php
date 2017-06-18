@@ -52,10 +52,10 @@ $cat_id = get_cat_ID($cat_name);
 
 
 
-        <header class="content__header content__header--list">
+        <header class="blog__item">
         <a href="<?php echo get_the_permalink($post->ID); ?>">
-			<div class="content wow fadeIn">
-				<h1 class="content__title"><?php echo $post->post_title ?></h1>
+			<div class="wow fadeIn">
+				<h2 class="content__title"><?php echo $post->post_title ?></h2>
 				<div class="content__post-date">Published <?php echo date_format($dat, 'd-m-Y') ?></div>
 			<div>
 
