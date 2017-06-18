@@ -55,7 +55,9 @@ ul, ol {
     color: #4d4d4f;
     font-size: 18px;
     padding: 8px 0;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding-left: 40px;
+    position: relative; }
     .hp__content ul li a {
       color: #4d4d4f; }
       .hp__content ul li a:hover {
@@ -70,7 +72,9 @@ ul, ol {
       font-style: normal;
       font-weight: normal;
       text-decoration: inherit;
-      margin-right: 10px; }
+      margin-right: 10px;
+      position: absolute;
+      left: 0; }
 
 .hp__cta {
   background-color: transparent;
@@ -2007,7 +2011,9 @@ nf-field {
     color: #4d4d4f;
     font-size: 18px;
     padding: 8px 0;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    padding-left: 40px;
+    position: relative; }
     .tick-list li a {
       color: #4d4d4f; }
       .tick-list li a:hover {
@@ -2022,7 +2028,9 @@ nf-field {
       font-style: normal;
       font-weight: normal;
       text-decoration: inherit;
-      margin-right: 10px; }
+      margin-right: 10px;
+      position: absolute;
+      left: 0; }
 
 @media screen and (min-width: 960px) {
   .tick-list {

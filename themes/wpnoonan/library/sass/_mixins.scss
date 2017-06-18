@@ -93,8 +93,8 @@
     font-size: 18px;
     padding: 8px 0;
     text-transform: uppercase;
-    //display: inline-block;
-    //width: 49%;
+    padding-left: 40px;
+    position: relative;
 
     a {
       color: $dark-grey;
@@ -114,6 +114,8 @@
       font-weight: normal;
       text-decoration: inherit;
       margin-right: 10px;
+      position: absolute;
+      left: 0;
     }
   }
 }
