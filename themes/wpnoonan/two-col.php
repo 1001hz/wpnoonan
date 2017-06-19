@@ -111,7 +111,7 @@ get_header(); ?>
 
     <div class="content-full-wrapper content-full-wrapper--brand content-full-wrapper--center">
 		<div class="content content--bump-top content--bump-bottom">
-			<div class="btn btn--large btn--on-blue modal__btn" data-modal-for="appointment">
+			<div class="btn btn--large btn--on-blue modal__btn booking">
 				Book an appointment
 			</div>
 		</div>

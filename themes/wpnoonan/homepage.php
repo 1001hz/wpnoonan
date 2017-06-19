@@ -338,9 +338,11 @@ get_header();
 
         </div>
 
+        
+
         <div class="content-full-wrapper content-full-wrapper--brand content-full-wrapper--center">
-            <div class=" content--bump-top content--bump-bottom">
-                <div class="btn btn--large btn--on-blue booking">
+            <div class="content content--bump-top content--bump-bottom">
+                <div class="btn btn--large btn--on-blue modal__btn booking">
                     Book an appointment
                 </div>
             </div>
