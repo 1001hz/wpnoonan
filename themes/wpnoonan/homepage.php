@@ -208,7 +208,17 @@ get_header();
             <div class="hp-services__panel-wrapper <?php echo $class; ?>" id="tab-panel-<?php echo $category->ID; ?>">
                 <div class="hp-services__panel">
                     <div>
-                        <h5><a href="/our-services#<?php echo $category->post_name; ?>"><?php echo $category->post_title; ?></a></h5>
+                        <h5 class="hp-services__heading">
+                            <a href="/our-services#<?php echo $category->post_name; ?>"><?php echo $category->post_title; ?></a></h5>
+
+                         <div class="hp-services__description">
+                            <?php
+                                $arrCatMeta = get_post_custom( $category->ID );
+                                $categoryDesc = $arrCatMeta['wpn_service_categories_desc'][0];
+                                echo $categoryDesc;
+                            ?>
+                         </div>
+
                          <ul class="tick-list">
                          <?php
                          foreach($all_services as $post):
@@ -338,7 +348,7 @@ get_header();
 
         </div>
 
-        
+
 
         <div class="content-full-wrapper content-full-wrapper--brand content-full-wrapper--center">
             <div class="content content--bump-top content--bump-bottom">

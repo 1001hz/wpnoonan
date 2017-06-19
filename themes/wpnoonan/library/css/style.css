@@ -274,7 +274,13 @@ ul, ol {
   padding: 0;
   display: none; }
   .hp-services__select select {
-    width: 100%; }
+    width: 100%;
+    background-color: #20c3f3;
+    color: #fff;
+    font-size: 18px;
+    border-color: #20c3f3; }
+  .hp-services__heading {
+    display: none; }
   .hp-services__panel-wrapper {
     display: none; }
     .hp-services__panel-wrapper.active {
@@ -422,6 +428,10 @@ ul, ol {
       transition: background-color 0.15s ease-in; }
   .hp-services {
     display: block; }
+    .hp-services__description {
+      display: none; }
+    .hp-services__heading {
+      display: block; }
     .hp-services__item {
       display: inline-block;
       width: 20%;

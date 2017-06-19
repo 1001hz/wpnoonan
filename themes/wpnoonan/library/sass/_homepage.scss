@@ -253,7 +253,15 @@
   &__select {
     select{
       width: 100%;
+      background-color: $brandBlue;
+      color: $white;
+      font-size: 18px;
+      border-color: $brandBlue;
     }
+  }
+
+  &__heading {
+    display: none;
   }
 
   &__panel-wrapper {
@@ -507,6 +515,14 @@
 
   .hp-services {
     display: block;
+
+    &__description {
+      display: none;
+    }
+
+    &__heading {
+      display: block;
+    }
 
     &__item {
       display: inline-block;
