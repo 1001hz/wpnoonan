@@ -816,7 +816,7 @@ body {
   .menu__sidebar--count-10.open {
     max-height: calc(48px * 10); }
   .menu__sidebar li {
-    padding: 0;
+    padding: 0 0 0 20px;
     margin: 0;
     position: relative;
     border-bottom: solid 1px #f1f1f2; }
@@ -824,7 +824,7 @@ body {
       content: '';
       border-left: 0px solid #14b0e6;
       position: absolute;
-      left: 0;
+      left: 20px;
       top: 20px;
       border: solid #20c3f3;
       border-width: 0 3px 3px 0;
@@ -835,6 +835,10 @@ body {
       padding: 3px;
       transform: rotate(-45deg);
       -webkit-transform: rotate(-45deg); }
+    .menu__sidebar li:first-child a {
+      padding-left: 0; }
+    .menu__sidebar li:first-child:before {
+      display: none; }
   .menu__sidebar a {
     font-family: "Abel", sans-serif;
     position: relative;

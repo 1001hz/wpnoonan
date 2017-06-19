@@ -35,11 +35,11 @@ get_header(); ?>
                         <div class="content content--flat-top">
                         <?php if(count($children) > 0) : ?>
                             <div class="menu__sidebar-heading">
-                                <span><?php echo $post->post_title ?></span>
+                                <span>Menu</span>
                                 <span class="arrow down"></span>
                             </div>
-                            <ul class="menu__sidebar menu__sidebar--count-<?php echo count($children); ?>">
-
+                            <ul class="menu__sidebar menu__sidebar--count-<?php echo (count($children) + 1); ?>">
+                                <li><a href="<?php echo get_the_permalink($post->ID); ?>"><?php echo $post->post_title ?></a></li>
                                 <?php foreach($children as $child) :
 
                                 ?>
@@ -66,12 +66,14 @@ get_header(); ?>
                                     <?php if(count($children) > 0) :
                                         $parent = get_post($parents[0]);
                                         $parentTitle = $parent->post_title;
+                                        $parentLink = get_the_permalink($parent->ID);
                                     ?>
                                         <div class="menu__sidebar-heading">
-                                        <?php echo $parentTitle ?>
+                                        Menu
                                         <span class="arrow down"></span>
                                         </div>
-                                        <ul class="menu__sidebar menu__sidebar--count-<?php echo count($children); ?>">
+                                        <ul class="menu__sidebar menu__sidebar--count-<?php echo (count($children) + 1); ?>">
+                                            <li><a href="<?php echo $parentLink; ?>"><?php echo $parentTitle ?></a></li>
                                             <?php foreach($children as $child) :
                                                 $class = "";
                                                 if($post->ID === $child->ID) {
