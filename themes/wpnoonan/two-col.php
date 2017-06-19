@@ -109,5 +109,11 @@ get_header(); ?>
     </div>
 
 
-
+    <div class="content-full-wrapper content-full-wrapper--brand content-full-wrapper--center">
+		<div class="content content--bump-top content--bump-bottom">
+			<div class="btn btn--large btn--on-blue modal__btn" data-modal-for="appointment">
+				Book an appointment
+			</div>
+		</div>
+    </div>
 <?php get_footer(); ?>
