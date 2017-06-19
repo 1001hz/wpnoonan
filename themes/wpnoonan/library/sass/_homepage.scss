@@ -265,10 +265,13 @@
   }
 
   &__panel-wrapper {
-    display: none;
+    opacity: 0;
+    height: 0;
 
     &.active {
-      display: block;
+      opacity: 1;
+      height: auto;
+      transition: opacity $base-duration $base-easing;
     }
   }
 

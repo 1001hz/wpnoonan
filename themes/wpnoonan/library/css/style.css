@@ -282,9 +282,12 @@ ul, ol {
   .hp-services__heading {
     display: none; }
   .hp-services__panel-wrapper {
-    display: none; }
+    opacity: 0;
+    height: 0; }
     .hp-services__panel-wrapper.active {
-      display: block; }
+      opacity: 1;
+      height: auto;
+      transition: opacity 0.15s ease-in; }
   .hp-services__item {
     min-height: 250px;
     background-color: #f1f1f2;
