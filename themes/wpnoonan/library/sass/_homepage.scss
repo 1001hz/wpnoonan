@@ -267,8 +267,12 @@
   &__panel-wrapper {
     opacity: 0;
     height: 0;
+    position: absolute;
+    left: -100000px;
 
     &.active {
+      position: relative;
+      left: 0;
       opacity: 1;
       height: auto;
       transition: opacity $base-duration $base-easing;

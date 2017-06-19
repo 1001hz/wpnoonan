@@ -283,8 +283,12 @@ ul, ol {
     display: none; }
   .hp-services__panel-wrapper {
     opacity: 0;
-    height: 0; }
+    height: 0;
+    position: absolute;
+    left: -100000px; }
     .hp-services__panel-wrapper.active {
+      position: relative;
+      left: 0;
       opacity: 1;
       height: auto;
       transition: opacity 0.15s ease-in; }
