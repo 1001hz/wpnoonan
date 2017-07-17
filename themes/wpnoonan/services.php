@@ -15,6 +15,18 @@ get_header(); ?>
     </div>
 
 
+	<div class="content content--flat-top content--mobile">
+		<select class="service__select">
+			<option value="">--Select Category--</option>
+			<?php
+				$args = array('post_type' => 'wpn_service_cat', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'menu_order');
+        		$full_all_service_categories = get_posts($args);
+				foreach($full_all_service_categories as $category) :
+			?>
+			<option value="<?php echo $category->post_name; ?>"><?php echo $category->post_title; ?></option>
+			<?php endforeach; ?>
+		</select>
+	</div>
 
     <div>
         <?php
@@ -37,7 +49,7 @@ get_header(); ?>
 					<h2 class="service__panel-title"><?php echo $category->post_title; ?></h2>
 				</div>
         	</div>
-        	<div>
+        	<div class="service__content-panel">
 				<div class="content service__content">
 					<div class="service__panel-image" style="background-image: url(<?php echo $categoryImg; ?>)">
 					</div>

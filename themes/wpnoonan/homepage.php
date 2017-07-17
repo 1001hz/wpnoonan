@@ -142,6 +142,9 @@ get_header();
         $args = array('post_type' => 'wpn_service_cat', 'post_status' => 'publish', 'posts_per_page' => 5, 'orderby' => 'menu_order');
 		$all_service_categories = get_posts($args);
 
+		$args = array('post_type' => 'wpn_service_cat', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'menu_order');
+        $full_all_service_categories = get_posts($args);
+
 		$args = array('post_type' => 'wpn_services', 'post_status' => 'publish', 'posts_per_page' => -1, 'orderby' => 'menu_order');
         $all_services = get_posts($args);
     ?>
@@ -154,7 +157,7 @@ get_header();
              <select>
              <?php
                  $index = 0;
-                 foreach($all_service_categories as $category) :
+                 foreach($full_all_service_categories as $category) :
                         $arrCatMeta = get_post_custom( $category->ID );
                         $categoryImg = wp_get_attachment_url($arrCatMeta['wpn_service_categories_image'][0]);
                         $categoryDesc = $arrCatMeta['wpn_service_categories_desc'][0];
@@ -198,7 +201,7 @@ get_header();
         <div class="hp__inner-section content services">
             <?php
             $index = 0;
-            foreach($all_service_categories as $category) :
+            foreach($full_all_service_categories as $category) :
                 $class = "";
                 if($index === 0) {
                     $class = "active";

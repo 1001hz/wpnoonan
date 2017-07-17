@@ -223,6 +223,11 @@
             $('.menu__sidebar').toggleClass('open');
         });
 
+        $('.service__select').change(function(){
+            var val = $(this).val();
+            location.href = "#"+val;
+        });
+
     });
 
 }(window.jQuery, window, document));

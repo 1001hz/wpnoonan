@@ -208,7 +208,12 @@ body {
     position: relative;
     z-index: 199;
   }
+
   .content {
+
+    &--mobile {
+      display: none;
+    }
 
     &__menu {
       display: none;

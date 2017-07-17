@@ -585,6 +585,8 @@ body {
   #main {
     position: relative;
     z-index: 199; }
+  .content--mobile {
+    display: none; }
   .content__menu {
     display: none; }
   .content__left {
