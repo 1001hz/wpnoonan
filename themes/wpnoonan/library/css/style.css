@@ -389,7 +389,8 @@ ul, ol {
     .hero-carousel__watermark img {
       width: 1000px; }
   .hero-carousel__content {
-    width: 400px; }
+    width: 400px;
+    padding: 20px 60px; }
   .hero-carousel__item {
     background-attachment: fixed; }
   .hero-carousel__cta {

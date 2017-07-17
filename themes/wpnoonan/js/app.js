@@ -93,9 +93,11 @@
 
         $('.bxslider').bxSlider({
             mode: 'fade',
-            controls: false,
+            controls: true,
+            nextText: '>',
+            prevText: '<',
             captions: true,
-            pager: false,
+            pager: true,
             autoStart: true,
             auto: true,
             autoControls: true,
