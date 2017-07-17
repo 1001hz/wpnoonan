@@ -2,6 +2,14 @@
 
   @include clearfix();
 
+  &__select {
+    width: 100%;
+    background-color: $brandBlue;
+    color: $white;
+    font-size: 18px;
+    border-color: $brandBlue;
+  }
+
   &__panel-wrapper {
     margin-bottom: 40px;
     background-color: $light-grey;

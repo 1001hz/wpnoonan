@@ -1927,6 +1927,13 @@ nf-field {
   content: "";
   display: block; }
 
+.service__select {
+  width: 100%;
+  background-color: #20c3f3;
+  color: #fff;
+  font-size: 18px;
+  border-color: #20c3f3; }
+
 .service__panel-wrapper {
   margin-bottom: 40px;
   background-color: #f1f1f2; }
