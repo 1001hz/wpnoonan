@@ -10,15 +10,7 @@
 
 get_header(); ?>
 
-    <div class="content content--flat">
 
-        <?php
-            while ( have_posts() ) : the_post();
-            ?>
-
-            <h1><?php the_title(); ?></h1>
-
-    </div>
 
 
             <?php
@@ -32,7 +24,7 @@ get_header(); ?>
 
                     ?>
                     <div class="content__menu">
-                        <div class="content content--flat-top">
+                        <div class="content content--flat">
                         <?php if(count($children) > 0) : ?>
                             <div class="menu__sidebar-heading">
                                 <span>Menu</span>
@@ -93,7 +85,15 @@ get_header(); ?>
                     </div>
                     </div>
 
+<div class="content content--flat-top">
 
+        <?php
+            while ( have_posts() ) : the_post();
+            ?>
+
+            <h1><?php the_title(); ?></h1>
+
+    </div>
 
         <div class="content content--flat-top">
             <div class="content__page-full">
