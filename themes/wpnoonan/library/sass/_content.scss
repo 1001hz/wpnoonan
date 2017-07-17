@@ -80,6 +80,10 @@ body {
     padding-top: 0;
   }
 
+  &--flat-top-mobile {
+    padding-top: 0;
+  }
+
   &__header {
     background-color: $light-grey;
     padding-top: 60px;
@@ -210,6 +214,10 @@ body {
   }
 
   .content {
+
+    &--flat-top-mobile {
+      padding-top: 40px;
+    }
 
     &--mobile {
       display: none;

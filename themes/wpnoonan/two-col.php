@@ -85,7 +85,7 @@ get_header(); ?>
                     </div>
                     </div>
 
-<div class="content content--flat-top">
+<div class="content content--flat-top-mobile">
 
         <?php
             while ( have_posts() ) : the_post();

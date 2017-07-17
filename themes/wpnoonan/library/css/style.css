@@ -505,6 +505,8 @@ body {
     padding-bottom: 0; }
   .content--flat-top {
     padding-top: 0; }
+  .content--flat-top-mobile {
+    padding-top: 0; }
   .content__header {
     background-color: #f1f1f2;
     padding-top: 60px;
@@ -585,6 +587,8 @@ body {
   #main {
     position: relative;
     z-index: 199; }
+  .content--flat-top-mobile {
+    padding-top: 40px; }
   .content--mobile {
     display: none; }
   .content__menu {
